@@ -1,0 +1,4 @@
+Change Component Footprint: Designator=R3 Old Footprint=RESC1005X40X25LL10T15 New Footprint=RESC0402(1005)_L
+Change Component Comment: Designator=R3 Old Comment=RMCF0402JT4K70 New Comment=20K 5% 0402(1005)
+Change Pin Designator/Name:  Old Designator=R3-1 Old Name=1 New Designator =2 New Name=2
+Change Pin Designator/Name:  Old Designator=R3-2 Old Name=2 New Designator =1 New Name=1

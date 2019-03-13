@@ -1,0 +1,9 @@
+Change Net Name : Old Net Name=NetJ3_1 New Net Name=DEBUG_IO
+Change Net Name : Old Net Name=NetJ4_1 New Net Name=DEBUG_CLK
+Change Net Name : Old Net Name=NetJ5_1 New Net Name=RX1
+Change Net Name : Old Net Name=NetJ6_1 New Net Name=NRST
+Change Net Name : Old Net Name=NetJ8_1 New Net Name=TX1
+Change Net Name : Old Net Name=NetJ9_1 New Net Name=SFBOOT
+Change Net Name : Old Net Name=NetU3_G6 New Net Name=INT2
+Change Net Name : Old Net Name=NetU3_G7 New Net Name=INT1
+Change Net Name : Old Net Name=RX New Net Name=RX2

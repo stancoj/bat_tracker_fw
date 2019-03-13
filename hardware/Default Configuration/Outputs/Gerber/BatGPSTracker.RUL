@@ -1,0 +1,10 @@
+DRC Rules Export File for PCB: C:\Users\Public\Documents\Altium\Projects\BatGPSTracker\BatGPSTracker.CSPcbDoc
+RuleKind=Width|RuleName=Width_GND|Scope=Board|Minimum=5.91
+RuleKind=Width|RuleName=Width_VCC|Scope=Board|Minimum=5.91
+RuleKind=Width|RuleName=Width_+5|Scope=Board|Minimum=5.91
+RuleKind=SolderMaskExpansion|RuleName=SolderMaskExpansion|Scope=Board|Minimum=4.00
+RuleKind=Width|RuleName=Width|Scope=Board|Minimum=5.91
+RuleKind=Clearance|RuleName=Clearance|Scope=Board|Minimum=3.94
+RuleKind=ShortCircuit|RuleName=ShortCircuit|Scope=Board|Allowed=0
+RuleKind=Width|RuleName=Width_RF|Scope=Board|Minimum=10.00
+RuleKind=Width|RuleName=Width_RFL1|Scope=Board|Minimum=10.00

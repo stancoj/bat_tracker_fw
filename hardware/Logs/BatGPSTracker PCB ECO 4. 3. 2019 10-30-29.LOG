@@ -1,0 +1,8 @@
+Change Component Comment : Designator=J1 Old Comment=Battery Connector New Comment=Batttery connector
+Change Component Designator: OldDesignator=DebugCLK NewDesignator=J4
+Change Component Designator: OldDesignator=DebugIO NewDesignator=J3
+Change Component Designator: OldDesignator=NRST NewDesignator=J6
+Change Component Designator: OldDesignator=RX NewDesignator=J5
+Change Component Designator: OldDesignator=SFBOOT NewDesignator=J9
+Change Component Designator: OldDesignator=TX NewDesignator=J8
+Change Net Name : Old Net Name=+5 New Net Name=+BATTERY

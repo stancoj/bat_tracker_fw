@@ -1,0 +1,4 @@
+Change Component Footprint: Designator=C3 Old Footprint=CAPC0402(1005)60_M New Footprint=CAPC0402(1005)60_L
+Change Component Footprint: Designator=C1 Old Footprint=CAPC0402(1005)60_N New Footprint=CAPC0402(1005)60_L
+Change Component Footprint: Designator=C2 Old Footprint=CAPC0402(1005)60_N New Footprint=CAPC0402(1005)60_L
+Change Component Footprint: Designator=R3 Old Footprint=RESC0402(1005)_M New Footprint=RESC0402(1005)_L

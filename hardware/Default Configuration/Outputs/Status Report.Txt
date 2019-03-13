@@ -1,0 +1,14 @@
+Project Outputs Generation Report
+---------------------------------
+Start Output Generation At 11:15:46 On 4. 3. 2019
+
+Output: ExportSTEP
+Type  : ExportSTEP
+From  : Variant [WithoutRFMatching] of PCB Document [BatGPSTracker.CSPcbDoc]
+   Generated File[BatGPSTracker(WithoutRFMatching).step]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 11:15:47 On 4. 3. 2019

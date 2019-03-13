@@ -1,0 +1,21 @@
+Removed Pin From Net: NetName=GND Pin=R3-2
+Change Component Footprint: Designator=R3 Old Footprint=RESC0402(1005)_L New Footprint=RESC1005X40X25LL10T15
+Change Component Comment : Designator=R3 Old Comment=20K 5% 0402(1005) New Comment=RMCF0402JT4K70
+Change Component Comment : Designator=C3 Old Comment=CAP 4.7nF 16V 0402(1005) New Comment=CAP 4.7uF 16V 0402(1005)
+Change Component Comment : Designator=U2 Old Comment=Component_1 New Comment=W3011
+Change Component Comment : Designator=L2 Old Comment=LQG15HS2N4S02D New Comment=LQG15WZ5N6S02D
+Change Component Designator: OldDesignator=DBG_CLK NewDesignator=J4
+Change Component Designator: OldDesignator=DBG_IO NewDesignator=J3
+Change Component Designator: OldDesignator=NRST NewDesignator=J6
+Change Component Designator: OldDesignator=Rx NewDesignator=J8
+Change Component Designator: OldDesignator=SFBOOT NewDesignator=J9
+Change Component Designator: OldDesignator=Tx NewDesignator=J5
+Change Component Description : Designator=U1 Old Description= New Description=1.8V Regulator 
+Change Component Description : Designator=U2 Old Description= New Description=GPS Chip antenna
+Change Component Description : Designator=C3 Old Description=CAP 4.7nF 16V ±20% 0402 (1005 Metric) Thickness 0.6mm SMD New Description=CAP 4.7uF 16V ±20% 0402 (1005 Metric) Thickness 0.6mm SMD
+Change Component Description : Designator=L2 Old Description=Chip Inductor, 2.4 nH, +/- 0.3 nH, 300 mA, -55 to 125 degC, 0402 (1005 Metric), RoHS, Tape and Reel New Description=Chip Inductor, 5.6 nH, +/- 0.3 nH, 300 mA, -55 to 125 degC, 0402 (1005 Metric), RoHS, Tape and Reel
+Added Pin To Net: NetName=GND Pin=R3-1
+Change Net Name : Old Net Name=NetU3_E4 New Net Name=RX
+Added Pin To Net: NetName=NetR3_2 Pin=R3-2
+Added Pin To Net: NetName=NetR3_2 Pin=U3-A5
+Added Net: Name=NetR3_2
