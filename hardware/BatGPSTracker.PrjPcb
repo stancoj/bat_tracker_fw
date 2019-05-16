@@ -29,7 +29,7 @@ PushECOToAnnotationFile=1
 DItemRevisionGUID=
 ReportSuppressedErrorsInMessages=0
 ForceUpdateCount=0
-OutputPath=
+OutputPath=Outputs
 LogFolderPath=
 ManagedProjectGUID=
 LinkedManagedProjectGUID=
@@ -411,94 +411,102 @@ DocumentPath=Default Configuration\Outputs\ODB\odb\steps\pcb\eda\data
 DItemRevisionGUID=
 
 [GeneratedDocument27]
-DocumentPath=Default Configuration\Outputs\ODB\odb\steps\pcb\layers\3D Top\features
+DocumentPath=Outputs\Design Rule Check - BatGPSTracker.html
 DItemRevisionGUID=
 
 [GeneratedDocument28]
-DocumentPath=Default Configuration\Outputs\ODB\odb\steps\pcb\layers\bottom\features
+DocumentPath=Default Configuration\Outputs\ODB\odb\steps\pcb\layers\3D Top\features
 DItemRevisionGUID=
 
 [GeneratedDocument29]
-DocumentPath=Default Configuration\Outputs\ODB\odb\steps\pcb\layers\bottomoverlay\features
+DocumentPath=Default Configuration\Outputs\ODB\odb\steps\pcb\layers\bottom\features
 DItemRevisionGUID=
 
 [GeneratedDocument30]
-DocumentPath=Default Configuration\Outputs\ODB\odb\steps\pcb\layers\bottompaste\features
+DocumentPath=Default Configuration\Outputs\ODB\odb\steps\pcb\layers\bottomoverlay\features
 DItemRevisionGUID=
 
 [GeneratedDocument31]
-DocumentPath=Default Configuration\Outputs\ODB\odb\steps\pcb\layers\bottomsolder\features
+DocumentPath=Default Configuration\Outputs\ODB\odb\steps\pcb\layers\bottompaste\features
 DItemRevisionGUID=
 
 [GeneratedDocument32]
-DocumentPath=Default Configuration\Outputs\ODB\odb\steps\pcb\layers\comp_+_top\features
+DocumentPath=Default Configuration\Outputs\ODB\odb\steps\pcb\layers\bottomsolder\features
 DItemRevisionGUID=
 
 [GeneratedDocument33]
-DocumentPath=Default Configuration\Outputs\ODB\odb\steps\pcb\layers\Courtyard Bottom\features
+DocumentPath=Default Configuration\Outputs\ODB\odb\steps\pcb\layers\comp_+_top\features
 DItemRevisionGUID=
 
 [GeneratedDocument34]
-DocumentPath=Default Configuration\Outputs\ODB\odb\steps\pcb\layers\Courtyard Top\features
+DocumentPath=Default Configuration\Outputs\ODB\odb\steps\pcb\layers\Courtyard Bottom\features
 DItemRevisionGUID=
 
 [GeneratedDocument35]
-DocumentPath=Default Configuration\Outputs\ODB\odb\steps\pcb\layers\drill\features
+DocumentPath=Default Configuration\Outputs\ODB\odb\steps\pcb\layers\Courtyard Top\features
 DItemRevisionGUID=
 
 [GeneratedDocument36]
-DocumentPath=Default Configuration\Outputs\ODB\odb\steps\pcb\layers\keepout\features
+DocumentPath=Default Configuration\Outputs\ODB\odb\steps\pcb\layers\drill\features
 DItemRevisionGUID=
 
 [GeneratedDocument37]
-DocumentPath=Default Configuration\Outputs\ODB\odb\steps\pcb\layers\mechanical4\features
+DocumentPath=Default Configuration\Outputs\ODB\odb\steps\pcb\layers\keepout\features
 DItemRevisionGUID=
 
 [GeneratedDocument38]
-DocumentPath=Default Configuration\Outputs\ODB\odb\steps\pcb\layers\mid1\features
+DocumentPath=Default Configuration\Outputs\ODB\odb\steps\pcb\layers\mechanical4\features
 DItemRevisionGUID=
 
 [GeneratedDocument39]
-DocumentPath=Default Configuration\Outputs\ODB\odb\steps\pcb\layers\mid2\features
+DocumentPath=Default Configuration\Outputs\ODB\odb\steps\pcb\layers\mid1\features
 DItemRevisionGUID=
 
 [GeneratedDocument40]
-DocumentPath=Default Configuration\Outputs\ODB\odb\steps\pcb\layers\Outline\features
+DocumentPath=Default Configuration\Outputs\ODB\odb\steps\pcb\layers\mid2\features
 DItemRevisionGUID=
 
 [GeneratedDocument41]
-DocumentPath=Default Configuration\Outputs\ODB\odb\steps\pcb\layers\top\features
+DocumentPath=Default Configuration\Outputs\ODB\odb\steps\pcb\layers\Outline\features
 DItemRevisionGUID=
 
 [GeneratedDocument42]
-DocumentPath=Default Configuration\Outputs\ODB\odb\steps\pcb\layers\topoverlay\features
+DocumentPath=Default Configuration\Outputs\ODB\odb\steps\pcb\layers\top\features
 DItemRevisionGUID=
 
 [GeneratedDocument43]
-DocumentPath=Default Configuration\Outputs\ODB\odb\steps\pcb\layers\toppaste\features
+DocumentPath=Default Configuration\Outputs\ODB\odb\steps\pcb\layers\topoverlay\features
 DItemRevisionGUID=
 
 [GeneratedDocument44]
-DocumentPath=Default Configuration\Outputs\ODB\odb\steps\pcb\layers\topsolder\features
+DocumentPath=Default Configuration\Outputs\ODB\odb\steps\pcb\layers\toppaste\features
 DItemRevisionGUID=
 
 [GeneratedDocument45]
-DocumentPath=Default Configuration\Outputs\ODB\odb\matrix\matrix
+DocumentPath=Default Configuration\Outputs\ODB\odb\steps\pcb\layers\topsolder\features
 DItemRevisionGUID=
 
 [GeneratedDocument46]
-DocumentPath=Default Configuration\Outputs\ODB\odb\steps\pcb\netlists\cadnet\netlist
+DocumentPath=Default Configuration\Outputs\ODB\odb\matrix\matrix
 DItemRevisionGUID=
 
 [GeneratedDocument47]
-DocumentPath=Default Configuration\Outputs\ODB\odb\steps\pcb\profile
+DocumentPath=Default Configuration\Outputs\ODB\odb\steps\pcb\netlists\cadnet\netlist
 DItemRevisionGUID=
 
 [GeneratedDocument48]
-DocumentPath=Default Configuration\Outputs\ODB\odb\steps\pcb\stephdr
+DocumentPath=Default Configuration\Outputs\Pick Place\Pick Place for BatGPSTracker(WithoutRFMatching).txt
 DItemRevisionGUID=
 
 [GeneratedDocument49]
+DocumentPath=Default Configuration\Outputs\ODB\odb\steps\pcb\profile
+DItemRevisionGUID=
+
+[GeneratedDocument50]
+DocumentPath=Default Configuration\Outputs\ODB\odb\steps\pcb\stephdr
+DItemRevisionGUID=
+
+[GeneratedDocument51]
 DocumentPath=Default Configuration\Outputs\ODB\odb\steps\pcb\layers\drill\tools
 DItemRevisionGUID=
 
@@ -519,7 +527,7 @@ DocumentReferenceClass1=DocumentReference
 OutputJobFileName1=BatGPSTracker.OutJob
 
 [Generic_EDE]
-OutputDir=
+OutputDir=Outputs
 
 [OutputGroup1]
 Name=Netlist Outputs
