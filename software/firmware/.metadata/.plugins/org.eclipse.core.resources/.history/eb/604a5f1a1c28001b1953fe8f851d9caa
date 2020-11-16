@@ -1,0 +1,14 @@
+/*
+ * bmp280.c
+ *
+ *  Created on: 14. 11. 2020
+ *      Author: Stancoj
+ */
+
+#include "bmp280.h"
+
+
+bool InitBMP280(void)
+{
+
+}

@@ -1,0 +1,1444 @@
+2020-11-15 13:00:03,415 [INFO] Activator:176 - 
+
+
+2020-11-15 13:00:03,428 [INFO] Activator:177 - !SESSION log4j initialized
+2020-11-15 13:00:23,843 [INFO] ApplicationProperties:181 - Using Application install path: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926
+2020-11-15 13:00:23,908 [INFO] DbMcusXml:68 - Set database path to: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\/mcu/
+2020-11-15 13:00:23,915 [INFO] DbBoardsPdsc:54 - Set plugin database path to: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\/plugins/boardmanager/
+2020-11-15 13:00:23,916 [INFO] DbMcus:262 - Set plugin images path to: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\/plugins/mcufinder/images/
+2020-11-15 13:00:23,917 [INFO] DbBoards:225 - Set plugin images path to: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\/plugins/mcufinder/images/
+2020-11-15 13:00:23,920 [INFO] APIGFXSelector:72 - Set database path to: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\/plugins/mcufinder/mcu/
+2020-11-15 13:00:24,136 [INFO] DbMcusAds:72 - Set database path to: C:\Users\Stancoj\.stmcufinder\plugins\mcufinder//mcu/
+2020-11-15 13:00:24,139 [INFO] DbMcusDocs:90 - Set database path to: C:\Users\Stancoj\.stmcufinder\plugins\mcufinder//mcu/
+2020-11-15 13:00:24,142 [INFO] DbMcusJson:59 - Set database path to: C:\Users\Stancoj\.stmcufinder\plugins\mcufinder//mcu/
+2020-11-15 13:00:24,143 [INFO] DbBoardsDocs:82 - Set database path to: C:\Users\Stancoj\.stmcufinder\plugins\mcufinder//mcu/
+2020-11-15 13:00:24,144 [INFO] DbBoardsJson:51 - Set database path to: C:\Users\Stancoj\.stmcufinder\plugins\mcufinder//mcu/
+2020-11-15 13:00:34,241 [INFO] CrossReferenceDbSqlite:197 - Set database path to: C:\Users\Stancoj\.stmcufinder\plugins\mcufinder//mcu/cs/
+2020-11-15 13:00:34,504 [INFO] RulesReader:52 - Compatibility file has been processed (156 Rules)
+2020-11-15 13:00:35,014 [INFO] MicroXplorer:521 - Detected Java Version = 1.8.0_202
+2020-11-15 13:00:35,014 [INFO] DbMcusXml:68 - Set database path to: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\/mcu/
+2020-11-15 13:00:35,015 [INFO] DbBoardsPdsc:54 - Set plugin database path to: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\/plugins/boardmanager/
+2020-11-15 13:00:35,017 [INFO] DbMcus:262 - Set plugin images path to: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\/plugins/mcufinder/images/
+2020-11-15 13:00:35,017 [INFO] DbBoards:225 - Set plugin images path to: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\/plugins/mcufinder/images/
+2020-11-15 13:00:35,017 [INFO] APIGFXSelector:72 - Set database path to: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\/plugins/mcufinder/mcu/
+2020-11-15 13:00:35,017 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Stancoj\.stmcufinder\plugins\mcufinder/ => C:\Users\Stancoj\.stmcufinder\plugins\mcufinder
+2020-11-15 13:00:35,018 [INFO] DbMcusAds:72 - Set database path to: C:\Users\Stancoj\.stmcufinder\plugins\mcufinder//mcu/
+2020-11-15 13:00:35,018 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Stancoj\.stmcufinder\plugins\mcufinder/ => C:\Users\Stancoj\.stmcufinder\plugins\mcufinder
+2020-11-15 13:00:35,018 [INFO] DbMcusDocs:90 - Set database path to: C:\Users\Stancoj\.stmcufinder\plugins\mcufinder//mcu/
+2020-11-15 13:00:35,018 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Stancoj\.stmcufinder\plugins\mcufinder/ => C:\Users\Stancoj\.stmcufinder\plugins\mcufinder
+2020-11-15 13:00:35,018 [INFO] DbMcusJson:59 - Set database path to: C:\Users\Stancoj\.stmcufinder\plugins\mcufinder//mcu/
+2020-11-15 13:00:35,019 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Stancoj\.stmcufinder\plugins\mcufinder/ => C:\Users\Stancoj\.stmcufinder\plugins\mcufinder
+2020-11-15 13:00:35,019 [INFO] DbBoardsDocs:82 - Set database path to: C:\Users\Stancoj\.stmcufinder\plugins\mcufinder//mcu/
+2020-11-15 13:00:35,019 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Stancoj\.stmcufinder\plugins\mcufinder/ => C:\Users\Stancoj\.stmcufinder\plugins\mcufinder
+2020-11-15 13:00:35,019 [INFO] DbBoardsJson:51 - Set database path to: C:\Users\Stancoj\.stmcufinder\plugins\mcufinder//mcu/
+2020-11-15 13:00:35,019 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Stancoj\.stmcufinder\plugins\mcufinder/ => C:\Users\Stancoj\.stmcufinder\plugins\mcufinder
+2020-11-15 13:00:35,020 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Stancoj\.stmcufinder\plugins\mcufinder/ => C:\Users\Stancoj\.stmcufinder\plugins\mcufinder
+2020-11-15 13:00:35,021 [INFO] CrossReferenceDbSqlite:197 - Set database path to: C:\Users\Stancoj\.stmcufinder\plugins\mcufinder//mcu/cs/
+2020-11-15 13:00:35,494 [INFO] MainPanel:211 - HeapMemory: 315621376
+2020-11-15 13:00:35,753 [INFO] DbMcusXml:68 - Set database path to: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\/mcu/
+2020-11-15 13:00:35,754 [INFO] DbBoardsPdsc:54 - Set plugin database path to: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\/plugins/boardmanager/
+2020-11-15 13:00:35,754 [INFO] DbMcus:262 - Set plugin images path to: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\/plugins/mcufinder/images/
+2020-11-15 13:00:35,754 [INFO] DbBoards:225 - Set plugin images path to: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\/plugins/mcufinder/images/
+2020-11-15 13:00:35,754 [INFO] APIGFXSelector:72 - Set database path to: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\/plugins/mcufinder/mcu/
+2020-11-15 13:00:35,755 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Stancoj\.stmcufinder\plugins\mcufinder/ => C:\Users\Stancoj\.stmcufinder\plugins\mcufinder
+2020-11-15 13:00:35,755 [INFO] DbMcusAds:72 - Set database path to: C:\Users\Stancoj\.stmcufinder\plugins\mcufinder//mcu/
+2020-11-15 13:00:35,755 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Stancoj\.stmcufinder\plugins\mcufinder/ => C:\Users\Stancoj\.stmcufinder\plugins\mcufinder
+2020-11-15 13:00:35,755 [INFO] DbMcusDocs:90 - Set database path to: C:\Users\Stancoj\.stmcufinder\plugins\mcufinder//mcu/
+2020-11-15 13:00:35,756 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Stancoj\.stmcufinder\plugins\mcufinder/ => C:\Users\Stancoj\.stmcufinder\plugins\mcufinder
+2020-11-15 13:00:35,756 [INFO] DbMcusJson:59 - Set database path to: C:\Users\Stancoj\.stmcufinder\plugins\mcufinder//mcu/
+2020-11-15 13:00:35,756 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Stancoj\.stmcufinder\plugins\mcufinder/ => C:\Users\Stancoj\.stmcufinder\plugins\mcufinder
+2020-11-15 13:00:35,756 [INFO] DbBoardsDocs:82 - Set database path to: C:\Users\Stancoj\.stmcufinder\plugins\mcufinder//mcu/
+2020-11-15 13:00:35,756 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Stancoj\.stmcufinder\plugins\mcufinder/ => C:\Users\Stancoj\.stmcufinder\plugins\mcufinder
+2020-11-15 13:00:35,757 [INFO] DbBoardsJson:51 - Set database path to: C:\Users\Stancoj\.stmcufinder\plugins\mcufinder//mcu/
+2020-11-15 13:00:35,757 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Stancoj\.stmcufinder\plugins\mcufinder/ => C:\Users\Stancoj\.stmcufinder\plugins\mcufinder
+2020-11-15 13:00:35,757 [WARN] DbFile:31 - Overriding database path with different value: C:\Users\Stancoj\.stmcufinder\plugins\mcufinder/ => C:\Users\Stancoj\.stmcufinder\plugins\mcufinder
+2020-11-15 13:00:35,757 [INFO] CrossReferenceDbSqlite:197 - Set database path to: C:\Users\Stancoj\.stmcufinder\plugins\mcufinder//mcu/cs/
+2020-11-15 13:00:35,820 [INFO] ApplicationProperties:181 - Using Application install path: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926
+2020-11-15 13:00:35,822 [INFO] PluginManage:178 - Search for loadable plugins [exclusion list=]
+2020-11-15 13:00:35,849 [INFO] PluginManage:292 - Check plugin analytics
+2020-11-15 13:00:35,906 [INFO] PluginManage:342 - Loaded plugin analytics (category:tool,tabindex:-1)
+2020-11-15 13:00:35,907 [INFO] PluginManage:292 - Check plugin clock
+2020-11-15 13:00:35,942 [INFO] PluginManage:342 - Loaded plugin clock (category:base,tabindex:2)
+2020-11-15 13:00:35,942 [INFO] PluginManage:292 - Check plugin ddr
+2020-11-15 13:00:35,980 [INFO] PluginManage:342 - Loaded plugin ddr (category:tool,tabindex:6)
+2020-11-15 13:00:35,980 [INFO] PluginManage:292 - Check plugin filemanager
+2020-11-15 13:00:36,384 [INFO] PluginManage:342 - Loaded plugin filemanager (category:base,tabindex:10)
+2020-11-15 13:00:36,384 [INFO] PluginManage:292 - Check plugin ipmanager
+2020-11-15 13:00:36,407 [INFO] PluginManage:342 - Loaded plugin ipmanager (category:base,tabindex:5)
+2020-11-15 13:00:36,408 [INFO] PluginManage:292 - Check plugin pinoutandconfiguration
+2020-11-15 13:00:36,438 [INFO] PluginManage:342 - Loaded plugin pinoutandconfiguration (category:base,tabindex:1)
+2020-11-15 13:00:36,438 [INFO] PluginManage:292 - Check plugin pinoutconfig
+2020-11-15 13:00:36,585 [INFO] PluginManage:342 - Loaded plugin pinoutconfig (category:base,tabindex:0)
+2020-11-15 13:00:36,585 [INFO] PluginManage:292 - Check plugin power
+2020-11-15 13:00:36,625 [INFO] PluginManage:342 - Loaded plugin power (category:power,tabindex:4)
+2020-11-15 13:00:36,626 [INFO] PluginManage:292 - Check plugin projectmanager
+2020-11-15 13:00:36,670 [INFO] PluginManage:342 - Loaded plugin projectmanager (category:projectmanager,tabindex:3)
+2020-11-15 13:00:36,671 [INFO] PluginManage:292 - Check plugin thirdparty
+2020-11-15 13:00:36,740 [INFO] ThirdPartyDb:293 - Open Third Party DataBase File (C:/Users/Stancoj/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml) : 0 ms. number of Sw pack : 0
+2020-11-15 13:00:36,776 [INFO] PluginManage:342 - Loaded plugin thirdparty (category:base,tabindex:-1)
+2020-11-15 13:00:36,778 [INFO] PluginManage:292 - Check plugin tools
+2020-11-15 13:00:36,800 [INFO] PluginManage:342 - Loaded plugin tools (category:base,tabindex:7)
+2020-11-15 13:00:36,801 [INFO] PluginManage:292 - Check plugin updater
+2020-11-15 13:00:36,853 [INFO] PluginManage:342 - Loaded plugin updater (category:base,tabindex:12)
+2020-11-15 13:00:36,853 [INFO] PluginManage:265 - PluginManage : Loaded plugins [12]
+2020-11-15 13:00:37,684 [INFO] PinOutPanel:1361 - setPackage(No Configuration,No Configuration)
+2020-11-15 13:00:38,369 [INFO] PluginManager:200 - loadIPPluginJar : add adc
+2020-11-15 13:00:38,415 [INFO] PluginManager:200 - loadIPPluginJar : add aes
+2020-11-15 13:00:38,437 [INFO] PluginManager:200 - loadIPPluginJar : add can
+2020-11-15 13:00:38,446 [INFO] PluginManager:200 - loadIPPluginJar : add comp
+2020-11-15 13:00:38,463 [INFO] PluginManager:200 - loadIPPluginJar : add cryp
+2020-11-15 13:00:38,469 [INFO] PluginManager:200 - loadIPPluginJar : add dfsdm
+2020-11-15 13:00:38,485 [INFO] PluginManager:200 - loadIPPluginJar : add dma
+2020-11-15 13:00:38,514 [INFO] PluginManager:200 - loadIPPluginJar : add fatfs
+2020-11-15 13:00:38,535 [INFO] PluginManager:200 - loadIPPluginJar : add fmc
+2020-11-15 13:00:38,561 [INFO] PluginManager:200 - loadIPPluginJar : add freertos
+2020-11-15 13:00:38,585 [INFO] PluginManager:200 - loadIPPluginJar : add genericplugin
+2020-11-15 13:00:38,606 [INFO] PluginManager:200 - loadIPPluginJar : add gfxmmu
+2020-11-15 13:00:38,625 [INFO] PluginManager:200 - loadIPPluginJar : add gfxsimulator
+2020-11-15 13:00:38,641 [INFO] PluginManager:200 - loadIPPluginJar : add gic
+2020-11-15 13:00:38,664 [INFO] PluginManager:200 - loadIPPluginJar : add gpio
+2020-11-15 13:00:38,681 [INFO] PluginManager:200 - loadIPPluginJar : add hash
+2020-11-15 13:00:38,700 [INFO] PluginManager:200 - loadIPPluginJar : add i2c
+2020-11-15 13:00:38,902 [INFO] PluginManager:200 - loadIPPluginJar : add i2s
+2020-11-15 13:00:38,919 [INFO] PluginManager:200 - loadIPPluginJar : add ipddr
+2020-11-15 13:00:38,933 [INFO] PluginManager:200 - loadIPPluginJar : add ltdc
+2020-11-15 13:00:38,957 [INFO] PluginManager:200 - loadIPPluginJar : add mdma
+2020-11-15 13:00:38,974 [INFO] PluginManager:200 - loadIPPluginJar : add nvic
+2020-11-15 13:00:38,989 [INFO] PluginManager:200 - loadIPPluginJar : add opamp
+2020-11-15 13:00:39,004 [INFO] PluginManager:200 - loadIPPluginJar : add pdm2pcm
+2020-11-15 13:00:39,030 [INFO] PluginManager:200 - loadIPPluginJar : add plateformsettings
+2020-11-15 13:00:39,054 [INFO] PluginManager:200 - loadIPPluginJar : add quadspi
+2020-11-15 13:00:39,073 [INFO] PluginManager:200 - loadIPPluginJar : add resmgrutility
+2020-11-15 13:00:39,096 [INFO] PluginManager:200 - loadIPPluginJar : add sai
+2020-11-15 13:00:39,115 [INFO] PluginManager:200 - loadIPPluginJar : add spi
+2020-11-15 13:00:39,119 [INFO] PluginManager:200 - loadIPPluginJar : add stm32_wpan
+2020-11-15 13:00:39,130 [INFO] PluginManager:200 - loadIPPluginJar : add tim
+2020-11-15 13:00:39,142 [INFO] PluginManager:200 - loadIPPluginJar : add touchsensing
+2020-11-15 13:00:39,154 [INFO] PluginManager:200 - loadIPPluginJar : add tracer_emb
+2020-11-15 13:00:39,166 [INFO] PluginManager:200 - loadIPPluginJar : add ts
+2020-11-15 13:00:39,182 [INFO] PluginManager:200 - loadIPPluginJar : add tsc
+2020-11-15 13:00:39,200 [INFO] PluginManager:200 - loadIPPluginJar : add ucpd
+2020-11-15 13:00:39,246 [INFO] PluginManager:200 - loadIPPluginJar : add usart
+2020-11-15 13:00:41,568 [FATAL] Updater:277 - Updater called before beeing initialized
+2020-11-15 13:00:42,347 [FATAL] Updater:277 - Updater called before beeing initialized
+2020-11-15 13:00:42,351 [INFO] PinOutPanel:1361 - setPackage(No Configuration,No Configuration)
+2020-11-15 13:00:42,352 [FATAL] Updater:277 - Updater called before beeing initialized
+2020-11-15 13:00:42,445 [INFO] Updater:860 - Updater Version found : 5.2.1
+2020-11-15 13:00:42,505 [INFO] ApplicationProperties:181 - Using Application install path: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926
+2020-11-15 13:00:42,788 [FATAL] Updater:277 - Updater called before beeing initialized
+2020-11-15 13:00:42,789 [ERROR] IntegrityCheckThread:227 - Cannot obtain thirdParties list 21
+2020-11-15 13:00:42,789 [ERROR] IntegrityCheckThread:96 - Unexpected exception IntegrityCheckThread Thread: Updater error
+2020-11-15 13:00:42,791 [ERROR] LogOutputStream:66 - [STDERR_REDIRECT] java.lang.Exception: Updater error
+2020-11-15 13:00:42,795 [ERROR] LogOutputStream:66 - [STDERR_REDIRECT] 	at com.st.microxplorer.plugins.thirdparty.engine.IntegrityCheckThread.getUpdaterThirdPartyList(IntegrityCheckThread.java:239)
+2020-11-15 13:00:42,798 [ERROR] LogOutputStream:66 - [STDERR_REDIRECT] 	at com.st.microxplorer.plugins.thirdparty.engine.IntegrityCheckThread.run(IntegrityCheckThread.java:61)
+2020-11-15 13:00:42,799 [INFO] ThirdPartyDb:263 - Close Third Party DataBase File (C:/Users/Stancoj/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml)
+2020-11-15 13:00:44,094 [INFO] MainUpdater:2032 - connection check result : 10
+2020-11-15 13:00:44,096 [INFO] MainUpdater:223 - Updater Check For Update Now.
+2020-11-15 13:00:44,097 [INFO] MicroXplorer:401 - Change Database Version : DB.5.0.21
+2020-11-15 13:00:44,111 [WARN] CheckServerUpdateThread:167 - Error reading file: updaterThirdParties.xml
+2020-11-15 13:00:44,139 [WARN] CheckServerUpdateThread:84 - Open Updater Control File Fail
+2020-11-15 13:00:44,149 [INFO] CheckServerUpdateThread:121 - End of CheckServer Thread
+2020-11-15 13:00:44,150 [INFO] MainUpdater:2032 - connection check result : 10
+2020-11-15 13:00:44,151 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Successfull proxy connection.
+2020-11-15 13:00:44,636 [INFO] McuFinderGlobals:40 - Set McuFinder mode to 2 (CubeIDE integrated)
+2020-11-15 13:00:44,727 [INFO] FinderPluginLoader:85 - Searching for filters in installed packs
+2020-11-15 13:00:44,785 [INFO] DbMcusXml:106 - Load MCU database from C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\/mcu/families.xml
+2020-11-15 13:00:45,907 [INFO] DbMcusJson:87 - JSON generation date=Thu Nov 05 17:05:07 CET 2020 (1604592307)
+2020-11-15 13:00:47,276 [INFO] DbMcus:192 - Found 1486 MCUs (1445 are supported by CubeMX, 1445 are visible in CubeMX)
+2020-11-15 13:00:47,287 [INFO] ApiDb:158 - Load user favorites file C:\Users\Stancoj/.stm32cubeide/favorites.mcus.txt: 0 item(s)
+2020-11-15 13:00:47,288 [INFO] ApiDb:163 - User favorites MCUs=[]
+2020-11-15 13:00:47,288 [INFO] DbMcus:203 - Set 0 / 0 favorites MCUs
+2020-11-15 13:00:49,686 [INFO] DbMcusAds:130 - JSON generation date=Wed Oct 21 15:42:18 CEST 2020 (1603287738)
+2020-11-15 13:00:49,887 [ERROR] ServerAccessManage:932 - Problem, file not found on Server
+2020-11-15 13:00:49,888 [ERROR] ServerAccessManage:504 - Problem, file not found on Server : .
+2020-11-15 13:00:49,888 [INFO] LoadUrlFilesThread:147 - End of LoadServerUrlFiles without Thread
+2020-11-15 13:00:49,889 [WARN] McuDetailPanel:183 - Failed to get advertising image, set to default
+2020-11-15 13:00:50,848 [INFO] ServerAccessManage:347 - Download File mcusDocs.json
+2020-11-15 13:00:50,958 [INFO] LoadUrlFilesThread:129 - End of LoadUrlFiles Thread
+2020-11-15 13:00:51,397 [INFO] ServerAccessManage:347 - Download File mcusFeaturesAndDescription.json
+2020-11-15 13:00:52,595 [INFO] LoadUrlFilesThread:129 - End of LoadUrlFiles Thread
+2020-11-15 13:00:52,761 [INFO] ServerAccessManage:347 - Download File mcusAds.json
+2020-11-15 13:00:52,784 [INFO] LoadUrlFilesThread:129 - End of LoadUrlFiles Thread
+2020-11-15 13:00:52,899 [INFO] ServerAccessManage:347 - Download File boardsDocs.json
+2020-11-15 13:00:52,956 [INFO] LoadUrlFilesThread:129 - End of LoadUrlFiles Thread
+2020-11-15 13:00:53,082 [INFO] ServerAccessManage:347 - Download File boards.json
+2020-11-15 13:00:53,148 [INFO] LoadUrlFilesThread:129 - End of LoadUrlFiles Thread
+2020-11-15 13:01:03,388 [INFO] ServerAccessManage:347 - Download File crdb.zip
+2020-11-15 13:01:03,509 [INFO] FileExtend:190 - Unzip File : crdb.zip
+2020-11-15 13:01:03,511 [INFO] FileExtend:205 - Standard Zip Deflate
+2020-11-15 13:01:03,548 [INFO] LoadUrlFilesThread:129 - End of LoadUrlFiles Thread
+2020-11-15 13:01:03,558 [INFO] DbMcusDocs:127 - JSON generation date=Thu Nov 05 17:05:07 CET 2020 (1604592307)
+2020-11-15 13:01:03,976 [INFO] DbMcusDocs:59 - Found 601 MCUs documents
+2020-11-15 13:01:03,977 [INFO] ApiDb:186 - Save user favorites file C:\Users\Stancoj/.stm32cubeide/favorites.mcus.txt: 0 item(s)
+2020-11-15 13:01:03,977 [INFO] ApiDb:191 - User favorites MCUs=[]
+2020-11-15 13:01:03,977 [INFO] DbMcusXml:106 - Load MCU database from C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\/mcu/families.xml
+2020-11-15 13:01:04,607 [INFO] DbMcusJson:87 - JSON generation date=Thu Nov 05 17:05:07 CET 2020 (1604592307)
+2020-11-15 13:01:05,405 [INFO] DbMcus:192 - Found 1486 MCUs (1445 are supported by CubeMX, 1445 are visible in CubeMX)
+2020-11-15 13:01:05,406 [INFO] ApiDb:158 - Load user favorites file C:\Users\Stancoj/.stm32cubeide/favorites.mcus.txt: 0 item(s)
+2020-11-15 13:01:05,406 [INFO] ApiDb:163 - User favorites MCUs=[]
+2020-11-15 13:01:05,406 [INFO] DbMcus:203 - Set 0 / 0 favorites MCUs
+2020-11-15 13:01:05,485 [INFO] McuFilterPanel:282 - Update 0 favorites MCUs
+2020-11-15 13:01:05,821 [INFO] DbBoardsDocs:119 - JSON generation date=Thu Nov 05 17:05:07 CET 2020 (1604592307)
+2020-11-15 13:01:05,913 [INFO] DbBoardsPdsc:92 - Found 18 items
+2020-11-15 13:01:05,929 [INFO] DbBoardsPdsc:92 - Found 9 items
+2020-11-15 13:01:05,941 [INFO] DbBoardsPdsc:92 - Found 27 items
+2020-11-15 13:01:05,952 [INFO] DbBoardsPdsc:92 - Found 1 items
+2020-11-15 13:01:05,965 [INFO] DbBoardsPdsc:92 - Found 35 items
+2020-11-15 13:01:05,992 [INFO] DbBoardsPdsc:92 - Found 37 items
+2020-11-15 13:01:06,024 [INFO] DbBoardsJson:79 - JSON generation date=Thu Nov 05 15:55:26 CET 2020 (1604588126)
+2020-11-15 13:01:06,029 [INFO] DbBoards:120 - Found 141 boards (126 are supported by CubeMX)
+2020-11-15 13:01:06,030 [WARN] DbBoards:145 - board NUCLEO-F303ZE / document id not found: 3602
+2020-11-15 13:01:06,030 [WARN] DbBoards:145 - board NUCLEO-F303ZE / document id not found: 3989
+2020-11-15 13:01:06,030 [WARN] DbBoards:145 - board NUCLEO-F303ZE / document id not found: 4166
+2020-11-15 13:01:06,030 [WARN] DbBoards:149 - board NUCLEO-F303ZE has no document !
+2020-11-15 13:01:06,030 [WARN] DbBoards:145 - board NUCLEO-F207ZG / document id not found: 3602
+2020-11-15 13:01:06,030 [WARN] DbBoards:145 - board NUCLEO-F207ZG / document id not found: 3989
+2020-11-15 13:01:06,030 [WARN] DbBoards:145 - board NUCLEO-F207ZG / document id not found: 4166
+2020-11-15 13:01:06,030 [WARN] DbBoards:149 - board NUCLEO-F207ZG has no document !
+2020-11-15 13:01:06,030 [WARN] DbBoards:145 - board NUCLEO-F429ZI / document id not found: 3602
+2020-11-15 13:01:06,030 [WARN] DbBoards:145 - board NUCLEO-F429ZI / document id not found: 3989
+2020-11-15 13:01:06,031 [WARN] DbBoards:145 - board NUCLEO-F429ZI / document id not found: 4166
+2020-11-15 13:01:06,031 [WARN] DbBoards:149 - board NUCLEO-F429ZI has no document !
+2020-11-15 13:01:06,031 [WARN] DbBoards:145 - board NUCLEO-F446ZE / document id not found: 3602
+2020-11-15 13:01:06,031 [WARN] DbBoards:145 - board NUCLEO-F446ZE / document id not found: 3989
+2020-11-15 13:01:06,031 [WARN] DbBoards:145 - board NUCLEO-F446ZE / document id not found: 4166
+2020-11-15 13:01:06,031 [WARN] DbBoards:149 - board NUCLEO-F446ZE has no document !
+2020-11-15 13:01:06,031 [WARN] DbBoards:145 - board NUCLEO-F746ZG / document id not found: 3602
+2020-11-15 13:01:06,031 [WARN] DbBoards:145 - board NUCLEO-F746ZG / document id not found: 3989
+2020-11-15 13:01:06,031 [WARN] DbBoards:145 - board NUCLEO-F746ZG / document id not found: 4166
+2020-11-15 13:01:06,031 [WARN] DbBoards:149 - board NUCLEO-F746ZG has no document !
+2020-11-15 13:01:06,031 [WARN] DbBoards:145 - board NUCLEO-F767ZI / document id not found: 3602
+2020-11-15 13:01:06,032 [WARN] DbBoards:145 - board NUCLEO-F767ZI / document id not found: 3989
+2020-11-15 13:01:06,032 [WARN] DbBoards:145 - board NUCLEO-F767ZI / document id not found: 4166
+2020-11-15 13:01:06,032 [WARN] DbBoards:149 - board NUCLEO-F767ZI has no document !
+2020-11-15 13:01:06,032 [WARN] DbBoards:145 - board NUCLEO-F412ZG / document id not found: 3602
+2020-11-15 13:01:06,032 [WARN] DbBoards:145 - board NUCLEO-F412ZG / document id not found: 3989
+2020-11-15 13:01:06,032 [WARN] DbBoards:145 - board NUCLEO-F412ZG / document id not found: 4166
+2020-11-15 13:01:06,032 [WARN] DbBoards:149 - board NUCLEO-F412ZG has no document !
+2020-11-15 13:01:06,033 [WARN] DbBoards:145 - board NUCLEO-F413ZH / document id not found: 3602
+2020-11-15 13:01:06,033 [WARN] DbBoards:145 - board NUCLEO-F413ZH / document id not found: 3989
+2020-11-15 13:01:06,033 [WARN] DbBoards:145 - board NUCLEO-F413ZH / document id not found: 4166
+2020-11-15 13:01:06,033 [WARN] DbBoards:149 - board NUCLEO-F413ZH has no document !
+2020-11-15 13:01:06,033 [WARN] DbBoards:145 - board NUCLEO-L496ZG / document id not found: 3602
+2020-11-15 13:01:06,033 [WARN] DbBoards:145 - board NUCLEO-L496ZG / document id not found: 4165
+2020-11-15 13:01:06,033 [WARN] DbBoards:145 - board NUCLEO-L496ZG / document id not found: 4166
+2020-11-15 13:01:06,033 [WARN] DbBoards:149 - board NUCLEO-L496ZG has no document !
+2020-11-15 13:01:06,033 [WARN] DbBoards:145 - board NUCLEO-L496ZG-P / document id not found: 3602
+2020-11-15 13:01:06,033 [WARN] DbBoards:145 - board NUCLEO-L496ZG-P / document id not found: 4165
+2020-11-15 13:01:06,034 [WARN] DbBoards:145 - board NUCLEO-L496ZG-P / document id not found: 4166
+2020-11-15 13:01:06,034 [WARN] DbBoards:149 - board NUCLEO-L496ZG-P has no document !
+2020-11-15 13:01:06,034 [WARN] DbBoards:145 - board NUCLEO-L4R5ZI / document id not found: 3602
+2020-11-15 13:01:06,034 [WARN] DbBoards:145 - board NUCLEO-L4R5ZI / document id not found: 4165
+2020-11-15 13:01:06,034 [WARN] DbBoards:145 - board NUCLEO-L4R5ZI / document id not found: 4166
+2020-11-15 13:01:06,034 [WARN] DbBoards:149 - board NUCLEO-L4R5ZI has no document !
+2020-11-15 13:01:06,034 [WARN] DbBoards:145 - board NUCLEO-L4R5ZI-P / document id not found: 3602
+2020-11-15 13:01:06,034 [WARN] DbBoards:145 - board NUCLEO-L4R5ZI-P / document id not found: 4165
+2020-11-15 13:01:06,035 [WARN] DbBoards:145 - board NUCLEO-L4R5ZI-P / document id not found: 4166
+2020-11-15 13:01:06,035 [WARN] DbBoards:149 - board NUCLEO-L4R5ZI-P has no document !
+2020-11-15 13:01:06,035 [WARN] DbBoards:145 - board NUCLEO-F722ZE / document id not found: 3602
+2020-11-15 13:01:06,035 [WARN] DbBoards:145 - board NUCLEO-F722ZE / document id not found: 3989
+2020-11-15 13:01:06,035 [WARN] DbBoards:145 - board NUCLEO-F722ZE / document id not found: 4166
+2020-11-15 13:01:06,035 [WARN] DbBoards:149 - board NUCLEO-F722ZE has no document !
+2020-11-15 13:01:06,035 [WARN] DbBoards:145 - board NUCLEO-H743ZI / document id not found: 3602
+2020-11-15 13:01:06,035 [WARN] DbBoards:145 - board NUCLEO-H743ZI / document id not found: 3989
+2020-11-15 13:01:06,035 [WARN] DbBoards:145 - board NUCLEO-H743ZI / document id not found: 4166
+2020-11-15 13:01:06,035 [WARN] DbBoards:145 - board NUCLEO-H743ZI / document id not found: 4418
+2020-11-15 13:01:06,036 [WARN] DbBoards:149 - board NUCLEO-H743ZI has no document !
+2020-11-15 13:01:06,036 [WARN] DbBoards:130 - board NUCLEO-H743ZI2 has no document id list !
+2020-11-15 13:01:06,036 [WARN] DbBoards:145 - board NUCLEO-H753ZI / document id not found: 4166
+2020-11-15 13:01:06,036 [WARN] DbBoards:145 - board NUCLEO-H753ZI / document id not found: 4418
+2020-11-15 13:01:06,036 [WARN] DbBoards:149 - board NUCLEO-H753ZI has no document !
+2020-11-15 13:01:06,036 [WARN] DbBoards:145 - board NUCLEO-H745ZI-Q / document id not found: 4166
+2020-11-15 13:01:06,036 [WARN] DbBoards:145 - board NUCLEO-H745ZI-Q / document id not found: 4419
+2020-11-15 13:01:06,036 [WARN] DbBoards:149 - board NUCLEO-H745ZI-Q has no document !
+2020-11-15 13:01:06,037 [WARN] DbBoards:145 - board NUCLEO-H755ZI-Q / document id not found: 4166
+2020-11-15 13:01:06,037 [WARN] DbBoards:145 - board NUCLEO-H755ZI-Q / document id not found: 4419
+2020-11-15 13:01:06,037 [WARN] DbBoards:149 - board NUCLEO-H755ZI-Q has no document !
+2020-11-15 13:01:06,037 [WARN] DbBoards:145 - board NUCLEO-F042K6 / document id not found: 3602
+2020-11-15 13:01:06,037 [WARN] DbBoards:145 - board NUCLEO-F042K6 / document id not found: 3902
+2020-11-15 13:01:06,037 [WARN] DbBoards:145 - board NUCLEO-F042K6 / document id not found: 3972
+2020-11-15 13:01:06,037 [WARN] DbBoards:149 - board NUCLEO-F042K6 has no document !
+2020-11-15 13:01:06,037 [WARN] DbBoards:145 - board NUCLEO-F031K6 / document id not found: 3602
+2020-11-15 13:01:06,038 [WARN] DbBoards:145 - board NUCLEO-F031K6 / document id not found: 3902
+2020-11-15 13:01:06,038 [WARN] DbBoards:145 - board NUCLEO-F031K6 / document id not found: 3972
+2020-11-15 13:01:06,038 [WARN] DbBoards:149 - board NUCLEO-F031K6 has no document !
+2020-11-15 13:01:06,038 [WARN] DbBoards:145 - board NUCLEO-F303K8 / document id not found: 3602
+2020-11-15 13:01:06,038 [WARN] DbBoards:145 - board NUCLEO-F303K8 / document id not found: 3902
+2020-11-15 13:01:06,038 [WARN] DbBoards:145 - board NUCLEO-F303K8 / document id not found: 3972
+2020-11-15 13:01:06,038 [WARN] DbBoards:149 - board NUCLEO-F303K8 has no document !
+2020-11-15 13:01:06,038 [WARN] DbBoards:145 - board NUCLEO-L031K6 / document id not found: 3602
+2020-11-15 13:01:06,038 [WARN] DbBoards:145 - board NUCLEO-L031K6 / document id not found: 3902
+2020-11-15 13:01:06,038 [WARN] DbBoards:145 - board NUCLEO-L031K6 / document id not found: 3972
+2020-11-15 13:01:06,039 [WARN] DbBoards:149 - board NUCLEO-L031K6 has no document !
+2020-11-15 13:01:06,039 [WARN] DbBoards:145 - board NUCLEO-L011K4 / document id not found: 3602
+2020-11-15 13:01:06,039 [WARN] DbBoards:145 - board NUCLEO-L011K4 / document id not found: 3902
+2020-11-15 13:01:06,039 [WARN] DbBoards:145 - board NUCLEO-L011K4 / document id not found: 3972
+2020-11-15 13:01:06,039 [WARN] DbBoards:149 - board NUCLEO-L011K4 has no document !
+2020-11-15 13:01:06,039 [WARN] DbBoards:145 - board NUCLEO-L432KC / document id not found: 3602
+2020-11-15 13:01:06,039 [WARN] DbBoards:145 - board NUCLEO-L432KC / document id not found: 3902
+2020-11-15 13:01:06,039 [WARN] DbBoards:145 - board NUCLEO-L432KC / document id not found: 3972
+2020-11-15 13:01:06,039 [WARN] DbBoards:149 - board NUCLEO-L432KC has no document !
+2020-11-15 13:01:06,039 [WARN] DbBoards:145 - board NUCLEO-L412KB / document id not found: 3602
+2020-11-15 13:01:06,040 [WARN] DbBoards:145 - board NUCLEO-L412KB / document id not found: 3902
+2020-11-15 13:01:06,040 [WARN] DbBoards:145 - board NUCLEO-L412KB / document id not found: 3972
+2020-11-15 13:01:06,040 [WARN] DbBoards:149 - board NUCLEO-L412KB has no document !
+2020-11-15 13:01:06,040 [WARN] DbBoards:145 - board NUCLEO-G431KB / document id not found: 3902
+2020-11-15 13:01:06,040 [WARN] DbBoards:145 - board NUCLEO-G431KB / document id not found: 4457
+2020-11-15 13:01:06,040 [WARN] DbBoards:149 - board NUCLEO-G431KB has no document !
+2020-11-15 13:01:06,040 [WARN] DbBoards:145 - board NUCLEO-G031K8 / document id not found: 3902
+2020-11-15 13:01:06,040 [WARN] DbBoards:145 - board NUCLEO-G031K8 / document id not found: 4478
+2020-11-15 13:01:06,040 [WARN] DbBoards:149 - board NUCLEO-G031K8 has no document !
+2020-11-15 13:01:06,040 [WARN] DbBoards:145 - board NUCLEO-F030R8 / document id not found: 3598
+2020-11-15 13:01:06,041 [WARN] DbBoards:145 - board NUCLEO-F030R8 / document id not found: 3600
+2020-11-15 13:01:06,041 [WARN] DbBoards:145 - board NUCLEO-F030R8 / document id not found: 3602
+2020-11-15 13:01:06,041 [WARN] DbBoards:149 - board NUCLEO-F030R8 has no document !
+2020-11-15 13:01:06,041 [WARN] DbBoards:145 - board NUCLEO-F070RB / document id not found: 3598
+2020-11-15 13:01:06,041 [WARN] DbBoards:145 - board NUCLEO-F070RB / document id not found: 3600
+2020-11-15 13:01:06,041 [WARN] DbBoards:145 - board NUCLEO-F070RB / document id not found: 3602
+2020-11-15 13:01:06,041 [WARN] DbBoards:149 - board NUCLEO-F070RB has no document !
+2020-11-15 13:01:06,041 [WARN] DbBoards:145 - board NUCLEO-F072RB / document id not found: 3598
+2020-11-15 13:01:06,041 [WARN] DbBoards:145 - board NUCLEO-F072RB / document id not found: 3600
+2020-11-15 13:01:06,041 [WARN] DbBoards:145 - board NUCLEO-F072RB / document id not found: 3602
+2020-11-15 13:01:06,041 [WARN] DbBoards:149 - board NUCLEO-F072RB has no document !
+2020-11-15 13:01:06,041 [WARN] DbBoards:145 - board NUCLEO-F091RC / document id not found: 3598
+2020-11-15 13:01:06,042 [WARN] DbBoards:145 - board NUCLEO-F091RC / document id not found: 3600
+2020-11-15 13:01:06,042 [WARN] DbBoards:145 - board NUCLEO-F091RC / document id not found: 3602
+2020-11-15 13:01:06,042 [WARN] DbBoards:149 - board NUCLEO-F091RC has no document !
+2020-11-15 13:01:06,042 [WARN] DbBoards:145 - board NUCLEO-F103RB / document id not found: 3598
+2020-11-15 13:01:06,042 [WARN] DbBoards:145 - board NUCLEO-F103RB / document id not found: 3600
+2020-11-15 13:01:06,042 [WARN] DbBoards:145 - board NUCLEO-F103RB / document id not found: 3602
+2020-11-15 13:01:06,042 [WARN] DbBoards:149 - board NUCLEO-F103RB has no document !
+2020-11-15 13:01:06,042 [WARN] DbBoards:145 - board NUCLEO-F302R8 / document id not found: 3598
+2020-11-15 13:01:06,042 [WARN] DbBoards:145 - board NUCLEO-F302R8 / document id not found: 3600
+2020-11-15 13:01:06,042 [WARN] DbBoards:145 - board NUCLEO-F302R8 / document id not found: 3602
+2020-11-15 13:01:06,042 [WARN] DbBoards:149 - board NUCLEO-F302R8 has no document !
+2020-11-15 13:01:06,042 [WARN] DbBoards:145 - board NUCLEO-F303RE / document id not found: 3598
+2020-11-15 13:01:06,042 [WARN] DbBoards:145 - board NUCLEO-F303RE / document id not found: 3600
+2020-11-15 13:01:06,043 [WARN] DbBoards:145 - board NUCLEO-F303RE / document id not found: 3602
+2020-11-15 13:01:06,043 [WARN] DbBoards:149 - board NUCLEO-F303RE has no document !
+2020-11-15 13:01:06,043 [WARN] DbBoards:145 - board NUCLEO-F334R8 / document id not found: 3598
+2020-11-15 13:01:06,043 [WARN] DbBoards:145 - board NUCLEO-F334R8 / document id not found: 3600
+2020-11-15 13:01:06,043 [WARN] DbBoards:145 - board NUCLEO-F334R8 / document id not found: 3602
+2020-11-15 13:01:06,043 [WARN] DbBoards:149 - board NUCLEO-F334R8 has no document !
+2020-11-15 13:01:06,043 [WARN] DbBoards:145 - board NUCLEO-F401RE / document id not found: 3598
+2020-11-15 13:01:06,043 [WARN] DbBoards:145 - board NUCLEO-F401RE / document id not found: 3600
+2020-11-15 13:01:06,043 [WARN] DbBoards:145 - board NUCLEO-F401RE / document id not found: 3602
+2020-11-15 13:01:06,043 [WARN] DbBoards:149 - board NUCLEO-F401RE has no document !
+2020-11-15 13:01:06,043 [WARN] DbBoards:145 - board NUCLEO-F411RE / document id not found: 3598
+2020-11-15 13:01:06,043 [WARN] DbBoards:145 - board NUCLEO-F411RE / document id not found: 3600
+2020-11-15 13:01:06,044 [WARN] DbBoards:145 - board NUCLEO-F411RE / document id not found: 3602
+2020-11-15 13:01:06,044 [WARN] DbBoards:149 - board NUCLEO-F411RE has no document !
+2020-11-15 13:01:06,044 [WARN] DbBoards:145 - board NUCLEO-L053R8 / document id not found: 3598
+2020-11-15 13:01:06,044 [WARN] DbBoards:145 - board NUCLEO-L053R8 / document id not found: 3600
+2020-11-15 13:01:06,044 [WARN] DbBoards:145 - board NUCLEO-L053R8 / document id not found: 3602
+2020-11-15 13:01:06,044 [WARN] DbBoards:149 - board NUCLEO-L053R8 has no document !
+2020-11-15 13:01:06,044 [WARN] DbBoards:145 - board NUCLEO-L152RE / document id not found: 3598
+2020-11-15 13:01:06,044 [WARN] DbBoards:145 - board NUCLEO-L152RE / document id not found: 3600
+2020-11-15 13:01:06,044 [WARN] DbBoards:145 - board NUCLEO-L152RE / document id not found: 3602
+2020-11-15 13:01:06,044 [WARN] DbBoards:149 - board NUCLEO-L152RE has no document !
+2020-11-15 13:01:06,044 [WARN] DbBoards:145 - board NUCLEO-F446RE / document id not found: 3598
+2020-11-15 13:01:06,044 [WARN] DbBoards:145 - board NUCLEO-F446RE / document id not found: 3600
+2020-11-15 13:01:06,045 [WARN] DbBoards:145 - board NUCLEO-F446RE / document id not found: 3602
+2020-11-15 13:01:06,045 [WARN] DbBoards:149 - board NUCLEO-F446RE has no document !
+2020-11-15 13:01:06,045 [WARN] DbBoards:145 - board NUCLEO-L476RG / document id not found: 3598
+2020-11-15 13:01:06,045 [WARN] DbBoards:145 - board NUCLEO-L476RG / document id not found: 3600
+2020-11-15 13:01:06,045 [WARN] DbBoards:145 - board NUCLEO-L476RG / document id not found: 3602
+2020-11-15 13:01:06,045 [WARN] DbBoards:149 - board NUCLEO-L476RG has no document !
+2020-11-15 13:01:06,045 [WARN] DbBoards:145 - board NUCLEO-F410RB / document id not found: 3598
+2020-11-15 13:01:06,045 [WARN] DbBoards:145 - board NUCLEO-F410RB / document id not found: 3600
+2020-11-15 13:01:06,045 [WARN] DbBoards:145 - board NUCLEO-F410RB / document id not found: 3602
+2020-11-15 13:01:06,045 [WARN] DbBoards:149 - board NUCLEO-F410RB has no document !
+2020-11-15 13:01:06,045 [WARN] DbBoards:145 - board NUCLEO-L073RZ / document id not found: 3598
+2020-11-15 13:01:06,045 [WARN] DbBoards:145 - board NUCLEO-L073RZ / document id not found: 3600
+2020-11-15 13:01:06,046 [WARN] DbBoards:145 - board NUCLEO-L073RZ / document id not found: 3602
+2020-11-15 13:01:06,046 [WARN] DbBoards:149 - board NUCLEO-L073RZ has no document !
+2020-11-15 13:01:06,046 [WARN] DbBoards:145 - board NUCLEO-L010RB / document id not found: 3598
+2020-11-15 13:01:06,046 [WARN] DbBoards:145 - board NUCLEO-L010RB / document id not found: 3600
+2020-11-15 13:01:06,046 [WARN] DbBoards:145 - board NUCLEO-L010RB / document id not found: 3602
+2020-11-15 13:01:06,046 [WARN] DbBoards:149 - board NUCLEO-L010RB has no document !
+2020-11-15 13:01:06,046 [WARN] DbBoards:145 - board NUCLEO-L452RE / document id not found: 3598
+2020-11-15 13:01:06,046 [WARN] DbBoards:145 - board NUCLEO-L452RE / document id not found: 3600
+2020-11-15 13:01:06,046 [WARN] DbBoards:145 - board NUCLEO-L452RE / document id not found: 3602
+2020-11-15 13:01:06,046 [WARN] DbBoards:149 - board NUCLEO-L452RE has no document !
+2020-11-15 13:01:06,046 [WARN] DbBoards:145 - board NUCLEO-L452RE-P / document id not found: 3600
+2020-11-15 13:01:06,046 [WARN] DbBoards:145 - board NUCLEO-L452RE-P / document id not found: 3602
+2020-11-15 13:01:06,046 [WARN] DbBoards:145 - board NUCLEO-L452RE-P / document id not found: 4216
+2020-11-15 13:01:06,047 [WARN] DbBoards:149 - board NUCLEO-L452RE-P has no document !
+2020-11-15 13:01:06,047 [WARN] DbBoards:145 - board NUCLEO-L433RC-P / document id not found: 3600
+2020-11-15 13:01:06,047 [WARN] DbBoards:145 - board NUCLEO-L433RC-P / document id not found: 3602
+2020-11-15 13:01:06,047 [WARN] DbBoards:145 - board NUCLEO-L433RC-P / document id not found: 4216
+2020-11-15 13:01:06,047 [WARN] DbBoards:149 - board NUCLEO-L433RC-P has no document !
+2020-11-15 13:01:06,047 [WARN] DbBoards:145 - board NUCLEO-L412RB-P / document id not found: 3600
+2020-11-15 13:01:06,047 [WARN] DbBoards:145 - board NUCLEO-L412RB-P / document id not found: 3602
+2020-11-15 13:01:06,047 [WARN] DbBoards:145 - board NUCLEO-L412RB-P / document id not found: 4216
+2020-11-15 13:01:06,047 [WARN] DbBoards:149 - board NUCLEO-L412RB-P has no document !
+2020-11-15 13:01:06,047 [WARN] DbBoards:145 - board NUCLEO-G071RB / document id not found: 3600
+2020-11-15 13:01:06,047 [WARN] DbBoards:145 - board NUCLEO-G071RB / document id not found: 3602
+2020-11-15 13:01:06,047 [WARN] DbBoards:145 - board NUCLEO-G071RB / document id not found: 4338
+2020-11-15 13:01:06,048 [WARN] DbBoards:149 - board NUCLEO-G071RB has no document !
+2020-11-15 13:01:06,048 [WARN] DbBoards:145 - board NUCLEO-G070RB / document id not found: 3600
+2020-11-15 13:01:06,048 [WARN] DbBoards:145 - board NUCLEO-G070RB / document id not found: 3602
+2020-11-15 13:01:06,048 [WARN] DbBoards:145 - board NUCLEO-G070RB / document id not found: 4338
+2020-11-15 13:01:06,048 [WARN] DbBoards:149 - board NUCLEO-G070RB has no document !
+2020-11-15 13:01:06,048 [WARN] DbBoards:130 - board P-NUCLEO-WB55-Nucleo has no document id list !
+2020-11-15 13:01:06,048 [WARN] DbBoards:130 - board P-NUCLEO-WB55-USBDongle has no document id list !
+2020-11-15 13:01:06,048 [WARN] DbBoards:145 - board NUCLEO-G431RB / document id not found: 3600
+2020-11-15 13:01:06,048 [WARN] DbBoards:145 - board NUCLEO-G431RB / document id not found: 4430
+2020-11-15 13:01:06,048 [WARN] DbBoards:149 - board NUCLEO-G431RB has no document !
+2020-11-15 13:01:06,048 [WARN] DbBoards:145 - board NUCLEO-G474RE / document id not found: 3600
+2020-11-15 13:01:06,048 [WARN] DbBoards:145 - board NUCLEO-G474RE / document id not found: 4430
+2020-11-15 13:01:06,049 [WARN] DbBoards:149 - board NUCLEO-G474RE has no document !
+2020-11-15 13:01:06,049 [WARN] DbBoards:145 - board P-NUCLEO-WB55 / document id not found: 4332
+2020-11-15 13:01:06,049 [WARN] DbBoards:145 - board P-NUCLEO-WB55 / document id not found: 4345
+2020-11-15 13:01:06,049 [WARN] DbBoards:149 - board P-NUCLEO-WB55 has no document !
+2020-11-15 13:01:06,049 [WARN] DbBoards:145 - board STM32F0DISCOVERY / document id not found: 3294
+2020-11-15 13:01:06,049 [WARN] DbBoards:145 - board STM32F0DISCOVERY / document id not found: 3400
+2020-11-15 13:01:06,049 [WARN] DbBoards:145 - board STM32F0DISCOVERY / document id not found: 3402
+2020-11-15 13:01:06,049 [WARN] DbBoards:145 - board STM32F0DISCOVERY / document id not found: 3405
+2020-11-15 13:01:06,049 [WARN] DbBoards:145 - board STM32F0DISCOVERY / document id not found: 3407
+2020-11-15 13:01:06,049 [WARN] DbBoards:145 - board STM32F0DISCOVERY / document id not found: 4079
+2020-11-15 13:01:06,049 [WARN] DbBoards:149 - board STM32F0DISCOVERY has no document !
+2020-11-15 13:01:06,049 [WARN] DbBoards:145 - board STM32F0308-DISCO / document id not found: 3522
+2020-11-15 13:01:06,050 [WARN] DbBoards:145 - board STM32F0308-DISCO / document id not found: 3523
+2020-11-15 13:01:06,050 [WARN] DbBoards:145 - board STM32F0308-DISCO / document id not found: 3550
+2020-11-15 13:01:06,050 [WARN] DbBoards:145 - board STM32F0308-DISCO / document id not found: 4079
+2020-11-15 13:01:06,050 [WARN] DbBoards:149 - board STM32F0308-DISCO has no document !
+2020-11-15 13:01:06,050 [WARN] DbBoards:145 - board STM32F072B-DISCO / document id not found: 3562
+2020-11-15 13:01:06,050 [WARN] DbBoards:145 - board STM32F072B-DISCO / document id not found: 3563
+2020-11-15 13:01:06,050 [WARN] DbBoards:145 - board STM32F072B-DISCO / document id not found: 3584
+2020-11-15 13:01:06,050 [WARN] DbBoards:145 - board STM32F072B-DISCO / document id not found: 4079
+2020-11-15 13:01:06,050 [WARN] DbBoards:149 - board STM32F072B-DISCO has no document !
+2020-11-15 13:01:06,050 [WARN] DbBoards:145 - board STM32F3DISCOVERY / document id not found: 3435
+2020-11-15 13:01:06,050 [WARN] DbBoards:145 - board STM32F3DISCOVERY / document id not found: 3445
+2020-11-15 13:01:06,050 [WARN] DbBoards:145 - board STM32F3DISCOVERY / document id not found: 3446
+2020-11-15 13:01:06,051 [WARN] DbBoards:145 - board STM32F3DISCOVERY / document id not found: 3448
+2020-11-15 13:01:06,051 [WARN] DbBoards:145 - board STM32F3DISCOVERY / document id not found: 4079
+2020-11-15 13:01:06,051 [WARN] DbBoards:149 - board STM32F3DISCOVERY has no document !
+2020-11-15 13:01:06,051 [WARN] DbBoards:145 - board STM32F3348-DISCO / document id not found: 3611
+2020-11-15 13:01:06,051 [WARN] DbBoards:145 - board STM32F3348-DISCO / document id not found: 3621
+2020-11-15 13:01:06,051 [WARN] DbBoards:145 - board STM32F3348-DISCO / document id not found: 3622
+2020-11-15 13:01:06,051 [WARN] DbBoards:145 - board STM32F3348-DISCO / document id not found: 3627
+2020-11-15 13:01:06,051 [WARN] DbBoards:145 - board STM32F3348-DISCO / document id not found: 3662
+2020-11-15 13:01:06,051 [WARN] DbBoards:145 - board STM32F3348-DISCO / document id not found: 3682
+2020-11-15 13:01:06,051 [WARN] DbBoards:145 - board STM32F3348-DISCO / document id not found: 4079
+2020-11-15 13:01:06,051 [WARN] DbBoards:149 - board STM32F3348-DISCO has no document !
+2020-11-15 13:01:06,051 [WARN] DbBoards:130 - board STM32F401C-DISCO has no document id list !
+2020-11-15 13:01:06,051 [WARN] DbBoards:145 - board STM32F411E-DISCO / document id not found: 3725
+2020-11-15 13:01:06,052 [WARN] DbBoards:145 - board STM32F411E-DISCO / document id not found: 3731
+2020-11-15 13:01:06,052 [WARN] DbBoards:145 - board STM32F411E-DISCO / document id not found: 3799
+2020-11-15 13:01:06,052 [WARN] DbBoards:145 - board STM32F411E-DISCO / document id not found: 4079
+2020-11-15 13:01:06,052 [WARN] DbBoards:149 - board STM32F411E-DISCO has no document !
+2020-11-15 13:01:06,052 [WARN] DbBoards:145 - board STM32F407G-DISC1 / document id not found: 3294
+2020-11-15 13:01:06,052 [WARN] DbBoards:145 - board STM32F407G-DISC1 / document id not found: 3350
+2020-11-15 13:01:06,052 [WARN] DbBoards:145 - board STM32F407G-DISC1 / document id not found: 3354
+2020-11-15 13:01:06,052 [WARN] DbBoards:145 - board STM32F407G-DISC1 / document id not found: 3360
+2020-11-15 13:01:06,052 [WARN] DbBoards:145 - board STM32F407G-DISC1 / document id not found: 3367
+2020-11-15 13:01:06,052 [WARN] DbBoards:145 - board STM32F407G-DISC1 / document id not found: 3368
+2020-11-15 13:01:06,052 [WARN] DbBoards:145 - board STM32F407G-DISC1 / document id not found: 4079
+2020-11-15 13:01:06,052 [WARN] DbBoards:149 - board STM32F407G-DISC1 has no document !
+2020-11-15 13:01:06,052 [WARN] DbBoards:145 - board STM32F429I-DISC1 / document id not found: 3360
+2020-11-15 13:01:06,053 [WARN] DbBoards:145 - board STM32F429I-DISC1 / document id not found: 3533
+2020-11-15 13:01:06,053 [WARN] DbBoards:145 - board STM32F429I-DISC1 / document id not found: 3540
+2020-11-15 13:01:06,053 [WARN] DbBoards:145 - board STM32F429I-DISC1 / document id not found: 3556
+2020-11-15 13:01:06,053 [WARN] DbBoards:145 - board STM32F429I-DISC1 / document id not found: 4079
+2020-11-15 13:01:06,053 [WARN] DbBoards:149 - board STM32F429I-DISC1 has no document !
+2020-11-15 13:01:06,053 [WARN] DbBoards:145 - board STM32F469I-DISCO / document id not found: 3907
+2020-11-15 13:01:06,053 [WARN] DbBoards:145 - board STM32F469I-DISCO / document id not found: 3908
+2020-11-15 13:01:06,053 [WARN] DbBoards:145 - board STM32F469I-DISCO / document id not found: 3976
+2020-11-15 13:01:06,053 [WARN] DbBoards:145 - board STM32F469I-DISCO / document id not found: 4079
+2020-11-15 13:01:06,053 [WARN] DbBoards:149 - board STM32F469I-DISCO has no document !
+2020-11-15 13:01:06,053 [WARN] DbBoards:145 - board STM32F746G-DISCO / document id not found: 3807
+2020-11-15 13:01:06,053 [WARN] DbBoards:145 - board STM32F746G-DISCO / document id not found: 3815
+2020-11-15 13:01:06,053 [WARN] DbBoards:145 - board STM32F746G-DISCO / document id not found: 3983
+2020-11-15 13:01:06,054 [WARN] DbBoards:145 - board STM32F746G-DISCO / document id not found: 4079
+2020-11-15 13:01:06,054 [WARN] DbBoards:149 - board STM32F746G-DISCO has no document !
+2020-11-15 13:01:06,054 [WARN] DbBoards:145 - board STM32F769I-DISCO / document id not found: 4053
+2020-11-15 13:01:06,054 [WARN] DbBoards:145 - board STM32F769I-DISCO / document id not found: 4061
+2020-11-15 13:01:06,054 [WARN] DbBoards:145 - board STM32F769I-DISCO / document id not found: 4079
+2020-11-15 13:01:06,054 [WARN] DbBoards:149 - board STM32F769I-DISCO has no document !
+2020-11-15 13:01:06,054 [WARN] DbBoards:130 - board STM32F769I-DISC1 has no document id list !
+2020-11-15 13:01:06,054 [WARN] DbBoards:145 - board STM32F723E-DISCO / document id not found: 4079
+2020-11-15 13:01:06,054 [WARN] DbBoards:145 - board STM32F723E-DISCO / document id not found: 4153
+2020-11-15 13:01:06,054 [WARN] DbBoards:145 - board STM32F723E-DISCO / document id not found: 4154
+2020-11-15 13:01:06,054 [WARN] DbBoards:145 - board STM32F723E-DISCO / document id not found: 4598
+2020-11-15 13:01:06,054 [WARN] DbBoards:149 - board STM32F723E-DISCO has no document !
+2020-11-15 13:01:06,054 [WARN] DbBoards:130 - board STM32F7308-DISCO has no document id list !
+2020-11-15 13:01:06,055 [WARN] DbBoards:145 - board STM32F7508-DK / document id not found: 4079
+2020-11-15 13:01:06,055 [WARN] DbBoards:145 - board STM32F7508-DK / document id not found: 4349
+2020-11-15 13:01:06,055 [WARN] DbBoards:145 - board STM32F7508-DK / document id not found: 4350
+2020-11-15 13:01:06,055 [WARN] DbBoards:149 - board STM32F7508-DK has no document !
+2020-11-15 13:01:06,055 [WARN] DbBoards:145 - board STM32L0538-DISCO / document id not found: 3671
+2020-11-15 13:01:06,055 [WARN] DbBoards:145 - board STM32L0538-DISCO / document id not found: 3681
+2020-11-15 13:01:06,055 [WARN] DbBoards:145 - board STM32L0538-DISCO / document id not found: 3696
+2020-11-15 13:01:06,055 [WARN] DbBoards:145 - board STM32L0538-DISCO / document id not found: 3697
+2020-11-15 13:01:06,055 [WARN] DbBoards:145 - board STM32L0538-DISCO / document id not found: 4079
+2020-11-15 13:01:06,055 [WARN] DbBoards:149 - board STM32L0538-DISCO has no document !
+2020-11-15 13:01:06,055 [WARN] DbBoards:145 - board STM32L100C-DISCO / document id not found: 3520
+2020-11-15 13:01:06,055 [WARN] DbBoards:145 - board STM32L100C-DISCO / document id not found: 3521
+2020-11-15 13:01:06,056 [WARN] DbBoards:145 - board STM32L100C-DISCO / document id not found: 4079
+2020-11-15 13:01:06,056 [WARN] DbBoards:149 - board STM32L100C-DISCO has no document !
+2020-11-15 13:01:06,056 [WARN] DbBoards:130 - board STM32L-DISCOVERY has no document id list !
+2020-11-15 13:01:06,056 [WARN] DbBoards:145 - board STM32L152C-DISCO / document id not found: 3307
+2020-11-15 13:01:06,056 [WARN] DbBoards:145 - board STM32L152C-DISCO / document id not found: 3309
+2020-11-15 13:01:06,056 [WARN] DbBoards:145 - board STM32L152C-DISCO / document id not found: 3333
+2020-11-15 13:01:06,056 [WARN] DbBoards:145 - board STM32L152C-DISCO / document id not found: 4079
+2020-11-15 13:01:06,056 [WARN] DbBoards:149 - board STM32L152C-DISCO has no document !
+2020-11-15 13:01:06,056 [WARN] DbBoards:145 - board STM32L476G-DISCO / document id not found: 3827
+2020-11-15 13:01:06,056 [WARN] DbBoards:145 - board STM32L476G-DISCO / document id not found: 3828
+2020-11-15 13:01:06,056 [WARN] DbBoards:145 - board STM32L476G-DISCO / document id not found: 3847
+2020-11-15 13:01:06,056 [WARN] DbBoards:145 - board STM32L476G-DISCO / document id not found: 4079
+2020-11-15 13:01:06,057 [WARN] DbBoards:149 - board STM32L476G-DISCO has no document !
+2020-11-15 13:01:06,057 [WARN] DbBoards:145 - board STM32F412G-DISCO / document id not found: 4079
+2020-11-15 13:01:06,057 [WARN] DbBoards:145 - board STM32F412G-DISCO / document id not found: 4107
+2020-11-15 13:01:06,057 [WARN] DbBoards:145 - board STM32F412G-DISCO / document id not found: 4108
+2020-11-15 13:01:06,057 [WARN] DbBoards:149 - board STM32F412G-DISCO has no document !
+2020-11-15 13:01:06,057 [WARN] DbBoards:145 - board STM32F413H-DISCO / document id not found: 4079
+2020-11-15 13:01:06,057 [WARN] DbBoards:145 - board STM32F413H-DISCO / document id not found: 4147
+2020-11-15 13:01:06,057 [WARN] DbBoards:145 - board STM32F413H-DISCO / document id not found: 4192
+2020-11-15 13:01:06,057 [WARN] DbBoards:149 - board STM32F413H-DISCO has no document !
+2020-11-15 13:01:06,057 [WARN] DbBoards:145 - board STM32VLDISCOVERY / document id not found: 3149
+2020-11-15 13:01:06,057 [WARN] DbBoards:145 - board STM32VLDISCOVERY / document id not found: 3165
+2020-11-15 13:01:06,057 [WARN] DbBoards:145 - board STM32VLDISCOVERY / document id not found: 3197
+2020-11-15 13:01:06,057 [WARN] DbBoards:145 - board STM32VLDISCOVERY / document id not found: 3199
+2020-11-15 13:01:06,058 [WARN] DbBoards:145 - board STM32VLDISCOVERY / document id not found: 3200
+2020-11-15 13:01:06,058 [WARN] DbBoards:145 - board STM32VLDISCOVERY / document id not found: 4079
+2020-11-15 13:01:06,058 [WARN] DbBoards:149 - board STM32VLDISCOVERY has no document !
+2020-11-15 13:01:06,058 [WARN] DbBoards:145 - board STM32L496G-DISCO / document id not found: 4079
+2020-11-15 13:01:06,058 [WARN] DbBoards:145 - board STM32L496G-DISCO / document id not found: 4155
+2020-11-15 13:01:06,058 [WARN] DbBoards:145 - board STM32L496G-DISCO / document id not found: 4156
+2020-11-15 13:01:06,058 [WARN] DbBoards:145 - board STM32L496G-DISCO / document id not found: 4598
+2020-11-15 13:01:06,058 [WARN] DbBoards:149 - board STM32L496G-DISCO has no document !
+2020-11-15 13:01:06,058 [WARN] DbBoards:145 - board B-L475E-IOT01A1 / document id not found: 4079
+2020-11-15 13:01:06,058 [WARN] DbBoards:145 - board B-L475E-IOT01A1 / document id not found: 4160
+2020-11-15 13:01:06,058 [WARN] DbBoards:145 - board B-L475E-IOT01A1 / document id not found: 4200
+2020-11-15 13:01:06,059 [WARN] DbBoards:149 - board B-L475E-IOT01A1 has no document !
+2020-11-15 13:01:06,059 [WARN] DbBoards:145 - board STM32G071B-DISCO / document id not found: 4079
+2020-11-15 13:01:06,059 [WARN] DbBoards:145 - board STM32G071B-DISCO / document id not found: 4389
+2020-11-15 13:01:06,059 [WARN] DbBoards:145 - board STM32G071B-DISCO / document id not found: 4393
+2020-11-15 13:01:06,059 [WARN] DbBoards:145 - board STM32G071B-DISCO / document id not found: 4441
+2020-11-15 13:01:06,059 [WARN] DbBoards:149 - board STM32G071B-DISCO has no document !
+2020-11-15 13:01:06,059 [WARN] DbBoards:145 - board STM32G0316-DISCO / document id not found: 4486
+2020-11-15 13:01:06,072 [WARN] DbBoards:145 - board STM32G0316-DISCO / document id not found: 4487
+2020-11-15 13:01:06,073 [WARN] DbBoards:149 - board STM32G0316-DISCO has no document !
+2020-11-15 13:01:06,073 [WARN] DbBoards:145 - board STM32H747I-DISCO / document id not found: 4364
+2020-11-15 13:01:06,073 [WARN] DbBoards:145 - board STM32H747I-DISCO / document id not found: 4365
+2020-11-15 13:01:06,074 [WARN] DbBoards:145 - board STM32H747I-DISCO / document id not found: 4598
+2020-11-15 13:01:06,074 [WARN] DbBoards:149 - board STM32H747I-DISCO has no document !
+2020-11-15 13:01:06,074 [WARN] DbBoards:130 - board STM32H747I-DISC1 has no document id list !
+2020-11-15 13:01:06,074 [WARN] DbBoards:145 - board STM32H745I-DISCO / document id not found: 4395
+2020-11-15 13:01:06,074 [WARN] DbBoards:145 - board STM32H745I-DISCO / document id not found: 4396
+2020-11-15 13:01:06,074 [WARN] DbBoards:145 - board STM32H745I-DISCO / document id not found: 4598
+2020-11-15 13:01:06,074 [WARN] DbBoards:149 - board STM32H745I-DISCO has no document !
+2020-11-15 13:01:06,074 [WARN] DbBoards:145 - board STM32H750B-DK / document id not found: 4395
+2020-11-15 13:01:06,074 [WARN] DbBoards:145 - board STM32H750B-DK / document id not found: 4396
+2020-11-15 13:01:06,074 [WARN] DbBoards:145 - board STM32H750B-DK / document id not found: 4598
+2020-11-15 13:01:06,075 [WARN] DbBoards:149 - board STM32H750B-DK has no document !
+2020-11-15 13:01:06,075 [WARN] DbBoards:145 - board STM32L4R9I-DISCO / document id not found: 4079
+2020-11-15 13:01:06,075 [WARN] DbBoards:145 - board STM32L4R9I-DISCO / document id not found: 4208
+2020-11-15 13:01:06,075 [WARN] DbBoards:145 - board STM32L4R9I-DISCO / document id not found: 4244
+2020-11-15 13:01:06,075 [WARN] DbBoards:145 - board STM32L4R9I-DISCO / document id not found: 4598
+2020-11-15 13:01:06,075 [WARN] DbBoards:149 - board STM32L4R9I-DISCO has no document !
+2020-11-15 13:01:06,075 [WARN] DbBoards:145 - board B-L072Z-LRWAN1 / document id not found: 4079
+2020-11-15 13:01:06,075 [WARN] DbBoards:145 - board B-L072Z-LRWAN1 / document id not found: 4157
+2020-11-15 13:01:06,075 [WARN] DbBoards:145 - board B-L072Z-LRWAN1 / document id not found: 4158
+2020-11-15 13:01:06,076 [WARN] DbBoards:145 - board B-L072Z-LRWAN1 / document id not found: 4159
+2020-11-15 13:01:06,076 [WARN] DbBoards:149 - board B-L072Z-LRWAN1 has no document !
+2020-11-15 13:01:06,076 [WARN] DbBoards:145 - board STM32MP157C-DK2 / document id not found: 4400
+2020-11-15 13:01:06,076 [WARN] DbBoards:145 - board STM32MP157C-DK2 / document id not found: 4436
+2020-11-15 13:01:06,076 [WARN] DbBoards:149 - board STM32MP157C-DK2 has no document !
+2020-11-15 13:01:06,076 [WARN] DbBoards:145 - board STM32072B-EVAL / document id not found: 3578
+2020-11-15 13:01:06,076 [WARN] DbBoards:145 - board STM32072B-EVAL / document id not found: 3579
+2020-11-15 13:01:06,077 [WARN] DbBoards:149 - board STM32072B-EVAL has no document !
+2020-11-15 13:01:06,077 [WARN] DbBoards:145 - board STM32091C-EVAL / document id not found: 3706
+2020-11-15 13:01:06,077 [WARN] DbBoards:145 - board STM32091C-EVAL / document id not found: 3715
+2020-11-15 13:01:06,077 [WARN] DbBoards:149 - board STM32091C-EVAL has no document !
+2020-11-15 13:01:06,077 [WARN] DbBoards:145 - board STM3210C-EVAL / document id not found: 3049
+2020-11-15 13:01:06,077 [WARN] DbBoards:145 - board STM3210C-EVAL / document id not found: 3182
+2020-11-15 13:01:06,077 [WARN] DbBoards:149 - board STM3210C-EVAL has no document !
+2020-11-15 13:01:06,077 [WARN] DbBoards:145 - board STM3210E-EVAL / document id not found: 2997
+2020-11-15 13:01:06,077 [WARN] DbBoards:145 - board STM3210E-EVAL / document id not found: 3028
+2020-11-15 13:01:06,077 [WARN] DbBoards:145 - board STM3210E-EVAL / document id not found: 3105
+2020-11-15 13:01:06,077 [WARN] DbBoards:145 - board STM3210E-EVAL / document id not found: 3173
+2020-11-15 13:01:06,077 [WARN] DbBoards:149 - board STM3210E-EVAL has no document !
+2020-11-15 13:01:06,077 [WARN] DbBoards:145 - board STM32100E-EVAL / document id not found: 3268
+2020-11-15 13:01:06,078 [WARN] DbBoards:145 - board STM32100E-EVAL / document id not found: 3274
+2020-11-15 13:01:06,078 [WARN] DbBoards:149 - board STM32100E-EVAL has no document !
+2020-11-15 13:01:06,078 [WARN] DbBoards:145 - board STM3220G-EVAL / document id not found: 3275
+2020-11-15 13:01:06,078 [WARN] DbBoards:145 - board STM3220G-EVAL / document id not found: 3276
+2020-11-15 13:01:06,078 [WARN] DbBoards:149 - board STM3220G-EVAL has no document !
+2020-11-15 13:01:06,078 [WARN] DbBoards:145 - board STM3221G-EVAL / document id not found: 3286
+2020-11-15 13:01:06,078 [WARN] DbBoards:145 - board STM3221G-EVAL / document id not found: 3298
+2020-11-15 13:01:06,078 [WARN] DbBoards:149 - board STM3221G-EVAL has no document !
+2020-11-15 13:01:06,078 [WARN] DbBoards:145 - board STM32303C-EVAL / document id not found: 3440
+2020-11-15 13:01:06,078 [WARN] DbBoards:145 - board STM32303C-EVAL / document id not found: 3441
+2020-11-15 13:01:06,078 [WARN] DbBoards:149 - board STM32303C-EVAL has no document !
+2020-11-15 13:01:06,078 [WARN] DbBoards:145 - board STM32303E-EVAL / document id not found: 3703
+2020-11-15 13:01:06,078 [WARN] DbBoards:145 - board STM32303E-EVAL / document id not found: 3705
+2020-11-15 13:01:06,078 [WARN] DbBoards:149 - board STM32303E-EVAL has no document !
+2020-11-15 13:01:06,079 [WARN] DbBoards:145 - board STM32373C-EVAL / document id not found: 3437
+2020-11-15 13:01:06,079 [WARN] DbBoards:145 - board STM32373C-EVAL / document id not found: 3447
+2020-11-15 13:01:06,079 [WARN] DbBoards:149 - board STM32373C-EVAL has no document !
+2020-11-15 13:01:06,079 [WARN] DbBoards:145 - board STM3240G-EVAL / document id not found: 3344
+2020-11-15 13:01:06,079 [WARN] DbBoards:145 - board STM3240G-EVAL / document id not found: 3351
+2020-11-15 13:01:06,079 [WARN] DbBoards:149 - board STM3240G-EVAL has no document !
+2020-11-15 13:01:06,079 [WARN] DbBoards:145 - board STM3241G-EVAL / document id not found: 3343
+2020-11-15 13:01:06,079 [WARN] DbBoards:145 - board STM3241G-EVAL / document id not found: 3352
+2020-11-15 13:01:06,079 [WARN] DbBoards:149 - board STM3241G-EVAL has no document !
+2020-11-15 13:01:06,079 [WARN] DbBoards:145 - board STM32429I-EVAL1 / document id not found: 3530
+2020-11-15 13:01:06,079 [WARN] DbBoards:145 - board STM32429I-EVAL1 / document id not found: 3541
+2020-11-15 13:01:06,079 [WARN] DbBoards:149 - board STM32429I-EVAL1 has no document !
+2020-11-15 13:01:06,079 [WARN] DbBoards:145 - board STM32439I-EVAL2 / document id not found: 3531
+2020-11-15 13:01:06,079 [WARN] DbBoards:145 - board STM32439I-EVAL2 / document id not found: 3542
+2020-11-15 13:01:06,080 [WARN] DbBoards:149 - board STM32439I-EVAL2 has no document !
+2020-11-15 13:01:06,080 [WARN] DbBoards:145 - board STM32L152D-EVAL / document id not found: 3392
+2020-11-15 13:01:06,080 [WARN] DbBoards:145 - board STM32L152D-EVAL / document id not found: 3396
+2020-11-15 13:01:06,080 [WARN] DbBoards:149 - board STM32L152D-EVAL has no document !
+2020-11-15 13:01:06,080 [WARN] DbBoards:145 - board STM32446E-EVAL / document id not found: 3767
+2020-11-15 13:01:06,080 [WARN] DbBoards:145 - board STM32446E-EVAL / document id not found: 3772
+2020-11-15 13:01:06,080 [WARN] DbBoards:149 - board STM32446E-EVAL has no document !
+2020-11-15 13:01:06,080 [WARN] DbBoards:145 - board STM32746G-EVAL2 / document id not found: 3777
+2020-11-15 13:01:06,080 [WARN] DbBoards:145 - board STM32746G-EVAL2 / document id not found: 3810
+2020-11-15 13:01:06,080 [WARN] DbBoards:149 - board STM32746G-EVAL2 has no document !
+2020-11-15 13:01:06,080 [WARN] DbBoards:145 - board STM32756G-EVAL2 / document id not found: 3776
+2020-11-15 13:01:06,080 [WARN] DbBoards:145 - board STM32756G-EVAL2 / document id not found: 3811
+2020-11-15 13:01:06,080 [WARN] DbBoards:149 - board STM32756G-EVAL2 has no document !
+2020-11-15 13:01:06,081 [WARN] DbBoards:145 - board STM32F769I-EVAL / document id not found: 4054
+2020-11-15 13:01:06,081 [WARN] DbBoards:145 - board STM32F769I-EVAL / document id not found: 4070
+2020-11-15 13:01:06,081 [WARN] DbBoards:149 - board STM32F769I-EVAL has no document !
+2020-11-15 13:01:06,081 [WARN] DbBoards:145 - board STM32F779I-EVAL / document id not found: 4055
+2020-11-15 13:01:06,081 [WARN] DbBoards:145 - board STM32F779I-EVAL / document id not found: 4062
+2020-11-15 13:01:06,081 [WARN] DbBoards:149 - board STM32F779I-EVAL has no document !
+2020-11-15 13:01:06,081 [WARN] DbBoards:145 - board STM32L476G-EVAL / document id not found: 3750
+2020-11-15 13:01:06,081 [WARN] DbBoards:145 - board STM32L476G-EVAL / document id not found: 3826
+2020-11-15 13:01:06,081 [WARN] DbBoards:149 - board STM32L476G-EVAL has no document !
+2020-11-15 13:01:06,081 [WARN] DbBoards:145 - board STM32469I-EVAL / document id not found: 3906
+2020-11-15 13:01:06,081 [WARN] DbBoards:145 - board STM32469I-EVAL / document id not found: 3909
+2020-11-15 13:01:06,081 [WARN] DbBoards:149 - board STM32469I-EVAL has no document !
+2020-11-15 13:01:06,082 [WARN] DbBoards:145 - board STM32479I-EVAL / document id not found: 3905
+2020-11-15 13:01:06,082 [WARN] DbBoards:145 - board STM32479I-EVAL / document id not found: 3910
+2020-11-15 13:01:06,082 [WARN] DbBoards:149 - board STM32479I-EVAL has no document !
+2020-11-15 13:01:06,082 [WARN] DbBoards:145 - board STM32L073Z-EVAL / document id not found: 3771
+2020-11-15 13:01:06,082 [WARN] DbBoards:145 - board STM32L073Z-EVAL / document id not found: 3999
+2020-11-15 13:01:06,082 [WARN] DbBoards:149 - board STM32L073Z-EVAL has no document !
+2020-11-15 13:01:06,082 [WARN] DbBoards:145 - board STM32H743I-EVAL / document id not found: 4206
+2020-11-15 13:01:06,082 [WARN] DbBoards:145 - board STM32H743I-EVAL / document id not found: 4210
+2020-11-15 13:01:06,082 [WARN] DbBoards:149 - board STM32H743I-EVAL has no document !
+2020-11-15 13:01:06,082 [WARN] DbBoards:130 - board STM32H743I-EVAL2 has no document id list !
+2020-11-15 13:01:06,083 [WARN] DbBoards:145 - board STM32H753I-EVAL / document id not found: 4206
+2020-11-15 13:01:06,083 [WARN] DbBoards:145 - board STM32H753I-EVAL / document id not found: 4210
+2020-11-15 13:01:06,083 [WARN] DbBoards:149 - board STM32H753I-EVAL has no document !
+2020-11-15 13:01:06,083 [WARN] DbBoards:130 - board STM32H753I-EVAL2 has no document id list !
+2020-11-15 13:01:06,083 [WARN] DbBoards:145 - board STM32G081B-EVAL / document id not found: 4343
+2020-11-15 13:01:06,083 [WARN] DbBoards:145 - board STM32G081B-EVAL / document id not found: 4363
+2020-11-15 13:01:06,083 [WARN] DbBoards:149 - board STM32G081B-EVAL has no document !
+2020-11-15 13:01:06,083 [WARN] DbBoards:145 - board STM32H747I-EVAL / document id not found: 4460
+2020-11-15 13:01:06,083 [WARN] DbBoards:145 - board STM32H747I-EVAL / document id not found: 4462
+2020-11-15 13:01:06,083 [WARN] DbBoards:149 - board STM32H747I-EVAL has no document !
+2020-11-15 13:01:06,083 [WARN] DbBoards:145 - board STM32H757I-EVAL / document id not found: 4460
+2020-11-15 13:01:06,084 [WARN] DbBoards:145 - board STM32H757I-EVAL / document id not found: 4462
+2020-11-15 13:01:06,084 [WARN] DbBoards:149 - board STM32H757I-EVAL has no document !
+2020-11-15 13:01:06,084 [WARN] DbBoards:145 - board STM32L4R9I-EVAL / document id not found: 4223
+2020-11-15 13:01:06,084 [WARN] DbBoards:145 - board STM32L4R9I-EVAL / document id not found: 4239
+2020-11-15 13:01:06,084 [WARN] DbBoards:149 - board STM32L4R9I-EVAL has no document !
+2020-11-15 13:01:06,084 [WARN] DbBoards:145 - board STM32MP157C-EV1 / document id not found: 4399
+2020-11-15 13:01:06,084 [WARN] DbBoards:145 - board STM32MP157C-EV1 / document id not found: 4437
+2020-11-15 13:01:06,084 [WARN] DbBoards:149 - board STM32MP157C-EV1 has no document !
+2020-11-15 13:01:06,084 [WARN] DbBoards:145 - board STM32MP157A-EV1 / document id not found: 4399
+2020-11-15 13:01:06,085 [WARN] DbBoards:145 - board STM32MP157A-EV1 / document id not found: 4437
+2020-11-15 13:01:06,085 [WARN] DbBoards:149 - board STM32MP157A-EV1 has no document !
+2020-11-15 13:01:06,085 [WARN] DbBoards:145 - board STM32G474E-EVAL / document id not found: 4397
+2020-11-15 13:01:06,085 [WARN] DbBoards:145 - board STM32G474E-EVAL / document id not found: 4432
+2020-11-15 13:01:06,085 [WARN] DbBoards:149 - board STM32G474E-EVAL has no document !
+2020-11-15 13:01:06,085 [WARN] DbBoards:130 - board STM32G474E-EVAL1 has no document id list !
+2020-11-15 13:01:06,086 [WARN] DbBoards:145 - board STM32G484E-EVAL / document id not found: 4397
+2020-11-15 13:01:06,086 [WARN] DbBoards:145 - board STM32G484E-EVAL / document id not found: 4432
+2020-11-15 13:01:06,086 [WARN] DbBoards:149 - board STM32G484E-EVAL has no document !
+2020-11-15 13:01:06,086 [WARN] DbBoards:145 - board NUCLEO-L552ZE-Q / document id not found: 4166
+2020-11-15 13:01:06,086 [WARN] DbBoards:145 - board NUCLEO-L552ZE-Q / document id not found: 4505
+2020-11-15 13:01:06,086 [WARN] DbBoards:149 - board NUCLEO-L552ZE-Q has no document !
+2020-11-15 13:01:06,086 [WARN] DbBoards:145 - board STM32F7308-DK / document id not found: 4079
+2020-11-15 13:01:06,086 [WARN] DbBoards:145 - board STM32F7308-DK / document id not found: 4347
+2020-11-15 13:01:06,086 [WARN] DbBoards:145 - board STM32F7308-DK / document id not found: 4348
+2020-11-15 13:01:06,086 [WARN] DbBoards:149 - board STM32F7308-DK has no document !
+2020-11-15 13:01:06,087 [WARN] DbBoards:145 - board B-G474E-DPOW1 / document id not found: 4463
+2020-11-15 13:01:06,087 [WARN] DbBoards:145 - board B-G474E-DPOW1 / document id not found: 4471
+2020-11-15 13:01:06,087 [WARN] DbBoards:145 - board B-G474E-DPOW1 / document id not found: 4480
+2020-11-15 13:01:06,087 [WARN] DbBoards:145 - board B-G474E-DPOW1 / document id not found: 4624
+2020-11-15 13:01:06,087 [WARN] DbBoards:145 - board B-G474E-DPOW1 / document id not found: 4625
+2020-11-15 13:01:06,087 [WARN] DbBoards:149 - board B-G474E-DPOW1 has no document !
+2020-11-15 13:01:06,087 [WARN] DbBoards:145 - board NUCLEO-H7A3ZI-Q / document id not found: 4166
+2020-11-15 13:01:06,087 [WARN] DbBoards:145 - board NUCLEO-H7A3ZI-Q / document id not found: 4419
+2020-11-15 13:01:06,087 [WARN] DbBoards:149 - board NUCLEO-H7A3ZI-Q has no document !
+2020-11-15 13:01:06,087 [WARN] DbBoards:145 - board NUCLEO-L4P5ZG / document id not found: 4165
+2020-11-15 13:01:06,087 [WARN] DbBoards:145 - board NUCLEO-L4P5ZG / document id not found: 4166
+2020-11-15 13:01:06,088 [WARN] DbBoards:149 - board NUCLEO-L4P5ZG has no document !
+2020-11-15 13:01:06,088 [WARN] DbBoards:145 - board STM32H7B3I-DK / document id not found: 2958
+2020-11-15 13:01:06,088 [WARN] DbBoards:145 - board STM32H7B3I-DK / document id not found: 4503
+2020-11-15 13:01:06,088 [WARN] DbBoards:145 - board STM32H7B3I-DK / document id not found: 4504
+2020-11-15 13:01:06,088 [WARN] DbBoards:145 - board STM32H7B3I-DK / document id not found: 4598
+2020-11-15 13:01:06,088 [WARN] DbBoards:149 - board STM32H7B3I-DK has no document !
+2020-11-15 13:01:06,088 [WARN] DbBoards:145 - board STM32H7B3I-EVAL / document id not found: 4529
+2020-11-15 13:01:06,088 [WARN] DbBoards:145 - board STM32H7B3I-EVAL / document id not found: 4596
+2020-11-15 13:01:06,088 [WARN] DbBoards:149 - board STM32H7B3I-EVAL has no document !
+2020-11-15 13:01:06,088 [WARN] DbBoards:145 - board STM32L552E-EV / document id not found: 4493
+2020-11-15 13:01:06,088 [WARN] DbBoards:145 - board STM32L552E-EV / document id not found: 4509
+2020-11-15 13:01:06,088 [WARN] DbBoards:149 - board STM32L552E-EV has no document !
+2020-11-15 13:01:06,089 [WARN] DbBoards:145 - board NUCLEO-F439ZI / document id not found: 3989
+2020-11-15 13:01:06,089 [WARN] DbBoards:145 - board NUCLEO-F439ZI / document id not found: 4166
+2020-11-15 13:01:06,089 [WARN] DbBoards:149 - board NUCLEO-F439ZI has no document !
+2020-11-15 13:01:06,089 [WARN] DbBoards:145 - board STM32L562E-DK / document id not found: 4510
+2020-11-15 13:01:06,089 [WARN] DbBoards:145 - board STM32L562E-DK / document id not found: 4514
+2020-11-15 13:01:06,089 [WARN] DbBoards:145 - board STM32L562E-DK / document id not found: 4598
+2020-11-15 13:01:06,089 [WARN] DbBoards:149 - board STM32L562E-DK has no document !
+2020-11-15 13:01:06,089 [WARN] DbBoards:145 - board NUCLEO-H723ZG / document id not found: 4166
+2020-11-15 13:01:06,089 [WARN] DbBoards:145 - board NUCLEO-H723ZG / document id not found: 4418
+2020-11-15 13:01:06,089 [WARN] DbBoards:149 - board NUCLEO-H723ZG has no document !
+2020-11-15 13:01:06,089 [WARN] DbBoards:145 - board STM32L4P5G-DK / document id not found: 4526
+2020-11-15 13:01:06,089 [WARN] DbBoards:145 - board STM32L4P5G-DK / document id not found: 4527
+2020-11-15 13:01:06,090 [WARN] DbBoards:149 - board STM32L4P5G-DK has no document !
+2020-11-15 13:01:06,090 [WARN] DbBoards:145 - board B-L4S5I-IOT01A / document id not found: 4612
+2020-11-15 13:01:06,090 [WARN] DbBoards:145 - board B-L4S5I-IOT01A / document id not found: 4613
+2020-11-15 13:01:06,090 [WARN] DbBoards:149 - board B-L4S5I-IOT01A has no document !
+2020-11-15 13:01:06,090 [WARN] DbBoards:145 - board STM32H735G-DK / document id not found: 4608
+2020-11-15 13:01:06,090 [WARN] DbBoards:145 - board STM32H735G-DK / document id not found: 4611
+2020-11-15 13:01:06,090 [WARN] DbBoards:145 - board STM32H735G-DK / document id not found: 4653
+2020-11-15 13:01:06,090 [WARN] DbBoards:149 - board STM32H735G-DK has no document !
+2020-11-15 13:01:06,849 [ERROR] DbBoards:185 - Image file not found for board P-NUCLEO-WB55: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\/plugins/mcufinder/images/boards/p-nucleo-wb55_small.jpg
+2020-11-15 13:01:07,426 [ERROR] DbBoards:185 - Image file not found for board STM32G0316-DISCO: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\/plugins/mcufinder/images/boards/stm32g0316discovery_small.jpg
+2020-11-15 13:01:08,129 [ERROR] DbBoards:185 - Image file not found for board B-G474E-DPOW1: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\/plugins/mcufinder/images/boards/B-G474E-DPOW1_small.jpg
+2020-11-15 13:01:08,139 [ERROR] DbBoards:188 - No image file URL for board STM32H7B3I-DK
+2020-11-15 13:01:08,139 [ERROR] DbBoards:188 - No image file URL for board STM32H7B3I-EVAL
+2020-11-15 13:01:08,140 [ERROR] DbBoards:185 - Image file not found for board STM32L552E-EV: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\/plugins/mcufinder/images/boards/stm32l552e-ev_small.jpg
+2020-11-15 13:01:08,143 [ERROR] DbBoards:185 - Image file not found for board STM32L562E-DK: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\/plugins/mcufinder/images/boards/stm32l562e-dk_small.jpg
+2020-11-15 13:01:08,146 [ERROR] DbBoards:185 - Image file not found for board STM32L4P5G-DK: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\/plugins/mcufinder/images/boards/stm32l4p5g-dk_small.jpg
+2020-11-15 13:01:08,146 [ERROR] DbBoards:185 - Image file not found for board B-L4S5I-IOT01A: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\/plugins/mcufinder/images/boards/B-L4S5I-IOT01A_small.jpg
+2020-11-15 13:01:08,146 [ERROR] DbBoards:185 - Image file not found for board STM32H735G-DK: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\/plugins/mcufinder/images/boards/STM32H735G_DK_small.jpg
+2020-11-15 13:01:08,170 [INFO] ApiDb:158 - Load user favorites file C:\Users\Stancoj/.stm32cubeide/favorites.boards.txt: 0 item(s)
+2020-11-15 13:01:08,170 [INFO] ApiDb:163 - User favorites Boards=[]
+2020-11-15 13:01:08,170 [INFO] DbBoards:202 - Set 0 / 0 favorites Boards
+2020-11-15 13:01:08,185 [INFO] DbBoardsDocs:55 - Found 190 boards documents
+2020-11-15 13:01:08,187 [INFO] ApiDb:186 - Save user favorites file C:\Users\Stancoj/.stm32cubeide/favorites.boards.txt: 0 item(s)
+2020-11-15 13:01:08,187 [INFO] ApiDb:191 - User favorites Boards=[]
+2020-11-15 13:01:08,191 [INFO] DbBoardsPdsc:92 - Found 18 items
+2020-11-15 13:01:08,194 [INFO] DbBoardsPdsc:92 - Found 9 items
+2020-11-15 13:01:08,198 [INFO] DbBoardsPdsc:92 - Found 27 items
+2020-11-15 13:01:08,201 [INFO] DbBoardsPdsc:92 - Found 1 items
+2020-11-15 13:01:08,205 [INFO] DbBoardsPdsc:92 - Found 35 items
+2020-11-15 13:01:08,211 [INFO] DbBoardsPdsc:92 - Found 37 items
+2020-11-15 13:01:08,252 [INFO] DbBoardsJson:79 - JSON generation date=Thu Nov 05 15:55:26 CET 2020 (1604588126)
+2020-11-15 13:01:08,258 [INFO] DbBoards:120 - Found 141 boards (126 are supported by CubeMX)
+2020-11-15 13:01:08,259 [WARN] DbBoards:130 - board NUCLEO-H743ZI2 has no document id list !
+2020-11-15 13:01:08,260 [WARN] DbBoards:130 - board P-NUCLEO-WB55-Nucleo has no document id list !
+2020-11-15 13:01:08,260 [WARN] DbBoards:130 - board P-NUCLEO-WB55-USBDongle has no document id list !
+2020-11-15 13:01:08,260 [WARN] DbBoards:130 - board STM32F401C-DISCO has no document id list !
+2020-11-15 13:01:08,260 [WARN] DbBoards:130 - board STM32F769I-DISC1 has no document id list !
+2020-11-15 13:01:08,260 [WARN] DbBoards:130 - board STM32F7308-DISCO has no document id list !
+2020-11-15 13:01:08,261 [WARN] DbBoards:130 - board STM32L-DISCOVERY has no document id list !
+2020-11-15 13:01:08,261 [WARN] DbBoards:130 - board STM32H747I-DISC1 has no document id list !
+2020-11-15 13:01:08,262 [WARN] DbBoards:130 - board STM32H743I-EVAL2 has no document id list !
+2020-11-15 13:01:08,262 [WARN] DbBoards:130 - board STM32H753I-EVAL2 has no document id list !
+2020-11-15 13:01:08,262 [WARN] DbBoards:130 - board STM32G474E-EVAL1 has no document id list !
+2020-11-15 13:01:08,558 [ERROR] DbBoards:185 - Image file not found for board P-NUCLEO-WB55: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\/plugins/mcufinder/images/boards/p-nucleo-wb55_small.jpg
+2020-11-15 13:01:08,685 [ERROR] DbBoards:185 - Image file not found for board STM32G0316-DISCO: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\/plugins/mcufinder/images/boards/stm32g0316discovery_small.jpg
+2020-11-15 13:01:08,916 [ERROR] DbBoards:185 - Image file not found for board B-G474E-DPOW1: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\/plugins/mcufinder/images/boards/B-G474E-DPOW1_small.jpg
+2020-11-15 13:01:08,923 [ERROR] DbBoards:188 - No image file URL for board STM32H7B3I-DK
+2020-11-15 13:01:08,924 [ERROR] DbBoards:188 - No image file URL for board STM32H7B3I-EVAL
+2020-11-15 13:01:08,924 [ERROR] DbBoards:185 - Image file not found for board STM32L552E-EV: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\/plugins/mcufinder/images/boards/stm32l552e-ev_small.jpg
+2020-11-15 13:01:08,928 [ERROR] DbBoards:185 - Image file not found for board STM32L562E-DK: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\/plugins/mcufinder/images/boards/stm32l562e-dk_small.jpg
+2020-11-15 13:01:08,932 [ERROR] DbBoards:185 - Image file not found for board STM32L4P5G-DK: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\/plugins/mcufinder/images/boards/stm32l4p5g-dk_small.jpg
+2020-11-15 13:01:08,933 [ERROR] DbBoards:185 - Image file not found for board B-L4S5I-IOT01A: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\/plugins/mcufinder/images/boards/B-L4S5I-IOT01A_small.jpg
+2020-11-15 13:01:08,934 [ERROR] DbBoards:185 - Image file not found for board STM32H735G-DK: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\/plugins/mcufinder/images/boards/STM32H735G_DK_small.jpg
+2020-11-15 13:01:08,934 [INFO] ApiDb:158 - Load user favorites file C:\Users\Stancoj/.stm32cubeide/favorites.boards.txt: 0 item(s)
+2020-11-15 13:01:08,934 [INFO] ApiDb:163 - User favorites Boards=[]
+2020-11-15 13:01:08,935 [INFO] DbBoards:202 - Set 0 / 0 favorites Boards
+2020-11-15 13:01:09,244 [ERROR] ServerAccessManage:932 - Problem, file not found on Server
+2020-11-15 13:01:09,244 [ERROR] ServerAccessManage:504 - Problem, file not found on Server : .
+2020-11-15 13:01:09,244 [INFO] LoadUrlFilesThread:147 - End of LoadServerUrlFiles without Thread
+2020-11-15 13:01:09,245 [INFO] McuFilterPanel:282 - Update 0 favorites MCUs
+2020-11-15 13:01:09,574 [ERROR] ServerAccessManage:932 - Problem, file not found on Server
+2020-11-15 13:01:09,574 [ERROR] ServerAccessManage:504 - Problem, file not found on Server : .
+2020-11-15 13:01:09,574 [INFO] LoadUrlFilesThread:147 - End of LoadServerUrlFiles without Thread
+2020-11-15 13:01:09,574 [WARN] BoardDetailPanel:182 - Failed to get advertising image, set to default
+2020-11-15 13:01:09,788 [INFO] ServerAccessManage:347 - Download File mcusDocs.json
+2020-11-15 13:01:09,868 [INFO] LoadUrlFilesThread:129 - End of LoadUrlFiles Thread
+2020-11-15 13:01:10,068 [INFO] ServerAccessManage:347 - Download File mcusFeaturesAndDescription.json
+2020-11-15 13:01:10,908 [INFO] LoadUrlFilesThread:129 - End of LoadUrlFiles Thread
+2020-11-15 13:01:11,033 [INFO] ServerAccessManage:347 - Download File mcusAds.json
+2020-11-15 13:01:11,065 [INFO] LoadUrlFilesThread:129 - End of LoadUrlFiles Thread
+2020-11-15 13:01:11,195 [INFO] ServerAccessManage:347 - Download File boardsDocs.json
+2020-11-15 13:01:11,261 [INFO] LoadUrlFilesThread:129 - End of LoadUrlFiles Thread
+2020-11-15 13:01:11,384 [INFO] ServerAccessManage:347 - Download File boards.json
+2020-11-15 13:01:11,446 [INFO] LoadUrlFilesThread:129 - End of LoadUrlFiles Thread
+2020-11-15 13:01:11,619 [INFO] ServerAccessManage:347 - Download File crdb.zip
+2020-11-15 13:01:11,757 [INFO] FileExtend:190 - Unzip File : crdb.zip
+2020-11-15 13:01:11,759 [INFO] FileExtend:205 - Standard Zip Deflate
+2020-11-15 13:01:11,820 [INFO] LoadUrlFilesThread:129 - End of LoadUrlFiles Thread
+2020-11-15 13:01:11,827 [INFO] DbMcusDocs:127 - JSON generation date=Thu Nov 05 17:05:07 CET 2020 (1604592307)
+2020-11-15 13:01:12,130 [INFO] DbMcusDocs:59 - Found 601 MCUs documents
+2020-11-15 13:01:12,133 [INFO] ApiDb:186 - Save user favorites file C:\Users\Stancoj/.stm32cubeide/favorites.mcus.txt: 0 item(s)
+2020-11-15 13:01:12,133 [INFO] ApiDb:191 - User favorites MCUs=[]
+2020-11-15 13:01:12,133 [INFO] DbMcusXml:106 - Load MCU database from C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\/mcu/families.xml
+2020-11-15 13:01:12,859 [INFO] DbMcusJson:87 - JSON generation date=Thu Nov 05 17:05:07 CET 2020 (1604592307)
+2020-11-15 13:01:13,869 [INFO] DbMcus:192 - Found 1486 MCUs (1445 are supported by CubeMX, 1445 are visible in CubeMX)
+2020-11-15 13:01:13,870 [INFO] ApiDb:158 - Load user favorites file C:\Users\Stancoj/.stm32cubeide/favorites.mcus.txt: 0 item(s)
+2020-11-15 13:01:13,871 [INFO] ApiDb:163 - User favorites MCUs=[]
+2020-11-15 13:01:13,871 [INFO] DbMcus:203 - Set 0 / 0 favorites MCUs
+2020-11-15 13:01:13,945 [INFO] McuFilterPanel:282 - Update 0 favorites MCUs
+2020-11-15 13:01:14,203 [INFO] DbBoardsDocs:119 - JSON generation date=Thu Nov 05 17:05:07 CET 2020 (1604592307)
+2020-11-15 13:01:14,215 [INFO] DbBoardsDocs:55 - Found 190 boards documents
+2020-11-15 13:01:14,216 [INFO] ApiDb:186 - Save user favorites file C:\Users\Stancoj/.stm32cubeide/favorites.boards.txt: 0 item(s)
+2020-11-15 13:01:14,216 [INFO] ApiDb:191 - User favorites Boards=[]
+2020-11-15 13:01:14,257 [INFO] DbBoardsPdsc:92 - Found 18 items
+2020-11-15 13:01:14,284 [INFO] DbBoardsPdsc:92 - Found 9 items
+2020-11-15 13:01:14,351 [INFO] DbBoardsPdsc:92 - Found 27 items
+2020-11-15 13:01:14,452 [INFO] DbBoardsPdsc:92 - Found 1 items
+2020-11-15 13:01:14,466 [INFO] DbBoardsPdsc:92 - Found 35 items
+2020-11-15 13:01:14,558 [INFO] DbBoardsPdsc:92 - Found 37 items
+2020-11-15 13:01:14,578 [INFO] DbBoardsJson:79 - JSON generation date=Thu Nov 05 15:55:26 CET 2020 (1604588126)
+2020-11-15 13:01:14,585 [INFO] DbBoards:120 - Found 141 boards (126 are supported by CubeMX)
+2020-11-15 13:01:14,585 [WARN] DbBoards:130 - board NUCLEO-H743ZI2 has no document id list !
+2020-11-15 13:01:14,588 [WARN] DbBoards:130 - board P-NUCLEO-WB55-Nucleo has no document id list !
+2020-11-15 13:01:14,589 [WARN] DbBoards:130 - board P-NUCLEO-WB55-USBDongle has no document id list !
+2020-11-15 13:01:14,589 [WARN] DbBoards:130 - board STM32F401C-DISCO has no document id list !
+2020-11-15 13:01:14,589 [WARN] DbBoards:130 - board STM32F769I-DISC1 has no document id list !
+2020-11-15 13:01:14,589 [WARN] DbBoards:130 - board STM32F7308-DISCO has no document id list !
+2020-11-15 13:01:14,589 [WARN] DbBoards:130 - board STM32L-DISCOVERY has no document id list !
+2020-11-15 13:01:14,589 [WARN] DbBoards:130 - board STM32H747I-DISC1 has no document id list !
+2020-11-15 13:01:14,590 [WARN] DbBoards:130 - board STM32H743I-EVAL2 has no document id list !
+2020-11-15 13:01:14,590 [WARN] DbBoards:130 - board STM32H753I-EVAL2 has no document id list !
+2020-11-15 13:01:14,590 [WARN] DbBoards:130 - board STM32G474E-EVAL1 has no document id list !
+2020-11-15 13:01:15,021 [ERROR] DbBoards:185 - Image file not found for board P-NUCLEO-WB55: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\/plugins/mcufinder/images/boards/p-nucleo-wb55_small.jpg
+2020-11-15 13:01:15,468 [ERROR] DbBoards:185 - Image file not found for board STM32G0316-DISCO: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\/plugins/mcufinder/images/boards/stm32g0316discovery_small.jpg
+2020-11-15 13:01:16,395 [ERROR] DbBoards:185 - Image file not found for board B-G474E-DPOW1: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\/plugins/mcufinder/images/boards/B-G474E-DPOW1_small.jpg
+2020-11-15 13:01:16,403 [ERROR] DbBoards:188 - No image file URL for board STM32H7B3I-DK
+2020-11-15 13:01:16,404 [ERROR] DbBoards:188 - No image file URL for board STM32H7B3I-EVAL
+2020-11-15 13:01:16,404 [ERROR] DbBoards:185 - Image file not found for board STM32L552E-EV: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\/plugins/mcufinder/images/boards/stm32l552e-ev_small.jpg
+2020-11-15 13:01:16,407 [ERROR] DbBoards:185 - Image file not found for board STM32L562E-DK: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\/plugins/mcufinder/images/boards/stm32l562e-dk_small.jpg
+2020-11-15 13:01:16,410 [ERROR] DbBoards:185 - Image file not found for board STM32L4P5G-DK: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\/plugins/mcufinder/images/boards/stm32l4p5g-dk_small.jpg
+2020-11-15 13:01:16,410 [ERROR] DbBoards:185 - Image file not found for board B-L4S5I-IOT01A: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\/plugins/mcufinder/images/boards/B-L4S5I-IOT01A_small.jpg
+2020-11-15 13:01:16,411 [ERROR] DbBoards:185 - Image file not found for board STM32H735G-DK: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\/plugins/mcufinder/images/boards/STM32H735G_DK_small.jpg
+2020-11-15 13:01:16,411 [INFO] ApiDb:158 - Load user favorites file C:\Users\Stancoj/.stm32cubeide/favorites.boards.txt: 0 item(s)
+2020-11-15 13:01:16,411 [INFO] ApiDb:163 - User favorites Boards=[]
+2020-11-15 13:01:16,411 [INFO] DbBoards:202 - Set 0 / 0 favorites Boards
+2020-11-15 13:01:16,417 [INFO] BoardFilterPanel:212 - Update 0 favorites Boards
+2020-11-15 13:01:16,648 [ERROR] ServerAccessManage:932 - Problem, file not found on Server
+2020-11-15 13:01:16,649 [ERROR] ServerAccessManage:504 - Problem, file not found on Server : .
+2020-11-15 13:01:16,650 [INFO] LoadUrlFilesThread:147 - End of LoadServerUrlFiles without Thread
+2020-11-15 13:01:16,651 [INFO] BoardFilterPanel:212 - Update 0 favorites Boards
+2020-11-15 13:01:18,003 [INFO] CrossSelectorPresenter:1239 - Cross Selector saved comparison directory: C:\Users\Stancoj\.stmcufinder\plugins\mcufinder\mcu\cs_comparisons_mx
+2020-11-15 13:02:09,714 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] withoutVersionV1.24.1
+2020-11-15 13:02:09,715 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] withoutVersionV1.24.0
+2020-11-15 13:02:21,334 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] File copied successfully!!
+2020-11-15 13:02:24,460 [INFO] MainUpdater:2032 - connection check result : 10
+2020-11-15 13:02:24,461 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Successfull proxy connection.
+2020-11-15 13:02:24,548 [INFO] MicroXplorer:371 - Change Database Path : 
+2020-11-15 13:02:24,548 [INFO] MicroXplorer:401 - Change Database Version : DB.5.0.21
+2020-11-15 13:02:24,553 [INFO] PinOutPanel:1361 - setPackage(No Configuration,No Configuration)
+2020-11-15 13:02:24,554 [INFO] UtilMem:74 - Begin LoadConfig() Used Memory: 510405840 Bytes (717225984)
+2020-11-15 13:02:24,556 [INFO] MicroXplorer:371 - Change Database Path : 
+2020-11-15 13:02:24,556 [INFO] MicroXplorer:401 - Change Database Version : DB.5.0.21
+2020-11-15 13:02:24,556 [INFO] OpenFileManager:269 - Change cursor
+2020-11-15 13:02:28,444 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) Unable to find key (Mcu.ThirdPartyNb) in loaded IOC file
+2020-11-15 13:02:28,445 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) Unable to find key (Mcu.PinsNb) in loaded IOC file
+2020-11-15 13:02:28,451 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) Unable to find key (Mcu.IPNb) in loaded IOC file
+2020-11-15 13:02:29,048 [INFO] UtilMem:74 - End LoadConfig() Used Memory: 336205592 Bytes (717225984)
+2020-11-15 13:02:29,320 [INFO] ThirdPartyDb:293 - Open Third Party DataBase File (C:/Users/Stancoj/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml) : 0 ms. number of Sw pack : 0
+2020-11-15 13:02:29,980 [INFO] PinOutPanel:1361 - setPackage(No Configuration,No Configuration)
+2020-11-15 13:02:29,983 [INFO] PinOutPanel:1361 - setPackage(STM32F401CEUx,UFQFPN48)
+2020-11-15 13:02:31,032 [INFO] UtilMem:74 - Before build in PCC Used Memory: 387750800 Bytes (717225984)
+2020-11-15 13:02:32,013 [INFO] SharedServices:71 - Folder for power plug-in: C:/Users/Stancoj/.stm32cubemx/plugins/power
+2020-11-15 13:02:32,040 [INFO] UtilMem:74 - After build in PCC Used Memory: 399811464 Bytes (717225984)
+2020-11-15 13:02:32,092 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] toolchainItems.length=====1
+2020-11-15 13:02:32,338 [INFO] OpenFileManager:289 - Restore cursor
+2020-11-15 13:02:32,957 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 433056624 Bytes (717225984)
+2020-11-15 13:02:33,072 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 436511624 Bytes (717225984)
+2020-11-15 13:02:33,735 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: NVIC
+2020-11-15 13:02:33,736 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: SYS
+2020-11-15 13:02:33,739 [INFO] CodeGenerator:572 - code generatio: config db path: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\
+2020-11-15 13:02:34,362 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\MXTmpFiles\license.tmp_save
+2020-11-15 13:02:35,409 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\MXTmpFiles\license.tmp
+2020-11-15 13:02:35,939 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2020-11-15 13:02:35,940 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for SYS
+2020-11-15 13:02:35,941 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2020-11-15 13:02:35,944 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for NVIC
+2020-11-15 13:02:35,945 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2020-11-15 13:02:35,984 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\stm32f4xx_it.c_save
+2020-11-15 13:02:36,219 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\stm32f4xx_it.c
+2020-11-15 13:02:36,233 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\stm32f4xx_it.h_save
+2020-11-15 13:02:36,729 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\stm32f4xx_it.h
+2020-11-15 13:02:36,799 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\stm32f4xx_hal_msp.c_save
+2020-11-15 13:02:37,169 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\stm32f4xx_hal_msp.c
+2020-11-15 13:02:37,263 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\MXTmpFiles\system.tmp_save
+2020-11-15 13:02:37,449 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\MXTmpFiles\system.tmp
+2020-11-15 13:02:37,482 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\stm32f4xx_hal_conf.h_save
+2020-11-15 13:02:37,779 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\stm32f4xx_hal_conf.h
+2020-11-15 13:02:37,983 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\main.h_save
+2020-11-15 13:02:38,146 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\main.h
+2020-11-15 13:02:38,276 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\main.c_save
+2020-11-15 13:02:38,528 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\main.c
+2020-11-15 13:02:40,639 [INFO] ProjectBuilder:1500 - Time for Copy HAL[1] : 1258mS.
+2020-11-15 13:02:40,646 [INFO] ProjectBuilder:2068 - Project Generator version: 3.3.0
+2020-11-15 13:02:40,992 [INFO] ConfigFileManager:883 - The Die is : DIE433
+2020-11-15 13:02:41,010 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] configName ==Arm Cortex-M4
+2020-11-15 13:02:41,375 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] memory ==name="RAM" access="xrw" start="0x20000000" size="96"
+2020-11-15 13:02:41,377 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] memory ==name="FLASH" access="rx" start="0x8000000" size="512"
+2020-11-15 13:02:41,817 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] namefile= STM32CubeIDE
+2020-11-15 13:02:41,819 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] method name===============generate
+2020-11-15 13:02:48,718 [INFO] ProjectBuilder:2161 - Time for Generating toolchain IDE Files: 8072mS.
+2020-11-15 13:02:48,719 [INFO] ProjectBuilder:1391 - Time for Copy CMSIS : 0mS.
+2020-11-15 13:02:48,722 [INFO] ProjectBuilder:1391 - Time for Copy CMSIS : 0mS.
+2020-11-15 13:04:04,180 [WARN] IP:1918 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2020-11-15 13:04:04,180 [WARN] IP:1918 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2020-11-15 13:04:04,203 [WARN] IP:1918 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2020-11-15 13:04:04,203 [WARN] IP:1918 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2020-11-15 13:04:04,203 [WARN] IP:1918 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2020-11-15 13:04:04,203 [WARN] IP:1918 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2020-11-15 13:04:04,425 [WARN] IP:1918 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2020-11-15 13:04:04,425 [WARN] IP:1918 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2020-11-15 13:04:04,429 [WARN] IP:1918 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2020-11-15 13:04:04,429 [WARN] IP:1918 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2020-11-15 13:04:04,438 [WARN] IP:1918 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2020-11-15 13:04:04,438 [WARN] IP:1918 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2020-11-15 13:04:24,487 [INFO] NvicIntPanel:85 - NVIC parent = javax.swing.JTabbedPane[,0,43,605x465,layout=com.st.microxplorer.stobjectsui.STTabbedPaneUI$TabbedPaneLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=352,maximumSize=,minimumSize=,preferredSize=,haveRegistered=false,tabPlacement=TOP]
+2020-11-15 13:04:26,784 [WARN] IP:1918 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2020-11-15 13:04:26,784 [WARN] IP:1918 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2020-11-15 13:04:26,793 [WARN] IP:1918 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2020-11-15 13:04:26,793 [WARN] IP:1918 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2020-11-15 13:04:26,796 [WARN] IP:1918 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2020-11-15 13:04:26,796 [WARN] IP:1918 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2020-11-15 13:04:26,804 [INFO] NvicIntPanel:85 - NVIC parent = javax.swing.JTabbedPane[,0,0,0x0,invalid,layout=com.st.microxplorer.stobjectsui.STTabbedPaneUI$TabbedPaneLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=352,maximumSize=,minimumSize=,preferredSize=,haveRegistered=false,tabPlacement=TOP]
+2020-11-15 13:04:28,722 [WARN] IP:1918 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2020-11-15 13:04:28,722 [WARN] IP:1918 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2020-11-15 13:04:28,731 [WARN] IP:1918 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2020-11-15 13:04:28,731 [WARN] IP:1918 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2020-11-15 13:04:28,733 [WARN] IP:1918 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2020-11-15 13:04:28,733 [WARN] IP:1918 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2020-11-15 13:07:16,096 [WARN] IP:1918 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2020-11-15 13:07:16,097 [WARN] IP:1918 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2020-11-15 13:07:16,097 [WARN] IP:1918 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2020-11-15 13:07:16,097 [WARN] IP:1918 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2020-11-15 13:07:22,256 [WARN] IP:1918 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2020-11-15 13:07:22,256 [WARN] IP:1918 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2020-11-15 13:07:22,257 [WARN] IP:1918 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2020-11-15 13:07:22,257 [WARN] IP:1918 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2020-11-15 13:20:45,849 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Tab changed to: Clock Configuration
+2020-11-15 13:21:18,974 [WARN] IP:1918 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2020-11-15 13:21:18,975 [WARN] IP:1918 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2020-11-15 13:21:18,975 [WARN] IP:1918 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2020-11-15 13:21:18,975 [WARN] IP:1918 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2020-11-15 13:21:23,184 [WARN] IP:1918 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2020-11-15 13:21:23,185 [WARN] IP:1918 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2020-11-15 13:21:23,185 [WARN] IP:1918 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2020-11-15 13:21:23,185 [WARN] IP:1918 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2020-11-15 13:21:30,147 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Tab changed to: Project Manager
+2020-11-15 13:22:12,758 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 587483544 Bytes (741343232)
+2020-11-15 13:22:13,195 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: NVIC
+2020-11-15 13:22:13,195 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: USART
+2020-11-15 13:22:13,195 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: USART
+2020-11-15 13:22:13,195 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: DMA
+2020-11-15 13:22:13,195 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: SYS
+2020-11-15 13:22:13,195 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: I2C
+2020-11-15 13:22:13,196 [INFO] CodeGenerator:572 - code generatio: config db path: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\
+2020-11-15 13:22:13,352 [WARN] IP:1918 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2020-11-15 13:22:13,353 [WARN] IP:1918 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2020-11-15 13:22:13,554 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\MXTmpFiles\license.tmp_save
+2020-11-15 13:22:13,614 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\MXTmpFiles\license.tmp
+2020-11-15 13:22:14,418 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\gpio.c_save
+2020-11-15 13:22:14,502 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\gpio.c
+2020-11-15 13:22:14,523 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\gpio.h_save
+2020-11-15 13:22:14,609 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\gpio.h
+2020-11-15 13:22:14,809 [ERROR] IPConfigManager:1260 - ERROR: the RefConfig I2C_Analogue is not available in your config.xml file
+2020-11-15 13:22:14,809 [ERROR] IPConfigManager:1260 - ERROR: the RefConfig I2C_DigitalFolter is not available in your config.xml file
+2020-11-15 13:22:14,934 [WARN] IPConfigManager:3190 - WARNING: Missing Config File for SYS ip!!
+2020-11-15 13:22:15,386 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2020-11-15 13:22:15,387 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for DMA
+2020-11-15 13:22:15,387 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2020-11-15 13:22:15,506 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\dma.c_save
+2020-11-15 13:22:15,605 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\dma.c
+2020-11-15 13:22:15,632 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\dma.h_save
+2020-11-15 13:22:15,698 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\dma.h
+2020-11-15 13:22:15,700 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2020-11-15 13:22:15,703 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for I2C
+2020-11-15 13:22:15,704 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2020-11-15 13:22:15,853 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\i2c.c_save
+2020-11-15 13:22:15,979 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\i2c.c
+2020-11-15 13:22:15,999 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\i2c.h_save
+2020-11-15 13:22:16,069 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\i2c.h
+2020-11-15 13:22:16,071 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2020-11-15 13:22:16,072 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for SYS
+2020-11-15 13:22:16,073 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2020-11-15 13:22:16,074 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2020-11-15 13:22:16,075 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for USART
+2020-11-15 13:22:16,076 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2020-11-15 13:22:16,088 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\usart.c_save
+2020-11-15 13:22:16,295 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\usart.c
+2020-11-15 13:22:16,301 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\usart.h_save
+2020-11-15 13:22:16,366 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\usart.h
+2020-11-15 13:22:16,368 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for NVIC
+2020-11-15 13:22:16,369 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2020-11-15 13:22:16,428 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\stm32f4xx_it.c_save
+2020-11-15 13:22:16,538 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\stm32f4xx_it.c
+2020-11-15 13:22:16,557 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\stm32f4xx_it.h_save
+2020-11-15 13:22:16,668 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\stm32f4xx_it.h
+2020-11-15 13:22:16,678 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\MXTmpFiles\system.tmp_save
+2020-11-15 13:22:16,744 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\MXTmpFiles\system.tmp
+2020-11-15 13:22:16,788 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\stm32_assert.h_save
+2020-11-15 13:22:16,848 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\stm32_assert.h
+2020-11-15 13:22:17,006 [WARN] IPConfigManager:2229 - Warning: the RefConfig RCC_PLL_PLLM_CONFIG is not available in your config.xml file
+2020-11-15 13:22:17,006 [WARN] IPConfigManager:2229 - Warning: the RefConfig RCC_PLL_PLLSOURCE_CONFIG is not available in your config.xml file
+2020-11-15 13:22:17,006 [WARN] IPConfigManager:2229 - Warning: the RefConfig RCC_ConfigVoltageScaling is not available in your config.xml file
+2020-11-15 13:22:17,013 [WARN] IPConfigManager:2229 - Warning: the RefConfig RCC_ClockConfig is not available in your config.xml file
+2020-11-15 13:22:17,014 [WARN] IPConfigManager:2229 - Warning: the RefConfig RCC_MCO1Config is not available in your config.xml file
+2020-11-15 13:22:17,014 [WARN] IPConfigManager:2229 - Warning: the RefConfig RCC_MCO2Config is not available in your config.xml file
+2020-11-15 13:22:17,014 [WARN] IPConfigManager:2229 - Warning: the RefConfig RCC_interrupt_Time_SYSTICK_Config is not available in your config.xml file
+2020-11-15 13:22:17,014 [WARN] IPConfigManager:2229 - Warning: the RefConfig RCC_SYSTICK_CONFIG is not available in your config.xml file
+2020-11-15 13:22:17,033 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\main.h_save
+2020-11-15 13:22:17,131 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\main.h
+2020-11-15 13:22:17,172 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\main.c_save
+2020-11-15 13:22:17,301 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\main.c
+2020-11-15 13:22:19,253 [INFO] ProjectBuilder:1500 - Time for Copy HAL[1] : 1416mS.
+2020-11-15 13:22:19,255 [INFO] ProjectBuilder:2068 - Project Generator version: 3.3.0
+2020-11-15 13:22:19,536 [INFO] ConfigFileManager:883 - The Die is : DIE433
+2020-11-15 13:22:19,548 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] configName ==Arm Cortex-M4
+2020-11-15 13:22:19,648 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] memory ==name="RAM" access="xrw" start="0x20000000" size="96"
+2020-11-15 13:22:19,650 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] memory ==name="FLASH" access="rx" start="0x8000000" size="512"
+2020-11-15 13:22:20,055 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] namefile= STM32CubeIDE
+2020-11-15 13:22:20,056 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] method name===============update
+2020-11-15 13:22:23,693 [INFO] ProjectBuilder:2161 - Time for Generating toolchain IDE Files: 4439mS.
+2020-11-15 13:22:23,694 [INFO] ProjectBuilder:1391 - Time for Copy CMSIS : 1mS.
+2020-11-15 13:22:23,696 [INFO] ProjectBuilder:1391 - Time for Copy CMSIS : 0mS.
+2020-11-15 13:28:38,952 [INFO] MainUpdater:2032 - connection check result : 10
+2020-11-15 13:28:38,954 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Successfull proxy connection.
+2020-11-15 13:28:39,028 [INFO] MicroXplorer:371 - Change Database Path : 
+2020-11-15 13:28:39,028 [INFO] MicroXplorer:401 - Change Database Version : DB.5.0.21
+2020-11-15 13:28:39,034 [INFO] PinOutPanel:1361 - setPackage(No Configuration,No Configuration)
+2020-11-15 13:28:39,035 [INFO] UtilMem:74 - Begin LoadConfig() Used Memory: 391468984 Bytes (793772032)
+2020-11-15 13:28:39,036 [INFO] MicroXplorer:371 - Change Database Path : 
+2020-11-15 13:28:39,036 [INFO] MicroXplorer:401 - Change Database Version : DB.5.0.21
+2020-11-15 13:28:39,036 [INFO] OpenFileManager:269 - Change cursor
+2020-11-15 13:28:39,071 [INFO] RulesReader:52 - Compatibility file has been processed (156 Rules)
+2020-11-15 13:28:41,361 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Instance) has Id (USART2_RX) currently not set
+2020-11-15 13:28:41,361 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Channel) has Id (USART2_RX) currently not set
+2020-11-15 13:28:41,361 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Direction) has Id (USART2_RX) currently not set
+2020-11-15 13:28:41,361 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (PeriphInc) has Id (USART2_RX) currently not set
+2020-11-15 13:28:41,361 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (MemInc) has Id (USART2_RX) currently not set
+2020-11-15 13:28:41,361 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (PeriphDataAlignment) has Id (USART2_RX) currently not set
+2020-11-15 13:28:41,362 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (MemDataAlignment) has Id (USART2_RX) currently not set
+2020-11-15 13:28:41,362 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Mode) has Id (USART2_RX) currently not set
+2020-11-15 13:28:41,362 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Priority) has Id (USART2_RX) currently not set
+2020-11-15 13:28:41,362 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (FIFOMode) has Id (USART2_RX) currently not set
+2020-11-15 13:28:41,362 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Instance) has Id (USART2_TX) currently not set
+2020-11-15 13:28:41,362 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Channel) has Id (USART2_TX) currently not set
+2020-11-15 13:28:41,362 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Direction) has Id (USART2_TX) currently not set
+2020-11-15 13:28:41,363 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (PeriphInc) has Id (USART2_TX) currently not set
+2020-11-15 13:28:41,363 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (MemInc) has Id (USART2_TX) currently not set
+2020-11-15 13:28:41,363 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (PeriphDataAlignment) has Id (USART2_TX) currently not set
+2020-11-15 13:28:41,363 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (MemDataAlignment) has Id (USART2_TX) currently not set
+2020-11-15 13:28:41,363 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Mode) has Id (USART2_TX) currently not set
+2020-11-15 13:28:41,363 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Priority) has Id (USART2_TX) currently not set
+2020-11-15 13:28:41,363 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (FIFOMode) has Id (USART2_TX) currently not set
+2020-11-15 13:28:41,585 [INFO] UtilMem:74 - End LoadConfig() Used Memory: 571152296 Bytes (793772032)
+2020-11-15 13:28:41,675 [INFO] PinOutPanel:1361 - setPackage(No Configuration,No Configuration)
+2020-11-15 13:28:41,693 [INFO] PinOutPanel:1361 - setPackage(STM32F401CEUx,UFQFPN48)
+2020-11-15 13:28:42,098 [INFO] UtilMem:74 - Before build in PCC Used Memory: 608674576 Bytes (793772032)
+2020-11-15 13:28:42,984 [INFO] SharedServices:71 - Folder for power plug-in: C:/Users/Stancoj/.stm32cubemx/plugins/power
+2020-11-15 13:28:43,000 [INFO] UtilMem:74 - After build in PCC Used Memory: 616014608 Bytes (793772032)
+2020-11-15 13:28:43,008 [WARN] IP:1918 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2020-11-15 13:28:43,008 [WARN] IP:1918 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2020-11-15 13:28:43,645 [INFO] OpenFileManager:289 - Restore cursor
+2020-11-15 13:28:43,695 [WARN] IP:1918 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2020-11-15 13:28:43,695 [WARN] IP:1918 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2020-11-15 13:28:43,696 [WARN] IP:1918 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2020-11-15 13:28:43,696 [WARN] IP:1918 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2020-11-15 13:29:09,077 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 579398464 Bytes (793772032)
+2020-11-15 13:29:09,328 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: RTC
+2020-11-15 13:29:09,328 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: NVIC
+2020-11-15 13:29:09,328 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: USART
+2020-11-15 13:29:09,328 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: USART
+2020-11-15 13:29:09,328 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: DMA
+2020-11-15 13:29:09,329 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: SYS
+2020-11-15 13:29:09,329 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: I2C
+2020-11-15 13:29:09,330 [INFO] CodeGenerator:572 - code generatio: config db path: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\
+2020-11-15 13:29:09,389 [WARN] IP:1918 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2020-11-15 13:29:09,389 [WARN] IP:1918 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2020-11-15 13:29:09,399 [INFO] Argument:277 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:09,399 [INFO] Argument:287 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:09,399 [INFO] Argument:277 - Argument : Streamvalue: LL_DMA_STREAM_5
+2020-11-15 13:29:09,399 [INFO] Argument:287 - Argument : Streamvalue: LL_DMA_STREAM_5
+2020-11-15 13:29:09,399 [INFO] Argument:277 - Argument : Channelvalue: LL_DMA_CHANNEL_4
+2020-11-15 13:29:09,399 [INFO] Argument:287 - Argument : Channelvalue: LL_DMA_CHANNEL_4
+2020-11-15 13:29:09,399 [INFO] Argument:277 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:09,399 [INFO] Argument:287 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:09,399 [INFO] Argument:277 - Argument : Streamvalue: LL_DMA_STREAM_5
+2020-11-15 13:29:09,399 [INFO] Argument:287 - Argument : Streamvalue: LL_DMA_STREAM_5
+2020-11-15 13:29:09,399 [INFO] Argument:277 - Argument : Directionvalue: LL_DMA_DIRECTION_PERIPH_TO_MEMORY
+2020-11-15 13:29:09,400 [INFO] Argument:287 - Argument : Directionvalue: LL_DMA_DIRECTION_PERIPH_TO_MEMORY
+2020-11-15 13:29:09,400 [INFO] Argument:277 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:09,400 [INFO] Argument:287 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:09,400 [INFO] Argument:277 - Argument : Streamvalue: LL_DMA_STREAM_5
+2020-11-15 13:29:09,400 [INFO] Argument:287 - Argument : Streamvalue: LL_DMA_STREAM_5
+2020-11-15 13:29:09,400 [INFO] Argument:277 - Argument : Priorityvalue: LL_DMA_PRIORITY_LOW
+2020-11-15 13:29:09,400 [INFO] Argument:287 - Argument : Priorityvalue: LL_DMA_PRIORITY_LOW
+2020-11-15 13:29:09,400 [INFO] Argument:277 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:09,400 [INFO] Argument:287 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:09,400 [INFO] Argument:277 - Argument : Streamvalue: LL_DMA_STREAM_5
+2020-11-15 13:29:09,400 [INFO] Argument:287 - Argument : Streamvalue: LL_DMA_STREAM_5
+2020-11-15 13:29:09,400 [INFO] Argument:277 - Argument : Modevalue: LL_DMA_MODE_CIRCULAR
+2020-11-15 13:29:09,400 [INFO] Argument:287 - Argument : Modevalue: LL_DMA_MODE_CIRCULAR
+2020-11-15 13:29:09,400 [INFO] Argument:277 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:09,400 [INFO] Argument:287 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:09,401 [INFO] Argument:277 - Argument : Streamvalue: LL_DMA_STREAM_5
+2020-11-15 13:29:09,401 [INFO] Argument:287 - Argument : Streamvalue: LL_DMA_STREAM_5
+2020-11-15 13:29:09,401 [INFO] Argument:277 - Argument : IncrementModevalue: LL_DMA_PERIPH_NOINCREMENT
+2020-11-15 13:29:09,401 [INFO] Argument:287 - Argument : IncrementModevalue: LL_DMA_PERIPH_NOINCREMENT
+2020-11-15 13:29:09,401 [INFO] Argument:277 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:09,401 [INFO] Argument:287 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:09,401 [INFO] Argument:277 - Argument : Streamvalue: LL_DMA_STREAM_5
+2020-11-15 13:29:09,401 [INFO] Argument:287 - Argument : Streamvalue: LL_DMA_STREAM_5
+2020-11-15 13:29:09,401 [INFO] Argument:277 - Argument : IncrementModevalue: LL_DMA_MEMORY_INCREMENT
+2020-11-15 13:29:09,401 [INFO] Argument:287 - Argument : IncrementModevalue: LL_DMA_MEMORY_INCREMENT
+2020-11-15 13:29:09,401 [INFO] Argument:277 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:09,401 [INFO] Argument:287 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:09,401 [INFO] Argument:277 - Argument : Streamvalue: LL_DMA_STREAM_5
+2020-11-15 13:29:09,401 [INFO] Argument:287 - Argument : Streamvalue: LL_DMA_STREAM_5
+2020-11-15 13:29:09,401 [INFO] Argument:277 - Argument : Sizevalue: LL_DMA_PDATAALIGN_BYTE
+2020-11-15 13:29:09,401 [INFO] Argument:287 - Argument : Sizevalue: LL_DMA_PDATAALIGN_BYTE
+2020-11-15 13:29:09,402 [INFO] Argument:277 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:09,402 [INFO] Argument:287 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:09,402 [INFO] Argument:277 - Argument : Streamvalue: LL_DMA_STREAM_5
+2020-11-15 13:29:09,402 [INFO] Argument:287 - Argument : Streamvalue: LL_DMA_STREAM_5
+2020-11-15 13:29:09,402 [INFO] Argument:277 - Argument : Sizevalue: LL_DMA_MDATAALIGN_BYTE
+2020-11-15 13:29:09,402 [INFO] Argument:287 - Argument : Sizevalue: LL_DMA_MDATAALIGN_BYTE
+2020-11-15 13:29:09,402 [INFO] Argument:277 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:09,402 [INFO] Argument:287 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:09,402 [INFO] Argument:277 - Argument : Streamvalue: LL_DMA_STREAM_5
+2020-11-15 13:29:09,402 [INFO] Argument:287 - Argument : Streamvalue: LL_DMA_STREAM_5
+2020-11-15 13:29:09,402 [INFO] Argument:277 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:09,402 [INFO] Argument:287 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:09,403 [INFO] Argument:277 - Argument : Streamvalue: LL_DMA_STREAM_6
+2020-11-15 13:29:09,403 [INFO] Argument:287 - Argument : Streamvalue: LL_DMA_STREAM_6
+2020-11-15 13:29:09,403 [INFO] Argument:277 - Argument : Channelvalue: LL_DMA_CHANNEL_4
+2020-11-15 13:29:09,403 [INFO] Argument:287 - Argument : Channelvalue: LL_DMA_CHANNEL_4
+2020-11-15 13:29:09,403 [INFO] Argument:277 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:09,403 [INFO] Argument:287 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:09,403 [INFO] Argument:277 - Argument : Streamvalue: LL_DMA_STREAM_6
+2020-11-15 13:29:09,403 [INFO] Argument:287 - Argument : Streamvalue: LL_DMA_STREAM_6
+2020-11-15 13:29:09,403 [INFO] Argument:277 - Argument : Directionvalue: LL_DMA_DIRECTION_MEMORY_TO_PERIPH
+2020-11-15 13:29:09,403 [INFO] Argument:287 - Argument : Directionvalue: LL_DMA_DIRECTION_MEMORY_TO_PERIPH
+2020-11-15 13:29:09,403 [INFO] Argument:277 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:09,403 [INFO] Argument:287 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:09,404 [INFO] Argument:277 - Argument : Streamvalue: LL_DMA_STREAM_6
+2020-11-15 13:29:09,404 [INFO] Argument:287 - Argument : Streamvalue: LL_DMA_STREAM_6
+2020-11-15 13:29:09,404 [INFO] Argument:277 - Argument : Priorityvalue: LL_DMA_PRIORITY_LOW
+2020-11-15 13:29:09,404 [INFO] Argument:287 - Argument : Priorityvalue: LL_DMA_PRIORITY_LOW
+2020-11-15 13:29:09,404 [INFO] Argument:277 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:09,404 [INFO] Argument:287 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:09,404 [INFO] Argument:277 - Argument : Streamvalue: LL_DMA_STREAM_6
+2020-11-15 13:29:09,404 [INFO] Argument:287 - Argument : Streamvalue: LL_DMA_STREAM_6
+2020-11-15 13:29:09,404 [INFO] Argument:277 - Argument : Modevalue: LL_DMA_MODE_NORMAL
+2020-11-15 13:29:09,404 [INFO] Argument:287 - Argument : Modevalue: LL_DMA_MODE_NORMAL
+2020-11-15 13:29:09,404 [INFO] Argument:277 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:09,404 [INFO] Argument:287 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:09,404 [INFO] Argument:277 - Argument : Streamvalue: LL_DMA_STREAM_6
+2020-11-15 13:29:09,404 [INFO] Argument:287 - Argument : Streamvalue: LL_DMA_STREAM_6
+2020-11-15 13:29:09,405 [INFO] Argument:277 - Argument : IncrementModevalue: LL_DMA_PERIPH_NOINCREMENT
+2020-11-15 13:29:09,405 [INFO] Argument:287 - Argument : IncrementModevalue: LL_DMA_PERIPH_NOINCREMENT
+2020-11-15 13:29:09,405 [INFO] Argument:277 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:09,405 [INFO] Argument:287 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:09,405 [INFO] Argument:277 - Argument : Streamvalue: LL_DMA_STREAM_6
+2020-11-15 13:29:09,405 [INFO] Argument:287 - Argument : Streamvalue: LL_DMA_STREAM_6
+2020-11-15 13:29:09,405 [INFO] Argument:277 - Argument : IncrementModevalue: LL_DMA_MEMORY_INCREMENT
+2020-11-15 13:29:09,405 [INFO] Argument:287 - Argument : IncrementModevalue: LL_DMA_MEMORY_INCREMENT
+2020-11-15 13:29:09,405 [INFO] Argument:277 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:09,405 [INFO] Argument:287 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:09,405 [INFO] Argument:277 - Argument : Streamvalue: LL_DMA_STREAM_6
+2020-11-15 13:29:09,405 [INFO] Argument:287 - Argument : Streamvalue: LL_DMA_STREAM_6
+2020-11-15 13:29:09,405 [INFO] Argument:277 - Argument : Sizevalue: LL_DMA_PDATAALIGN_BYTE
+2020-11-15 13:29:09,405 [INFO] Argument:287 - Argument : Sizevalue: LL_DMA_PDATAALIGN_BYTE
+2020-11-15 13:29:09,405 [INFO] Argument:277 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:09,405 [INFO] Argument:287 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:09,406 [INFO] Argument:277 - Argument : Streamvalue: LL_DMA_STREAM_6
+2020-11-15 13:29:09,406 [INFO] Argument:287 - Argument : Streamvalue: LL_DMA_STREAM_6
+2020-11-15 13:29:09,406 [INFO] Argument:277 - Argument : Sizevalue: LL_DMA_MDATAALIGN_BYTE
+2020-11-15 13:29:09,406 [INFO] Argument:287 - Argument : Sizevalue: LL_DMA_MDATAALIGN_BYTE
+2020-11-15 13:29:09,406 [INFO] Argument:277 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:09,406 [INFO] Argument:287 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:09,406 [INFO] Argument:277 - Argument : Streamvalue: LL_DMA_STREAM_6
+2020-11-15 13:29:09,406 [INFO] Argument:287 - Argument : Streamvalue: LL_DMA_STREAM_6
+2020-11-15 13:29:10,061 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\MXTmpFiles\license.tmp_save
+2020-11-15 13:29:10,124 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\MXTmpFiles\license.tmp
+2020-11-15 13:29:10,876 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\gpio.c_save
+2020-11-15 13:29:11,102 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\gpio.c
+2020-11-15 13:29:11,230 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\gpio.h_save
+2020-11-15 13:29:11,384 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\gpio.h
+2020-11-15 13:29:11,992 [ERROR] IPConfigManager:1260 - ERROR: the RefConfig I2C_Analogue is not available in your config.xml file
+2020-11-15 13:29:11,993 [ERROR] IPConfigManager:1260 - ERROR: the RefConfig I2C_DigitalFolter is not available in your config.xml file
+2020-11-15 13:29:15,087 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2020-11-15 13:29:15,088 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for DMA
+2020-11-15 13:29:15,089 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2020-11-15 13:29:15,279 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\dma.c_save
+2020-11-15 13:29:15,373 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\dma.c
+2020-11-15 13:29:15,477 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\dma.h_save
+2020-11-15 13:29:15,653 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\dma.h
+2020-11-15 13:29:15,656 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2020-11-15 13:29:15,658 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for I2C
+2020-11-15 13:29:15,658 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2020-11-15 13:29:15,760 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\i2c.c_save
+2020-11-15 13:29:15,958 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\i2c.c
+2020-11-15 13:29:15,996 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\i2c.h_save
+2020-11-15 13:29:16,163 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\i2c.h
+2020-11-15 13:29:16,166 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2020-11-15 13:29:16,167 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for RTC
+2020-11-15 13:29:16,168 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2020-11-15 13:29:16,175 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\rtc.c_save
+2020-11-15 13:29:16,383 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\rtc.c
+2020-11-15 13:29:16,390 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\rtc.h_save
+2020-11-15 13:29:16,478 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\rtc.h
+2020-11-15 13:29:16,481 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2020-11-15 13:29:16,486 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for SYS
+2020-11-15 13:29:16,487 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2020-11-15 13:29:16,489 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2020-11-15 13:29:16,490 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for USART
+2020-11-15 13:29:16,492 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2020-11-15 13:29:16,551 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\usart.c_save
+2020-11-15 13:29:16,788 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\usart.c
+2020-11-15 13:29:16,797 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\usart.h_save
+2020-11-15 13:29:16,891 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\usart.h
+2020-11-15 13:29:16,894 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for NVIC
+2020-11-15 13:29:16,895 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2020-11-15 13:29:16,978 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\stm32f4xx_it.c_save
+2020-11-15 13:29:17,101 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\stm32f4xx_it.c
+2020-11-15 13:29:17,185 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\stm32f4xx_it.h_save
+2020-11-15 13:29:17,358 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\stm32f4xx_it.h
+2020-11-15 13:29:17,719 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\stm32f4xx_hal_msp.c_save
+2020-11-15 13:29:17,804 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\stm32f4xx_hal_msp.c
+2020-11-15 13:29:17,811 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\MXTmpFiles\system.tmp_save
+2020-11-15 13:29:17,878 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\MXTmpFiles\system.tmp
+2020-11-15 13:29:17,888 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\stm32_assert.h_save
+2020-11-15 13:29:17,999 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\stm32_assert.h
+2020-11-15 13:29:18,169 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\stm32f4xx_hal_conf.h_save
+2020-11-15 13:29:18,236 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\stm32f4xx_hal_conf.h
+2020-11-15 13:29:18,661 [WARN] IPConfigManager:2229 - Warning: the RefConfig RCC_PLL_PLLM_CONFIG is not available in your config.xml file
+2020-11-15 13:29:18,661 [WARN] IPConfigManager:2229 - Warning: the RefConfig RCC_PLL_PLLSOURCE_CONFIG is not available in your config.xml file
+2020-11-15 13:29:18,661 [WARN] IPConfigManager:2229 - Warning: the RefConfig RCC_ConfigVoltageScaling is not available in your config.xml file
+2020-11-15 13:29:18,668 [WARN] IPConfigManager:2229 - Warning: the RefConfig RCC_ClockConfig is not available in your config.xml file
+2020-11-15 13:29:18,668 [WARN] IPConfigManager:2229 - Warning: the RefConfig RCC_MCO1Config is not available in your config.xml file
+2020-11-15 13:29:18,668 [WARN] IPConfigManager:2229 - Warning: the RefConfig RCC_MCO2Config is not available in your config.xml file
+2020-11-15 13:29:18,668 [WARN] IPConfigManager:2229 - Warning: the RefConfig RCC_interrupt_Time_SYSTICK_Config is not available in your config.xml file
+2020-11-15 13:29:18,668 [WARN] IPConfigManager:2229 - Warning: the RefConfig RCC_SYSTICK_CONFIG is not available in your config.xml file
+2020-11-15 13:29:18,783 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\main.h_save
+2020-11-15 13:29:18,912 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\main.h
+2020-11-15 13:29:18,966 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\main.c_save
+2020-11-15 13:29:19,128 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\main.c
+2020-11-15 13:29:28,524 [INFO] ProjectBuilder:1500 - Time for Copy HAL[1] : 8634mS.
+2020-11-15 13:29:28,526 [INFO] ProjectBuilder:2068 - Project Generator version: 3.3.0
+2020-11-15 13:29:28,951 [INFO] ConfigFileManager:883 - The Die is : DIE433
+2020-11-15 13:29:28,965 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] configName ==Arm Cortex-M4
+2020-11-15 13:29:29,066 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] memory ==name="RAM" access="xrw" start="0x20000000" size="96"
+2020-11-15 13:29:29,068 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] memory ==name="FLASH" access="rx" start="0x8000000" size="512"
+2020-11-15 13:29:33,507 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] namefile= STM32CubeIDE
+2020-11-15 13:29:33,508 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] method name===============update
+2020-11-15 13:29:35,112 [INFO] ProjectBuilder:2161 - Time for Generating toolchain IDE Files: 6586mS.
+2020-11-15 13:29:35,113 [INFO] ProjectBuilder:1391 - Time for Copy CMSIS : 1mS.
+2020-11-15 13:29:35,116 [INFO] ProjectBuilder:1391 - Time for Copy CMSIS : 0mS.
+2020-11-15 13:29:35,125 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Tab changed to: Project Manager
+2020-11-15 13:29:42,145 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 543459944 Bytes (813694976)
+2020-11-15 13:29:42,382 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: RTC
+2020-11-15 13:29:42,382 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: NVIC
+2020-11-15 13:29:42,382 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: USART
+2020-11-15 13:29:42,382 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: USART
+2020-11-15 13:29:42,382 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: DMA
+2020-11-15 13:29:42,384 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: SYS
+2020-11-15 13:29:42,384 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: I2C
+2020-11-15 13:29:42,385 [INFO] CodeGenerator:572 - code generatio: config db path: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\
+2020-11-15 13:29:42,387 [WARN] IP:1918 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2020-11-15 13:29:42,388 [WARN] IP:1918 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2020-11-15 13:29:42,397 [INFO] Argument:277 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:42,397 [INFO] Argument:287 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:42,397 [INFO] Argument:277 - Argument : Streamvalue: LL_DMA_STREAM_5
+2020-11-15 13:29:42,397 [INFO] Argument:287 - Argument : Streamvalue: LL_DMA_STREAM_5
+2020-11-15 13:29:42,397 [INFO] Argument:277 - Argument : Channelvalue: LL_DMA_CHANNEL_4
+2020-11-15 13:29:42,397 [INFO] Argument:287 - Argument : Channelvalue: LL_DMA_CHANNEL_4
+2020-11-15 13:29:42,397 [INFO] Argument:277 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:42,397 [INFO] Argument:287 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:42,397 [INFO] Argument:277 - Argument : Streamvalue: LL_DMA_STREAM_5
+2020-11-15 13:29:42,397 [INFO] Argument:287 - Argument : Streamvalue: LL_DMA_STREAM_5
+2020-11-15 13:29:42,397 [INFO] Argument:277 - Argument : Directionvalue: LL_DMA_DIRECTION_PERIPH_TO_MEMORY
+2020-11-15 13:29:42,398 [INFO] Argument:287 - Argument : Directionvalue: LL_DMA_DIRECTION_PERIPH_TO_MEMORY
+2020-11-15 13:29:42,398 [INFO] Argument:277 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:42,398 [INFO] Argument:287 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:42,398 [INFO] Argument:277 - Argument : Streamvalue: LL_DMA_STREAM_5
+2020-11-15 13:29:42,398 [INFO] Argument:287 - Argument : Streamvalue: LL_DMA_STREAM_5
+2020-11-15 13:29:42,398 [INFO] Argument:277 - Argument : Priorityvalue: LL_DMA_PRIORITY_LOW
+2020-11-15 13:29:42,398 [INFO] Argument:287 - Argument : Priorityvalue: LL_DMA_PRIORITY_LOW
+2020-11-15 13:29:42,398 [INFO] Argument:277 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:42,398 [INFO] Argument:287 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:42,398 [INFO] Argument:277 - Argument : Streamvalue: LL_DMA_STREAM_5
+2020-11-15 13:29:42,398 [INFO] Argument:287 - Argument : Streamvalue: LL_DMA_STREAM_5
+2020-11-15 13:29:42,398 [INFO] Argument:277 - Argument : Modevalue: LL_DMA_MODE_CIRCULAR
+2020-11-15 13:29:42,398 [INFO] Argument:287 - Argument : Modevalue: LL_DMA_MODE_CIRCULAR
+2020-11-15 13:29:42,398 [INFO] Argument:277 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:42,398 [INFO] Argument:287 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:42,398 [INFO] Argument:277 - Argument : Streamvalue: LL_DMA_STREAM_5
+2020-11-15 13:29:42,399 [INFO] Argument:287 - Argument : Streamvalue: LL_DMA_STREAM_5
+2020-11-15 13:29:42,399 [INFO] Argument:277 - Argument : IncrementModevalue: LL_DMA_PERIPH_NOINCREMENT
+2020-11-15 13:29:42,399 [INFO] Argument:287 - Argument : IncrementModevalue: LL_DMA_PERIPH_NOINCREMENT
+2020-11-15 13:29:42,399 [INFO] Argument:277 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:42,399 [INFO] Argument:287 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:42,399 [INFO] Argument:277 - Argument : Streamvalue: LL_DMA_STREAM_5
+2020-11-15 13:29:42,399 [INFO] Argument:287 - Argument : Streamvalue: LL_DMA_STREAM_5
+2020-11-15 13:29:42,399 [INFO] Argument:277 - Argument : IncrementModevalue: LL_DMA_MEMORY_INCREMENT
+2020-11-15 13:29:42,399 [INFO] Argument:287 - Argument : IncrementModevalue: LL_DMA_MEMORY_INCREMENT
+2020-11-15 13:29:42,399 [INFO] Argument:277 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:42,399 [INFO] Argument:287 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:42,399 [INFO] Argument:277 - Argument : Streamvalue: LL_DMA_STREAM_5
+2020-11-15 13:29:42,399 [INFO] Argument:287 - Argument : Streamvalue: LL_DMA_STREAM_5
+2020-11-15 13:29:42,399 [INFO] Argument:277 - Argument : Sizevalue: LL_DMA_PDATAALIGN_BYTE
+2020-11-15 13:29:42,399 [INFO] Argument:287 - Argument : Sizevalue: LL_DMA_PDATAALIGN_BYTE
+2020-11-15 13:29:42,399 [INFO] Argument:277 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:42,400 [INFO] Argument:287 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:42,400 [INFO] Argument:277 - Argument : Streamvalue: LL_DMA_STREAM_5
+2020-11-15 13:29:42,400 [INFO] Argument:287 - Argument : Streamvalue: LL_DMA_STREAM_5
+2020-11-15 13:29:42,400 [INFO] Argument:277 - Argument : Sizevalue: LL_DMA_MDATAALIGN_BYTE
+2020-11-15 13:29:42,400 [INFO] Argument:287 - Argument : Sizevalue: LL_DMA_MDATAALIGN_BYTE
+2020-11-15 13:29:42,400 [INFO] Argument:277 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:42,400 [INFO] Argument:287 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:42,400 [INFO] Argument:277 - Argument : Streamvalue: LL_DMA_STREAM_5
+2020-11-15 13:29:42,400 [INFO] Argument:287 - Argument : Streamvalue: LL_DMA_STREAM_5
+2020-11-15 13:29:42,401 [INFO] Argument:277 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:42,401 [INFO] Argument:287 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:42,401 [INFO] Argument:277 - Argument : Streamvalue: LL_DMA_STREAM_6
+2020-11-15 13:29:42,401 [INFO] Argument:287 - Argument : Streamvalue: LL_DMA_STREAM_6
+2020-11-15 13:29:42,401 [INFO] Argument:277 - Argument : Channelvalue: LL_DMA_CHANNEL_4
+2020-11-15 13:29:42,401 [INFO] Argument:287 - Argument : Channelvalue: LL_DMA_CHANNEL_4
+2020-11-15 13:29:42,401 [INFO] Argument:277 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:42,401 [INFO] Argument:287 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:42,401 [INFO] Argument:277 - Argument : Streamvalue: LL_DMA_STREAM_6
+2020-11-15 13:29:42,401 [INFO] Argument:287 - Argument : Streamvalue: LL_DMA_STREAM_6
+2020-11-15 13:29:42,401 [INFO] Argument:277 - Argument : Directionvalue: LL_DMA_DIRECTION_MEMORY_TO_PERIPH
+2020-11-15 13:29:42,401 [INFO] Argument:287 - Argument : Directionvalue: LL_DMA_DIRECTION_MEMORY_TO_PERIPH
+2020-11-15 13:29:42,401 [INFO] Argument:277 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:42,401 [INFO] Argument:287 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:42,402 [INFO] Argument:277 - Argument : Streamvalue: LL_DMA_STREAM_6
+2020-11-15 13:29:42,402 [INFO] Argument:287 - Argument : Streamvalue: LL_DMA_STREAM_6
+2020-11-15 13:29:42,402 [INFO] Argument:277 - Argument : Priorityvalue: LL_DMA_PRIORITY_LOW
+2020-11-15 13:29:42,402 [INFO] Argument:287 - Argument : Priorityvalue: LL_DMA_PRIORITY_LOW
+2020-11-15 13:29:42,402 [INFO] Argument:277 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:42,402 [INFO] Argument:287 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:42,402 [INFO] Argument:277 - Argument : Streamvalue: LL_DMA_STREAM_6
+2020-11-15 13:29:42,402 [INFO] Argument:287 - Argument : Streamvalue: LL_DMA_STREAM_6
+2020-11-15 13:29:42,402 [INFO] Argument:277 - Argument : Modevalue: LL_DMA_MODE_NORMAL
+2020-11-15 13:29:42,402 [INFO] Argument:287 - Argument : Modevalue: LL_DMA_MODE_NORMAL
+2020-11-15 13:29:42,402 [INFO] Argument:277 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:42,402 [INFO] Argument:287 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:42,402 [INFO] Argument:277 - Argument : Streamvalue: LL_DMA_STREAM_6
+2020-11-15 13:29:42,403 [INFO] Argument:287 - Argument : Streamvalue: LL_DMA_STREAM_6
+2020-11-15 13:29:42,403 [INFO] Argument:277 - Argument : IncrementModevalue: LL_DMA_PERIPH_NOINCREMENT
+2020-11-15 13:29:42,403 [INFO] Argument:287 - Argument : IncrementModevalue: LL_DMA_PERIPH_NOINCREMENT
+2020-11-15 13:29:42,403 [INFO] Argument:277 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:42,403 [INFO] Argument:287 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:42,403 [INFO] Argument:277 - Argument : Streamvalue: LL_DMA_STREAM_6
+2020-11-15 13:29:42,403 [INFO] Argument:287 - Argument : Streamvalue: LL_DMA_STREAM_6
+2020-11-15 13:29:42,403 [INFO] Argument:277 - Argument : IncrementModevalue: LL_DMA_MEMORY_INCREMENT
+2020-11-15 13:29:42,403 [INFO] Argument:287 - Argument : IncrementModevalue: LL_DMA_MEMORY_INCREMENT
+2020-11-15 13:29:42,403 [INFO] Argument:277 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:42,403 [INFO] Argument:287 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:42,404 [INFO] Argument:277 - Argument : Streamvalue: LL_DMA_STREAM_6
+2020-11-15 13:29:42,404 [INFO] Argument:287 - Argument : Streamvalue: LL_DMA_STREAM_6
+2020-11-15 13:29:42,404 [INFO] Argument:277 - Argument : Sizevalue: LL_DMA_PDATAALIGN_BYTE
+2020-11-15 13:29:42,404 [INFO] Argument:287 - Argument : Sizevalue: LL_DMA_PDATAALIGN_BYTE
+2020-11-15 13:29:42,404 [INFO] Argument:277 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:42,404 [INFO] Argument:287 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:42,404 [INFO] Argument:277 - Argument : Streamvalue: LL_DMA_STREAM_6
+2020-11-15 13:29:42,404 [INFO] Argument:287 - Argument : Streamvalue: LL_DMA_STREAM_6
+2020-11-15 13:29:42,404 [INFO] Argument:277 - Argument : Sizevalue: LL_DMA_MDATAALIGN_BYTE
+2020-11-15 13:29:42,404 [INFO] Argument:287 - Argument : Sizevalue: LL_DMA_MDATAALIGN_BYTE
+2020-11-15 13:29:42,404 [INFO] Argument:277 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:42,404 [INFO] Argument:287 - Argument : DMAxvalue: DMA1
+2020-11-15 13:29:42,404 [INFO] Argument:277 - Argument : Streamvalue: LL_DMA_STREAM_6
+2020-11-15 13:29:42,404 [INFO] Argument:287 - Argument : Streamvalue: LL_DMA_STREAM_6
+2020-11-15 13:29:42,843 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\MXTmpFiles\license.tmp_save
+2020-11-15 13:29:43,134 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\MXTmpFiles\license.tmp
+2020-11-15 13:29:43,202 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\gpio.c_save
+2020-11-15 13:29:43,360 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\gpio.c
+2020-11-15 13:29:43,369 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\gpio.h_save
+2020-11-15 13:29:43,430 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\gpio.h
+2020-11-15 13:29:43,496 [ERROR] IPConfigManager:1260 - ERROR: the RefConfig I2C_Analogue is not available in your config.xml file
+2020-11-15 13:29:43,496 [ERROR] IPConfigManager:1260 - ERROR: the RefConfig I2C_DigitalFolter is not available in your config.xml file
+2020-11-15 13:29:44,865 [WARN] IPConfigManager:3190 - WARNING: Missing Config File for SYS ip!!
+2020-11-15 13:29:45,112 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2020-11-15 13:29:45,113 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for DMA
+2020-11-15 13:29:45,114 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2020-11-15 13:29:45,171 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\dma.c_save
+2020-11-15 13:29:45,239 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\dma.c
+2020-11-15 13:29:45,247 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\dma.h_save
+2020-11-15 13:29:45,311 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\dma.h
+2020-11-15 13:29:45,315 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2020-11-15 13:29:45,316 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for I2C
+2020-11-15 13:29:45,316 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2020-11-15 13:29:45,325 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\i2c.c_save
+2020-11-15 13:29:45,410 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\i2c.c
+2020-11-15 13:29:45,419 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\i2c.h_save
+2020-11-15 13:29:45,497 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\i2c.h
+2020-11-15 13:29:45,504 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2020-11-15 13:29:45,505 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for RTC
+2020-11-15 13:29:45,506 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2020-11-15 13:29:45,514 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\rtc.c_save
+2020-11-15 13:29:45,597 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\rtc.c
+2020-11-15 13:29:45,606 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\rtc.h_save
+2020-11-15 13:29:45,669 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\rtc.h
+2020-11-15 13:29:45,673 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2020-11-15 13:29:45,673 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for SYS
+2020-11-15 13:29:45,675 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2020-11-15 13:29:45,676 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2020-11-15 13:29:45,678 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for USART
+2020-11-15 13:29:45,678 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2020-11-15 13:29:45,688 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\usart.c_save
+2020-11-15 13:29:46,234 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\usart.c
+2020-11-15 13:29:46,271 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\usart.h_save
+2020-11-15 13:29:46,339 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\usart.h
+2020-11-15 13:29:46,343 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for NVIC
+2020-11-15 13:29:46,344 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2020-11-15 13:29:46,498 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\stm32f4xx_it.c_save
+2020-11-15 13:29:46,601 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\stm32f4xx_it.c
+2020-11-15 13:29:46,704 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\stm32f4xx_it.h_save
+2020-11-15 13:29:46,787 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\stm32f4xx_it.h
+2020-11-15 13:29:46,847 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\MXTmpFiles\system.tmp_save
+2020-11-15 13:29:46,899 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\MXTmpFiles\system.tmp
+2020-11-15 13:29:46,906 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\stm32_assert.h_save
+2020-11-15 13:29:47,078 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\stm32_assert.h
+2020-11-15 13:29:47,088 [WARN] IPConfigManager:2229 - Warning: the RefConfig RCC_PLL_PLLM_CONFIG is not available in your config.xml file
+2020-11-15 13:29:47,088 [WARN] IPConfigManager:2229 - Warning: the RefConfig RCC_PLL_PLLSOURCE_CONFIG is not available in your config.xml file
+2020-11-15 13:29:47,088 [WARN] IPConfigManager:2229 - Warning: the RefConfig RCC_ConfigVoltageScaling is not available in your config.xml file
+2020-11-15 13:29:47,094 [WARN] IPConfigManager:2229 - Warning: the RefConfig RCC_ClockConfig is not available in your config.xml file
+2020-11-15 13:29:47,094 [WARN] IPConfigManager:2229 - Warning: the RefConfig RCC_MCO1Config is not available in your config.xml file
+2020-11-15 13:29:47,094 [WARN] IPConfigManager:2229 - Warning: the RefConfig RCC_MCO2Config is not available in your config.xml file
+2020-11-15 13:29:47,094 [WARN] IPConfigManager:2229 - Warning: the RefConfig RCC_interrupt_Time_SYSTICK_Config is not available in your config.xml file
+2020-11-15 13:29:47,094 [WARN] IPConfigManager:2229 - Warning: the RefConfig RCC_SYSTICK_CONFIG is not available in your config.xml file
+2020-11-15 13:29:47,228 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\main.h_save
+2020-11-15 13:29:47,372 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Inc\main.h
+2020-11-15 13:29:47,385 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\main.c_save
+2020-11-15 13:29:47,577 [INFO] CodeEngine:208 - Generated code: C:\Users\Stancoj\Desktop\PhD\APVV_netopier\gps_for_bats\software\firmware\gps_for_bat_firmware\Src\main.c
+2020-11-15 13:29:49,428 [INFO] ProjectBuilder:1500 - Time for Copy HAL[1] : 1234mS.
+2020-11-15 13:29:49,429 [INFO] ProjectBuilder:2068 - Project Generator version: 3.3.0
+2020-11-15 13:29:49,652 [INFO] ConfigFileManager:883 - The Die is : DIE433
+2020-11-15 13:29:49,664 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] configName ==Arm Cortex-M4
+2020-11-15 13:29:49,764 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] memory ==name="RAM" access="xrw" start="0x20000000" size="96"
+2020-11-15 13:29:49,766 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] memory ==name="FLASH" access="rx" start="0x8000000" size="512"
+2020-11-15 13:29:49,891 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] namefile= STM32CubeIDE
+2020-11-15 13:29:49,892 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] method name===============update
+2020-11-15 13:29:50,559 [INFO] ProjectBuilder:2161 - Time for Generating toolchain IDE Files: 1130mS.
+2020-11-15 13:29:50,560 [INFO] ProjectBuilder:1391 - Time for Copy CMSIS : 0mS.
+2020-11-15 13:29:50,564 [INFO] ProjectBuilder:1391 - Time for Copy CMSIS : 1mS.
+2020-11-16 14:39:00,704 [INFO] Activator:176 - 
+
+
+2020-11-16 14:39:00,753 [INFO] Activator:177 - !SESSION log4j initialized
+2020-11-16 15:07:38,992 [INFO] Activator:176 - 
+
+
+2020-11-16 15:07:38,995 [INFO] Activator:177 - !SESSION log4j initialized
+2020-11-16 15:09:21,509 [INFO] Activator:176 - 
+
+
+2020-11-16 15:09:21,512 [INFO] Activator:177 - !SESSION log4j initialized

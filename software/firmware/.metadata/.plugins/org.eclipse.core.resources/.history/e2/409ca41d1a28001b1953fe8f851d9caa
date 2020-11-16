@@ -1,0 +1,14 @@
+/*
+ * bmp280.h
+ *
+ *  Created on: 14. 11. 2020
+ *      Author: Stancoj
+ */
+
+#ifndef BMP280_H_
+#define BMP280_H_
+
+#include "mcu.h"
+
+#endif /* BMP280_H_ */
+

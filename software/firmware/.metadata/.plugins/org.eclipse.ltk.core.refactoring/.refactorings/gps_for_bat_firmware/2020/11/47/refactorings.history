@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;gps_for_bat_firmware/hw/gps&apos; to &apos;zoe_m8g&apos;" description="Rename resource &apos;gps&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="hw/gps" name="zoe_m8g" stamp="1605443244616" updateReferences="true"/>
+</session>
