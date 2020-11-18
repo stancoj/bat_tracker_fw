@@ -1,0 +1,54 @@
+/*
+ * bmp280.c
+ *
+ *  Created on: 14. 11. 2020
+ *      Author: Stancoj
+ */
+
+#include "bmp280.h"
+
+static uint8_t bmp280_data_buffer[DATA_BUFFER_SIZE];
+
+
+bool InitBMP280(void)
+{
+	/* Check if sensor has correct ID */
+	if(i2c_master_read(BMP280_ID_REG_ADDR, BMP280_I2C_ADDRESS, bmp280_data_buffer, 1))
+	{
+		if(bmp280_data_buffer[0] != BMP280_ID_REG_VALUE)
+		{
+			return false;
+		}
+	}
+	else
+	{
+		return false;
+	}
+
+	/* Setup the sensor */
+	uint8_t reg_data = BMP280_CTRL_MEAS_POWER_MODE_NORMAL | BMP280_CTRL_MEAS_OSRS_PRS2 | BMP280_CTRL_MEAS_OSRS_TEMP2;
+	i2c_master_write(BMP280_CTRL_MEAS_REG_ADDR, BMP280_I2C_ADDRESS, &reg_data, 1);
+
+	return true;
+}
+
+
+void ReadPreasure3B(void)
+{
+	i2c_master_read(BMP280_TEMP_MSB_REG_ADDR, BMP280_I2C_ADDRESS, bmp280_data_buffer, 3);
+}
+
+void ReadPreasure1B(void)
+{
+	i2c_master_read(BMP280_TEMP_MSB_REG_ADDR, BMP280_I2C_ADDRESS, bmp280_data_buffer, 3);
+}
+
+void ReadConfig(void)
+{
+	i2c_master_read(BMP280_CONFIG_REG_ADDR, BMP280_I2C_ADDRESS, bmp280_data_buffer, 1);
+}
+
+void ReadCtrlMeas(void)
+{
+	i2c_master_read(BMP280_CTRL_MEAS_REG_ADDR, BMP280_I2C_ADDRESS, bmp280_data_buffer, 1);
+}

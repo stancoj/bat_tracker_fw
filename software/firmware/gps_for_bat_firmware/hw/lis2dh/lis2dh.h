@@ -16,8 +16,8 @@
 
 
 
-#define 	LIS2DH_DEVICE_ADDRESS				(0x18 << 1)
-#define 	LIS2DH_DEVICE_ADDRESS_ALTERNATIVE	(0x19 << 1)				//alternative for various hardware configurations,
+#define 	LIS2DH_DEVICE_ADDRESS				(0x30u)
+#define 	LIS2DH_DEVICE_ADDRESS_ALTERNATIVE	(0x32u)				//alternative for various hardware configurations,
 																		//initialization should detect which one is used
 #define 	LIS2DH_ACC_ON						LL_GPIO_SetOutputPin(GPIOB, LL_GPIO_PIN_8)
 #define 	LIS2DH_ACC_OFF						LL_GPIO_ResetOutputPin(GPIOB, LL_GPIO_PIN_8)

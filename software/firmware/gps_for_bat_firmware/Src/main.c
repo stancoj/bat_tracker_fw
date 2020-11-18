@@ -49,14 +49,14 @@ int main(void)
 
   mcu_init();
 
-  if(InitBMP280())
-  {
+  LL_mDelay(5000);
 
-  }
-  else
+  if(!InitBMP280())
   {
 	  while(1);
   }
+
+  //lis2dh_init();
 
   InitGps();
   time_init = time;

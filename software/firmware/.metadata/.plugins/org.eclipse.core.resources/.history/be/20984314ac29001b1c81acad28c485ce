@@ -1,0 +1,44 @@
+/*
+ * bmp280.c
+ *
+ *  Created on: 14. 11. 2020
+ *      Author: Stancoj
+ */
+
+#include "bmp280.h"
+
+static uint8_t bmp280_data_buffer[DATA_BUFFER_SIZE];
+
+
+bool InitBMP280(void)
+{
+	if(BMP280_ID_REG_VALUE == i2c_master_read(BMP280_ID_REG_ADDR, BMP280_I2C_ADDRESS, bmp280_data_buffer, 1))
+	{
+		return true;
+	}
+	else
+	{
+		return true;
+	}
+}
+
+
+void ReadPreasure3B(void)
+{
+	i2c_master_read(BMP280_TEMP_MSB_REG_ADDR, BMP280_I2C_ADDRESS, bmp280_data_buffer, 3);
+}
+
+void ReadPreasure1B(void)
+{
+	i2c_master_read(BMP280_TEMP_MSB_REG_ADDR, BMP280_I2C_ADDRESS, bmp280_data_buffer, 3);
+}
+
+void ReadConfig(void)
+{
+	i2c_master_read(BMP280_TEMP_MSB_REG_ADDR, BMP280_I2C_ADDRESS, bmp280_data_buffer, 3);
+}
+
+void ReadCtrlMeas(void)
+{
+	i2c_master_read(BMP280_TEMP_MSB_REG_ADDR, BMP280_I2C_ADDRESS, bmp280_data_buffer, 3);
+}

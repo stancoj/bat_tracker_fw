@@ -1,0 +1,38 @@
+/*
+ * bmp280.h
+ *
+ *  Created on: 14. 11. 2020
+ *      Author: Stancoj
+ */
+
+#ifndef BMP280_H_
+#define BMP280_H_
+
+#include "mcu.h"
+#include <stdbool.h>
+
+/* BMP sensor I2C address */
+#define BMP280_I2C_ADDRESS			0xEEu
+/* Revision registers */
+#define BMP280_ID_REG_ADDR			0xD0u
+#define BMP280_ID_REG_VALUE			0x58u
+/* Data registers */
+#define BMP280_TEMP_MSB_REG_ADDR	0xFAu
+#define BMP280_TEMP_MSB_REG_ADDR	0xF7u
+/* Control registers */
+#define BMP280_CONFIG_REG_ADDR		0xF5u
+#define BMP280_CTRL_MEAS_REG_ADDR	0xF4u
+/* Status registers */
+#define BMP280_STATUS_REG_ADDR		0xF3u
+/* Reset registers */
+#define BMP280_RESET_REG_ADDR		0xE0u
+/* Calibration data */
+#define BMP280_RESET_REG_ADDR		0x88u
+
+bool InitBMP280(void);
+void ReadPreasure(void);
+void ReadConfig(void);
+void ReadCtrlMeas(void);
+
+#endif /* BMP280_H_ */
+

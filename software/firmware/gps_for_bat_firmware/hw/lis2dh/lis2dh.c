@@ -24,15 +24,17 @@ static uint8_t sLis2dhI2Caddress = LIS2DH_DEVICE_ADDRESS_ALTERNATIVE;
 
 uint64_t lastMovementTick = 0;
 
+static uint8_t sLis2dhDataBuffer[10];
+
 uint8_t lis2dh_read_byte(uint8_t reg_addr)
 {
 	//uint8_t data = 0;
-	return i2c_master_read(reg_addr, sLis2dhI2Caddress, 1);
+	return i2c_master_read(reg_addr, sLis2dhI2Caddress, sLis2dhDataBuffer, 1);
 }
 
 void lis2dh_write_byte(uint8_t reg_addr, uint8_t value)
 {
-	i2c_master_write(value, reg_addr, sLis2dhI2Caddress, 0);
+	//i2c_master_write(value, reg_addr, sLis2dhI2Caddress, 0);
 }
 
 void lis2dh_readArray(uint8_t * data, uint8_t reg, uint8_t length)
@@ -159,6 +161,16 @@ void lis2dh_fifoDisable()
 uint8_t lis2dh_init(void)
 {
 
+	if(LIS2DH_WHO_AM_I_VALUE == i2c_master_read(LIS2DH_WHO_AM_I_ADDRES, LIS2DH_DEVICE_ADDRESS, sLis2dhDataBuffer, 1))
+	{
+		return 1;
+	}
+	else
+	{
+		return 0;
+	}
+
+	/*
 	uint8_t status = 1;
 
 	LIS2DH_ACC_ON;
@@ -205,6 +217,7 @@ uint8_t lis2dh_init(void)
 	lis2dh_prepareFIFO(10);
 
 	return status;
+	*/
 }
 
 
