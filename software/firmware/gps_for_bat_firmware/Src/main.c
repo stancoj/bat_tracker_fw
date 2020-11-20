@@ -26,11 +26,13 @@
 #include "mcu.h"
 #include "gps.h"
 #include "lis2dh.h"
-#include "bmp280.h"
+#include "bmp280_app.h"
+
 
 /* Structures containing GPS data */
 extern Gps_Data_s gGpsData;
 extern Gps_Data_Ubx_s gGpsDataUbx;
+extern bmp280_sensor_data_ BMP280_data;
 
 void SystemClock_Config(void);
 void sendGPStoUsart(void);
@@ -51,13 +53,7 @@ int main(void)
 
   LL_mDelay(5000);
 
-  if(!InitBMP280())
-  {
-	  while(1);
-  }
-
-  //lis2dh_init();
-
+  initBMP280_app();
   InitGps();
   time_init = time;
 
@@ -65,9 +61,10 @@ int main(void)
 
   while (1)
   {
-	  if((time - prev_time) > 1000)
+	  if((time - prev_time) > 2000)
 	  {
-		  sendGPStoUsart();
+		  calculateBMP280Altitude();
+		  //sendGPStoUsart();
 		  prev_time = time;
 	  }
 

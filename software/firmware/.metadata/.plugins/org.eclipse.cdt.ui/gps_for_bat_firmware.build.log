@@ -1,7 +1,7 @@
-20:19:09 **** Clean-only build of configuration Debug for project gps_for_bat_firmware ****
+20:41:31 **** Clean-only build of configuration Debug for project gps_for_bat_firmware ****
 make -j4 clean 
 rm -rf *
  
 
-20:19:10 Build Finished. 0 errors, 0 warnings. (took 1s.275ms)
+20:41:33 Build Finished. 0 errors, 0 warnings. (took 1s.801ms)
 

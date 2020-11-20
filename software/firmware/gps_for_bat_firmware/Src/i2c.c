@@ -200,6 +200,129 @@ uint8_t i2c_master_read(uint8_t register_addr, uint8_t slave_addr, uint8_t *data
 
 }
 
+
+int8_t i2c_bmp280_write(uint8_t slave_addr, uint8_t register_addr, uint8_t *data, uint16_t send_data_length)
+{
+	if(data == 0 || send_data_length == 0)
+	{
+		return 1;
+	}
+
+	LL_I2C_AcknowledgeNextData(I2C3, LL_I2C_ACK);
+	LL_I2C_GenerateStartCondition(I2C3);
+	while(!LL_I2C_IsActiveFlag_SB(I2C3)){};
+	LL_I2C_TransmitData8(I2C3, (slave_addr));
+	while(!LL_I2C_IsActiveFlag_ADDR(I2C3)){};
+	LL_I2C_ClearFlag_ADDR(I2C3);
+
+	/* Send register address */
+	LL_I2C_TransmitData8(I2C3, register_addr);
+	while(!LL_I2C_IsActiveFlag_TXE(I2C3)){};
+
+	for(uint8_t i = send_data_length; i > 0; i-- )
+	{
+		if(i == 1)
+		{
+			/* Send byte and wait for ACK */
+			LL_I2C_TransmitData8(I2C3, data[i-1]);
+			while(!LL_I2C_IsActiveFlag_TXE(I2C3)){};
+			/* Generate Stop condition */
+			LL_I2C_GenerateStopCondition(I2C3);
+			LL_I2C_ClearFlag_STOP(I2C3);
+		}
+		else if(i > 1)
+		{
+			LL_I2C_TransmitData8(I2C3, data[i-1]);
+			while(!LL_I2C_IsActiveFlag_TXE(I2C3)){};
+		}
+	}
+
+	return 0;
+}
+
+
+int8_t i2c_bmp280_read(uint8_t slave_addr, uint8_t register_addr, uint8_t *data_rx_buffer, uint16_t read_data_length)
+{
+	/* Multibyte data transfer: slave => master */
+	if(read_data_length > 0 && data_rx_buffer != 0)
+	{
+		/* Save number of bytes to be received */
+		uint8_t data_to_receive = read_data_length;
+		uint8_t buffer_iterator = 0;
+
+		/**** Tx part ****/
+		/* Prepare acknowledge for Master data reception */
+		LL_I2C_AcknowledgeNextData(I2C3, LL_I2C_ACK);
+		/* Master Generate Start condition */
+		LL_I2C_GenerateStartCondition(I2C3);
+		/* Check SB flag value in ISR register */
+		while(!LL_I2C_IsActiveFlag_SB(I2C3)){};
+		LL_I2C_TransmitData8(I2C3, (slave_addr));
+		while(!LL_I2C_IsActiveFlag_ADDR(I2C3)){};
+		LL_I2C_ClearFlag_ADDR(I2C3);
+		/* Send register address we want to read from*/
+		while(!LL_I2C_IsActiveFlag_TXE(I2C3)){};
+		LL_I2C_TransmitData8(I2C3, register_addr);
+
+		/**** Rx part ****/
+		/* Enable I2C interrupts */
+		LL_I2C_EnableIT_BUF(I2C3);
+		/* Prepare acknowledge for Master data reception */
+		if(read_data_length == 1)
+		{
+			LL_I2C_AcknowledgeNextData(I2C3, LL_I2C_NACK);
+		}
+		else
+		{
+			LL_I2C_AcknowledgeNextData(I2C3, LL_I2C_ACK);
+		}
+		/* Generate start condition */
+		LL_I2C_GenerateStartCondition(I2C3);
+
+		while(!LL_I2C_IsActiveFlag_SB(I2C3)){};
+		// Send slave address with request to read data
+		LL_I2C_TransmitData8(I2C3, ((slave_addr) | 0x01));
+		// Wait for slave ACK
+		while(!LL_I2C_IsActiveFlag_ADDR(I2C3)){};
+		LL_I2C_ClearFlag_ADDR(I2C3);
+
+		/* Wait for end of the reception */
+		while(data_to_receive > 0)
+		{
+			if(LL_I2C_IsActiveFlag_RXNE(I2C3))
+			{
+				if((data_to_receive > 2) || (data_to_receive == 1))
+				{
+					data_rx_buffer[buffer_iterator++] = LL_I2C_ReceiveData8(I2C3);
+					data_to_receive--;
+				}
+				else if(data_to_receive == 2)
+				{
+					LL_I2C_AcknowledgeNextData(I2C3, LL_I2C_NACK);
+
+					data_rx_buffer[buffer_iterator++] = LL_I2C_ReceiveData8(I2C3);
+					data_to_receive--;
+				}
+			}
+		};
+
+		/* Generate Stop condition */
+		LL_I2C_GenerateStopCondition(I2C3);
+		LL_I2C_ClearFlag_STOP(I2C3);
+
+		buffer_iterator = 0;
+
+		return 0;
+	}
+	else
+	{
+		return 1;
+	}
+
+
+}
+
+
 /* USER CODE BEGIN 1 */
 
 /* USER CODE END 1 */

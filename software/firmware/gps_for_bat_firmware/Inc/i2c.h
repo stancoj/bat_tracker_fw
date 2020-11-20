@@ -39,6 +39,8 @@ void I2C3RxCallback(void);
 uint8_t i2c_master_read(uint8_t register_addr, uint8_t slave_addr, uint8_t *data_buffer, uint8_t read_data_length);
 uint8_t i2c_master_write(uint8_t register_addr, uint8_t slave_addr, uint8_t *data, uint8_t send_data_length);
 
+int8_t i2c_bmp280_read(uint8_t slave_addr, uint8_t register_addr, uint8_t *data_buffer, uint16_t read_data_length);
+int8_t i2c_bmp280_write(uint8_t slave_addr, uint8_t register_addr, uint8_t *data, uint16_t send_data_length);
 
 #ifdef __cplusplus
 }

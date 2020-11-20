@@ -1,0 +1,13 @@
+/*
+ * bmp280_defs.h
+ *
+ *  Created on: 20. 11. 2020
+ *      Author: Stancoj
+ */
+
+#ifndef BMP280_BMP280_DEFS_H_
+#define BMP280_BMP280_DEFS_H_
+
+
+
+#endif /* BMP280_BMP280_DEFS_H_ */

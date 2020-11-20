@@ -1,0 +1,103 @@
+/*
+ * bmp280.c
+ *
+ *  Created on: 14. 11. 2020
+ *      Author: Stancoj
+ */
+
+#include "bmp280_app.h"
+
+bmp280_sensor_data_ BMP280_data = {0};
+
+
+bool initBMP280_app(void)
+{
+	int8_t rslt = 0;
+
+	BMP280_data.bmp.delay_ms = LL_mDelay;
+	BMP280_data.bmp.dev_id = (BMP280_I2C_ADDR_SEC << 1);
+	BMP280_data.bmp.intf = BMP280_I2C_INTF;
+	BMP280_data.bmp.read = i2c_bmp280_read;
+	BMP280_data.bmp.write = i2c_bmp280_write;
+
+	rslt = bmp280_init(&BMP280_data.bmp);
+	if(rslt != BMP280_OK) return false;
+
+	rslt = bmp280_get_config(&BMP280_data.bmp_conf, &BMP280_data.bmp);
+	if(rslt != BMP280_OK) return false;
+
+	// Set BMP280 configuration
+	BMP280_data.bmp_conf.filter = BMP280_FILTER_OFF;
+	BMP280_data.bmp_conf.os_temp = BMP280_OS_1X;
+	BMP280_data.bmp_conf.os_pres = BMP280_OS_1X;
+	BMP280_data.bmp_conf.odr = BMP280_ODR_1000_MS;
+
+    rslt = bmp280_set_config(&BMP280_data.bmp_conf, &BMP280_data.bmp);
+	if(rslt != BMP280_OK) return false;
+
+	/*
+	rslt = bmp280_set_power_mode(BMP280_SLEEP, &BMP280_data.bmp);
+	if(rslt != BMP280_OK) return false;
+	*/
+
+	// Save ground level pressure and calculate pressure above sea level
+	uint32_t temporary_pres[5];
+
+	for(uint8_t i = 0; i < 5; i++)
+	{
+		updateBMP280data_forced();
+		temporary_pres += BMP280_data.bmp_comp_data.bmp_pres.pres32;
+
+		BMP280_data.bmp.delay_ms(2000);
+	}
+
+	return true;
+}
+
+
+void updateBMP280data_normal(void)
+{
+	// Get raw data
+	bmp280_get_uncomp_data(&BMP280_data.bmp_ucomp_data, &BMP280_data.bmp);
+	// Compensate temp raw data
+	bmp280_get_comp_temp_32bit(&BMP280_data.bmp_comp_data.bmp_temp.temp32, BMP280_data.bmp_ucomp_data.uncomp_temp, &BMP280_data.bmp);
+	// Compensate pres raw data
+    bmp280_get_comp_pres_32bit(&BMP280_data.bmp_comp_data.bmp_pres.pres32, BMP280_data.bmp_ucomp_data.uncomp_press, &BMP280_data.bmp);
+}
+
+
+void updateBMP280data_forced (void)
+{
+	int8_t rslt = bmp280_set_power_mode(BMP280_FORCED_MODE, &BMP280_data.bmp);
+	if(rslt != BMP280_OK) return;
+
+	do
+	{
+		rslt = bmp280_get_status(&BMP280_data.bmp_status, &BMP280_data.bmp);
+		if(rslt != BMP280_OK) return;
+
+		BMP280_data.bmp.delay_ms(1);
+	}while(BMP280_data.bmp_status.measuring == BMP280_MEAS_ONGOING || BMP280_data.bmp_status.measuring == BMP280_IM_UPDATE_ONGOING);
+
+
+	// Get raw data
+	bmp280_get_uncomp_data(&BMP280_data.bmp_ucomp_data, &BMP280_data.bmp);
+	// Compensate temp raw data
+	bmp280_get_comp_temp_32bit(&BMP280_data.bmp_comp_data.bmp_temp.temp32, BMP280_data.bmp_ucomp_data.uncomp_temp, &BMP280_data.bmp);
+	// Compensate pres raw data
+    bmp280_get_comp_pres_32bit(&BMP280_data.bmp_comp_data.bmp_pres.pres32, BMP280_data.bmp_ucomp_data.uncomp_press, &BMP280_data.bmp);
+}
+
+
+void calculateAltitude()
+{
+
+}
+
+int compare( const void* a, const void* b)
+{
+     int int_a = * ( (int*) a );
+     int int_b = * ( (int*) b );
+
+     return (int_a > int_b) - (int_a < int_b);
+}

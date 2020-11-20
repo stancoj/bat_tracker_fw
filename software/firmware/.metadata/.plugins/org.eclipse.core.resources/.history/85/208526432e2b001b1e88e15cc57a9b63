@@ -1,0 +1,22 @@
+/*
+ * bmp280.c
+ *
+ *  Created on: 14. 11. 2020
+ *      Author: Stancoj
+ */
+
+#include "bmp280_app.h"
+
+
+struct bmp280_dev bmp;
+struct bmp280_config bmp_conf;
+struct bmp280_uncomp_data bmp_ucomp_data;
+
+void initBMP280_app(void)
+{
+	bmp.delay_ms = LL_mDelay;
+	bmp.dev_id = BMP280_I2C_ADDR_SEC;
+	bmp.intf = BMP280_I2C_INTF;
+	bmp.read = i2c_bmp280_read;
+	bmp.write = i2c_bmp280_write;
+}

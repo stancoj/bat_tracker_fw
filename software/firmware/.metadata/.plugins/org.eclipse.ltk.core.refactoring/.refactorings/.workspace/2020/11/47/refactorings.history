@@ -1,4 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Delete resource &apos;gps_for_bat_firmware/Src/bmp280.h&apos;" deleteContents="false" description="Delete resource &apos;gps_for_bat_firmware/Src/bmp280.h&apos;" element1="/gps_for_bat_firmware/Src/bmp280.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1605537232979"/>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;gps_for_bat_firmware/Src/bmp280.h&apos;" deleteContents="false" description="Delete resource &apos;gps_for_bat_firmware/Src/bmp280.h&apos;" element1="/gps_for_bat_firmware/Src/bmp280.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1605537232979"/>&#x0A;<refactoring comment="Delete 2 resources" deleteContents="false" description="Delete 2 resources" element1="/gps_for_bat_firmware/hw/bmp280/bmp280.c" element2="/gps_for_bat_firmware/hw/bmp280/bmp280.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="2" stamp="1605901245198"/>
 </session>
