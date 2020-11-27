@@ -27,15 +27,18 @@
 #include "gps.h"
 #include "lis2dh.h"
 #include "bmp280_app.h"
-
+#include "flash.h"
 
 /* Structures containing GPS data */
 extern Gps_Data_s gGpsData;
 extern Gps_Data_Ubx_s gGpsDataUbx;
 extern bmp280_sensor_data_ BMP280_data;
+extern flash_state_ flash_state_data;
 
 void SystemClock_Config(void);
-void sendGPStoUsart(void);
+void send_GPS_BMP_to_Usart(void);
+void sendInitText(void);
+void double_to_str(double x, char *p);
 
 uint64_t time = 0, time_init = 0, time_first_fix = 0;
 
@@ -51,8 +54,10 @@ int main(void)
 
   mcu_init();
 
-  LL_mDelay(5000);
+  sendInitText();
+  LL_mDelay(3000);
 
+  flash_init();
   initBMP280_app();
   InitGps();
   time_init = time;
@@ -61,10 +66,10 @@ int main(void)
 
   while (1)
   {
-	  if((time - prev_time) > 2000)
+	  if((time - prev_time) > 1000)
 	  {
 		  calculateBMP280Altitude();
-		  //sendGPStoUsart();
+		  send_GPS_BMP_to_Usart();
 		  prev_time = time;
 	  }
 
@@ -126,9 +131,9 @@ void SystemClock_Config(void)
 }
 
 
-void sendGPStoUsart(void)
+void send_GPS_BMP_to_Usart(void)
 {
-	char text[50];
+	char text[50], number[10] = {0};
 
 	memset(text, '\0', sizeof(text));
 	sprintf(text, "sysTime: %ld, initTime: %ld, fixTime: %ld", (uint32_t)(time/1000), (uint32_t)(time_init/1000), (uint32_t)(time_first_fix/1000));
@@ -178,7 +183,58 @@ void sendGPStoUsart(void)
 	}
 
 	memset(text, '\0', sizeof(text));
-	sprintf(text, "gpsTime: %d:%d:%d \n \r", gGpsData.time.hour, gGpsData.time.min, gGpsData.time.sec);
+	sprintf(text, "gpsTime: %d:%d:%d, ", gGpsData.time.hour, gGpsData.time.min, gGpsData.time.sec);
+	for(uint8_t i = 0; i < strlen(text); i++)
+	{
+		  LL_USART_TransmitData8(USART1, text[i]);
+		  while(!LL_USART_IsActiveFlag_TC(USART1)){};
+		  LL_USART_ClearFlag_TC(USART1);
+	}
+
+	memset(number, '\0', sizeof(number));
+	double_to_str(BMP280_data.bmp_comp_data.bmp_alt.alt_abs, number);
+	memset(text, '\0', sizeof(text));
+	sprintf(text, "bmpAlt_abs: %s, ", number);
+	for(uint8_t i = 0; i < strlen(text); i++)
+	{
+		  LL_USART_TransmitData8(USART1, text[i]);
+		  while(!LL_USART_IsActiveFlag_TC(USART1)){};
+		  LL_USART_ClearFlag_TC(USART1);
+	}
+
+	memset(number, '\0', sizeof(number));
+	double_to_str(BMP280_data.bmp_comp_data.bmp_alt.alt_rel, number);
+	memset(text, '\0', sizeof(text));
+	sprintf(text, "bmpAlt_rel: %s, ", number);
+	for(uint8_t i = 0; i < strlen(text); i++)
+	{
+		  LL_USART_TransmitData8(USART1, text[i]);
+		  while(!LL_USART_IsActiveFlag_TC(USART1)){};
+		  LL_USART_ClearFlag_TC(USART1);
+	}
+
+	memset(text, '\0', sizeof(text));
+	sprintf(text, "bmpPress: %ld, ", BMP280_data.bmp_comp_data.bmp_pres.pres32);
+	for(uint8_t i = 0; i < strlen(text); i++)
+	{
+		  LL_USART_TransmitData8(USART1, text[i]);
+		  while(!LL_USART_IsActiveFlag_TC(USART1)){};
+		  LL_USART_ClearFlag_TC(USART1);
+	}
+
+	memset(number, '\0', sizeof(number));
+	double_to_str(BMP280_data.bmp_comp_data.bmp_temp.temp, number);
+	memset(text, '\0', sizeof(text));
+	sprintf(text, "bmpTemp: %s \n \r", number);
+	for(uint8_t i = 0; i < strlen(text); i++)
+	{
+		  LL_USART_TransmitData8(USART1, text[i]);
+		  while(!LL_USART_IsActiveFlag_TC(USART1)){};
+		  LL_USART_ClearFlag_TC(USART1);
+	}
+
+	memset(text, '\0', sizeof(text));
+	sprintf(text, "FLASH: %d, %d, %lx \n \r \n \r", flash_state_data.initialized, flash_state_data.error, flash_state_data.free_memory);
 	for(uint8_t i = 0; i < strlen(text); i++)
 	{
 		  LL_USART_TransmitData8(USART1, text[i]);
@@ -188,7 +244,58 @@ void sendGPStoUsart(void)
 }
 
 
+void sendInitText(void)
+{
+	char text[] = "\n\r\n\r ***** Device is ON! ***** \n\r\n\r";
+	for(uint8_t i = 0; i < strlen(text); i++)
+	{
+		  LL_USART_TransmitData8(USART1, text[i]);
+		  while(!LL_USART_IsActiveFlag_TC(USART1)){};
+		  LL_USART_ClearFlag_TC(USART1);
+	}
+}
 
+
+void double_to_str(double x, char *p)
+{
+    char temp[10] = {0}, *s;
+
+    s = temp;
+
+    uint16_t decimals;
+    int units;
+    if (x < 0)
+    {
+        decimals = (int)(x * -100) % 100;
+        units = (int)(-1 * x);
+    }
+    else
+    {
+        decimals = (int)(x * 100) % 100;
+        units = (int)x;
+    }
+
+    *s = (decimals % 10) + '0';
+    decimals /= 10;
+    *++s = (decimals % 10) + '0';
+    *++s = '.';
+
+    do
+    {
+    	*++s = (units % 10) + '0';
+        units /= 10;
+    }while(units > 0);
+
+    if (x < 0) *++s = '-';
+
+    uint8_t j = 0;
+
+    for(int8_t i = (strlen(temp)-1); i >= 0; i--)
+    {
+    	p[j] = temp[i];
+    	j++;
+    }
+}
 /**
   * @brief  This function is executed in case of error occurrence.
   * @retval None

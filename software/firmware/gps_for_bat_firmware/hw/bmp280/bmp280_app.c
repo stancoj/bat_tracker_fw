@@ -43,6 +43,8 @@ bool initBMP280_app(void)
 	BMP280_data.bmp_comp_data.bmp_pres.pres_asl = SEAL_LEVEL_PRESSURE_Pa;
 	// Save ground level pressure and calculate pressure above sea level
 	calculateRefferencePress();
+	// Calculate zero absolute altitude
+	calculateZeroAbsAltitude();
 
 	return true;
 }
@@ -77,9 +79,10 @@ void updateBMP280data_forced (void)
 	bmp280_get_uncomp_data(&BMP280_data.bmp_ucomp_data, &BMP280_data.bmp);
 	// Compensate temp raw data
 	bmp280_get_comp_temp_32bit(&BMP280_data.bmp_comp_data.bmp_temp.temp32, BMP280_data.bmp_ucomp_data.uncomp_temp, &BMP280_data.bmp);
+	BMP280_data.bmp_comp_data.bmp_temp.temp = BMP280_data.bmp_comp_data.bmp_temp.temp32 / 100.0;
+
 	// Compensate pres raw data
     bmp280_get_comp_pres_32bit(&BMP280_data.bmp_comp_data.bmp_pres.pres32, BMP280_data.bmp_ucomp_data.uncomp_press, &BMP280_data.bmp);
-    bmp280_get_comp_pres_double(&BMP280_data.bmp_comp_data.bmp_pres.pres, BMP280_data.bmp_ucomp_data.uncomp_press, &BMP280_data.bmp);
 }
 
 /*
@@ -87,29 +90,65 @@ void updateBMP280data_forced (void)
  */
 void calculateRefferencePress(void)
 {
-	uint32_t temporary_pres[5];
+	uint8_t sample_num = 30;
+	//uint32_t temporary_pres[sample_num];
 
-	for(uint8_t i = 0; i < 5; i++)
+	for(uint8_t i = 0; i < sample_num; i++)
 	{
 		//measure
 		updateBMP280data_forced();
 		//save
-		temporary_pres[i] = BMP280_data.bmp_comp_data.bmp_pres.pres32;
+		//temporary_pres[i] = BMP280_data.bmp_comp_data.bmp_pres.pres32;
+		BMP280_data.bmp_comp_data.bmp_pres.pres_ref +=  BMP280_data.bmp_comp_data.bmp_pres.pres32;
 		//wait
-		BMP280_data.bmp.delay_ms(2000);
+		BMP280_data.bmp.delay_ms(500);
 	}
 
-	qsort(temporary_pres, 5, sizeof(uint32_t), compare);
+	/*
+	qsort(temporary_pres, sample_num, sizeof(uint32_t), compare);
 
-	BMP280_data.bmp_comp_data.bmp_pres.pres_ref = (uint32_t)((temporary_pres[1] + temporary_pres[2] + temporary_pres[3])/3.0f);
+	for(uint8_t i = 0; i < sample_num; i++)
+	{
+		BMP280_data.bmp_comp_data.bmp_pres.pres_ref += temporary_pres[i];
+	}
+	*/
+
+	BMP280_data.bmp_comp_data.bmp_pres.pres_ref /= sample_num;
+}
+
+void calculateZeroAbsAltitude(void)
+{
+	BMP280_data.bmp_comp_data.bmp_alt.alt_zero_abs = calculateAltitude9thOrderPolynomial((double)BMP280_data.bmp_comp_data.bmp_pres.pres_ref);
 }
 
 void calculateBMP280Altitude(void)
 {
 	updateBMP280data_forced();
 
-	BMP280_data.bmp_comp_data.bmp_alt.alt_asl = 44330.0 * (1.0 - pow(((BMP280_data.bmp_comp_data.bmp_pres.pres / 100.0) / BMP280_data.bmp_comp_data.bmp_pres.pres_asl), 0.1903));
+	//BMP280_data.bmp_comp_data.bmp_alt.alt_asl = 44330.0 * (1.0 - pow(((BMP280_data.bmp_comp_data.bmp_pres.pres / 100.0) / BMP280_data.bmp_comp_data.bmp_pres.pres_asl), 0.1903));
+	//BMP280_data.bmp_comp_data.bmp_alt.alt_rel = ((pow((BMP280_data.bmp_comp_data.bmp_pres.pres_ref/(double)BMP280_data.bmp_comp_data.bmp_pres.pres32), (1/5.257)) - 1) * (BMP280_data.bmp_comp_data.bmp_temp.temp + 273.15))/0.0065;
+	BMP280_data.bmp_comp_data.bmp_alt.alt_abs = calculateAltitude9thOrderPolynomial(BMP280_data.bmp_comp_data.bmp_pres.pres32);
+	BMP280_data.bmp_comp_data.bmp_alt.alt_rel = BMP280_data.bmp_comp_data.bmp_alt.alt_abs - BMP280_data.bmp_comp_data.bmp_alt.alt_zero_abs;
 }
+
+
+double calculateAltitude9thOrderPolynomial(double p)
+{
+	double y;
+    p = p/100;
+    y = p_1 * p + p_2;
+    y = y * p + p_3;
+    y = y * p + p_4;
+    y = y * p + p_5;
+    y = y * p + p_6;
+    y = y * p + p_7;
+    y = y * p + p_8;
+    y = y * p + p_9;
+    y = y * p + p_10;
+    return y;
+}
+
+
 
 int compare( const void* a, const void* b)
 {
@@ -118,3 +157,5 @@ int compare( const void* a, const void* b)
 
      return (int_a > int_b) - (int_a < int_b);
 }
+
+

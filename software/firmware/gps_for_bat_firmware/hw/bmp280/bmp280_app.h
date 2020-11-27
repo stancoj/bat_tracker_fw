@@ -17,6 +17,18 @@
 
 #define SEAL_LEVEL_PRESSURE_Pa		1013.25f
 
+#define p_1		-6.170947634975743e-023
+#define p_2		4.160166469725014e-019
+#define p_3		-1.232717311332906e-015
+#define p_4		2.113607695781207e-012
+#define p_5		-2.324664093073154e-009
+#define p_6		1.720850634126080e-006
+#define p_7		-8.789071899021217e-004
+#define p_8		0.317691798459342
+#define p_9		-92.532548674378035
+#define p_10	2.247471205129054e+004
+
+
 struct preasure
 {
 	uint32_t pres_ref;
@@ -34,7 +46,8 @@ struct temperature
 
 struct altitude
 {
-	double alt_asl;
+	double alt_zero_abs;
+	double alt_abs;
 	double alt_rel;
 };
 
@@ -59,6 +72,9 @@ void updateBMP280data_forced(void);
 void updateBMP280data_normal(void);
 void calculateRefferencePress(void);
 void calculateBMP280Altitude(void);
+void calculateZeroAbsAltitude(void);
+
+double calculateAltitude9thOrderPolynomial(double p);
 int compare( const void* a, const void* b);
 
 
