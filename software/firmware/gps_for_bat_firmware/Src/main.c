@@ -28,6 +28,7 @@
 #include "lis2dh.h"
 #include "bmp280_app.h"
 #include "flash.h"
+#include "data_logger.h"
 
 /* Structures containing GPS data */
 extern Gps_Data_s gGpsData;
@@ -60,16 +61,19 @@ int main(void)
   flash_init();
   initBMP280_app();
   InitGps();
+  loggerInit();
   time_init = time;
 
   uint64_t prev_time = 0;
 
   while (1)
   {
-	  if((time - prev_time) > 1000)
+	  if((time - prev_time) >= 1000)
 	  {
 		  calculateBMP280Altitude();
-		  send_GPS_BMP_to_Usart();
+		  //send_GPS_BMP_to_Usart();
+		  loggerLogData();
+		  //loggerReadOutProccesedData();
 		  prev_time = time;
 	  }
 

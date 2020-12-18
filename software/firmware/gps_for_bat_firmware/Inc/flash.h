@@ -52,12 +52,18 @@ typedef struct
 }flash_state_;
 
 void flash_init(void);
+uint8_t flash_is_init(void);
+
 void flash_write_byte(uint32_t addr, uint8_t data);
 void flash_write_word(uint32_t addr, uint32_t data);
-void flash_write_data(uint32_t addr, uint8_t *data, uint16_t len);
+uint8_t flash_write_data(uint32_t addr, uint8_t *data, uint16_t len);
+
 uint8_t flash_read_byte(uint32_t addr);
+uint32_t flash_read_word(uint32_t addr);
 
-uint32_t flash_get_free_mem(void);
+//uint32_t flash_get_free_mem(void);
+uint32_t flash_get_free_user_mem(void);
 
+void flash_erase(void);
 
 #endif /* FLASH_H_ */
