@@ -55,7 +55,9 @@ uint8_t loggerLogData(void)
 }
 
 
-/* parsed data in CSV format */
+/*
+ * Raw data formated in CSV are sent over USART.
+ */
 void loggerReadOutProccesedData(void)
 {
 	uint32_t read_out_addr = logger_state.write_to_addr - data_len;
@@ -80,7 +82,10 @@ void loggerReadOutProccesedData(void)
 }
 
 
-/* Raw data. Sent as they are stored in FLASH*/
+/*
+ * Raw data. Sent as they are stored in FLASH.
+ * Sent data are formated in line.
+ */
 void loggerReadOutRawData(void)
 {
 	uint32_t i = 0;
@@ -107,7 +112,9 @@ void loggerReadOutRawData(void)
 }
 
 
-
+/*
+ * Return how much FLASH memory is already used
+ */
 uint32_t loggerMemoryUsed(void)
 {
 	return (FLASH_END_ADDR - logger_state.write_to_addr);

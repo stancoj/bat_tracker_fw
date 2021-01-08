@@ -71,12 +71,13 @@ int main(void)
 	  if((time - prev_time) >= 1000)
 	  {
 		  calculateBMP280Altitude();
-		  //send_GPS_BMP_to_Usart();
-		  loggerLogData();
+		  send_GPS_BMP_to_Usart();
+		  //loggerLogData();
 		  //loggerReadOutProccesedData();
 		  prev_time = time;
 	  }
 
+	  // time of the first GPS fix
 	  if((gGpsData.gpsValid == 1) && (!time_first_fix)) time_first_fix = time;
 
 	  USART2_CheckDmaReception();
