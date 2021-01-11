@@ -549,7 +549,7 @@ void InitGps()
 
 	while (((rtc_getMs() - time) < 1000) && (!CorrectMsg))
 	{
-		USART2_CheckDmaReception();
+		//USART2_CheckDmaReception();
 		//i++;
 	}
 
@@ -608,7 +608,7 @@ uint8_t WaitToReceive(void)
 
 	while((packetState != Packet_State_Accepted))
 	{
-		USART2_CheckDmaReception();
+		//USART2_CheckDmaReception();
 		if(!((rtc_getMs() - Time) < 3000))
 		{
 			return packetState;
@@ -627,7 +627,7 @@ uint8_t WaitToSend(void)
 
 	    while(!SendFlag)
 	    {
-	    	USART2_CheckDmaReception();
+	    	//USART2_CheckDmaReception();
 
 	        if(!((rtc_getMs() - Time) < 3000))
 			{

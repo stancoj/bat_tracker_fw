@@ -26,14 +26,23 @@
 
 uint32_t baud_rate_table[7] = {9600, 19200, 38400, 57600, 115200, 230400, 460800};
 
+// USART2 for GPS
 #define DMA_USART2_BUFFER_SIZE 1024					//in order to store long NMEA data with fast sampling between sampline
 uint8_t bufferUSART2dma[DMA_USART2_BUFFER_SIZE];	//and proceed them in once
 uint8_t aTxBuffer[1];
 
+// USART 1 for app
+#define DMA_USART1_BUFFER_SIZE 32
+uint8_t bufferUSART1dma[DMA_USART1_BUFFER_SIZE];
+
 static void (* usart2Callback)(uint8_t) = 0;
 static void (* usart2CallbackWakeUp)(void) = 0;
 
+static void (* usart1Callback)(uint8_t) = 0;
+
 static uint8_t gAfterTransmitUpdateBaudRate = 0;
+
+uint8_t DMA2_USART1_Tx_flag = 0;
 
 
 /* USART1 init function */
@@ -58,6 +67,48 @@ void MX_USART1_UART_Init(void)
   GPIO_InitStruct.Alternate = LL_GPIO_AF_7;
   LL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
+  /* USART1 DMA Init */
+
+  // USART1_RX Init
+  LL_DMA_SetChannelSelection(DMA2, LL_DMA_STREAM_2, LL_DMA_CHANNEL_4);
+  LL_DMA_SetDataTransferDirection(DMA2, LL_DMA_STREAM_2, LL_DMA_DIRECTION_PERIPH_TO_MEMORY);
+  LL_DMA_SetStreamPriorityLevel(DMA2, LL_DMA_STREAM_2, LL_DMA_PRIORITY_LOW);
+  LL_DMA_SetMode(DMA2, LL_DMA_STREAM_2, LL_DMA_MODE_CIRCULAR);
+  LL_DMA_SetPeriphIncMode(DMA2, LL_DMA_STREAM_2, LL_DMA_PERIPH_NOINCREMENT);
+  LL_DMA_SetMemoryIncMode(DMA2, LL_DMA_STREAM_2, LL_DMA_MEMORY_INCREMENT);
+  LL_DMA_SetPeriphSize(DMA2, LL_DMA_STREAM_2, LL_DMA_PDATAALIGN_BYTE);
+  LL_DMA_SetMemorySize(DMA2, LL_DMA_STREAM_2, LL_DMA_MDATAALIGN_BYTE);
+  LL_DMA_DisableFifoMode(DMA2, LL_DMA_STREAM_2);
+  LL_DMA_ConfigAddresses(DMA2, LL_DMA_STREAM_2,
+                         LL_USART_DMA_GetRegAddr(USART1),
+                         (uint32_t)bufferUSART1dma,
+                         LL_DMA_GetDataTransferDirection(DMA2, LL_DMA_STREAM_2));
+  LL_DMA_SetDataLength(DMA2, LL_DMA_STREAM_2, DMA_USART1_BUFFER_SIZE);
+
+  LL_DMA_EnableIT_TC(DMA2, LL_DMA_STREAM_2);
+  LL_DMA_EnableIT_HT(DMA2, LL_DMA_STREAM_2);
+  LL_DMA_EnableIT_TE(DMA2, LL_DMA_STREAM_2);
+  LL_DMA_EnableStream(DMA2, LL_DMA_STREAM_2);
+
+  // USART1_TX Init
+  LL_DMA_SetChannelSelection(DMA2, LL_DMA_STREAM_7, LL_DMA_CHANNEL_4);
+  LL_DMA_SetDataTransferDirection(DMA2, LL_DMA_STREAM_7, LL_DMA_DIRECTION_MEMORY_TO_PERIPH);
+  LL_DMA_SetStreamPriorityLevel(DMA2, LL_DMA_STREAM_7, LL_DMA_PRIORITY_LOW);
+  LL_DMA_SetMode(DMA2, LL_DMA_STREAM_7, LL_DMA_MODE_NORMAL);
+  LL_DMA_SetPeriphIncMode(DMA2, LL_DMA_STREAM_7, LL_DMA_PERIPH_NOINCREMENT);
+  LL_DMA_SetMemoryIncMode(DMA2, LL_DMA_STREAM_7, LL_DMA_MEMORY_INCREMENT);
+  LL_DMA_SetPeriphSize(DMA2, LL_DMA_STREAM_7, LL_DMA_PDATAALIGN_BYTE);
+  LL_DMA_SetMemorySize(DMA2, LL_DMA_STREAM_7, LL_DMA_MDATAALIGN_BYTE);
+  LL_DMA_DisableFifoMode(DMA2, LL_DMA_STREAM_7);
+
+  LL_DMA_SetPeriphAddress(DMA2, LL_DMA_STREAM_7, LL_USART_DMA_GetRegAddr(USART1));
+  LL_DMA_EnableIT_TC(DMA2, LL_DMA_STREAM_7);
+  LL_DMA_EnableIT_TE(DMA2, LL_DMA_STREAM_7);
+
+  /* USART1 interrupt Init */
+  NVIC_SetPriority(USART1_IRQn, NVIC_EncodePriority(NVIC_GetPriorityGrouping(),0, 0));
+  NVIC_EnableIRQ(USART1_IRQn);
+
   USART_InitStruct.BaudRate = 115200;
   USART_InitStruct.DataWidth = LL_USART_DATAWIDTH_8B;
   USART_InitStruct.StopBits = LL_USART_STOPBITS_1;
@@ -67,6 +118,11 @@ void MX_USART1_UART_Init(void)
   USART_InitStruct.OverSampling = LL_USART_OVERSAMPLING_16;
   LL_USART_Init(USART1, &USART_InitStruct);
   LL_USART_ConfigAsyncMode(USART1);
+
+  LL_USART_EnableDMAReq_RX(USART1);
+  LL_USART_EnableDMAReq_TX(USART1);
+  LL_USART_EnableIT_IDLE(USART1);
+
   LL_USART_Enable(USART1);
 
 }
@@ -94,8 +150,8 @@ void MX_USART2_UART_Init(void)
   LL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /* USART2 DMA Init */
-  
-  /* USART2_RX Init */
+
+  // USART2_RX Init
   LL_DMA_SetChannelSelection(DMA1, LL_DMA_STREAM_5, LL_DMA_CHANNEL_4);
   LL_DMA_SetDataTransferDirection(DMA1, LL_DMA_STREAM_5, LL_DMA_DIRECTION_PERIPH_TO_MEMORY);
   LL_DMA_SetStreamPriorityLevel(DMA1, LL_DMA_STREAM_5, LL_DMA_PRIORITY_LOW);
@@ -111,7 +167,12 @@ void MX_USART2_UART_Init(void)
                          LL_DMA_GetDataTransferDirection(DMA1, LL_DMA_STREAM_5));
   LL_DMA_SetDataLength(DMA1, LL_DMA_STREAM_5, DMA_USART2_BUFFER_SIZE);
 
-  /* USART2_TX Init */
+  LL_DMA_EnableIT_TC(DMA1, LL_DMA_STREAM_5);
+  LL_DMA_EnableIT_HT(DMA1, LL_DMA_STREAM_5);
+  LL_DMA_EnableIT_TE(DMA1, LL_DMA_STREAM_5);
+  LL_DMA_EnableStream(DMA1, LL_DMA_STREAM_5);
+
+  // USART2_TX Init
   LL_DMA_SetChannelSelection(DMA1, LL_DMA_STREAM_6, LL_DMA_CHANNEL_4);
   LL_DMA_SetDataTransferDirection(DMA1, LL_DMA_STREAM_6, LL_DMA_DIRECTION_MEMORY_TO_PERIPH);
   LL_DMA_SetStreamPriorityLevel(DMA1, LL_DMA_STREAM_6, LL_DMA_PRIORITY_LOW);
@@ -123,9 +184,11 @@ void MX_USART2_UART_Init(void)
   LL_DMA_DisableFifoMode(DMA1, LL_DMA_STREAM_6);
 
   LL_DMA_SetPeriphAddress(DMA1, LL_DMA_STREAM_6, LL_USART_DMA_GetRegAddr(USART2));
+  LL_DMA_EnableIT_TC(DMA1, LL_DMA_STREAM_6);
+  LL_DMA_EnableIT_TE(DMA1, LL_DMA_STREAM_6);
 
   /* USART2 interrupt Init */
-  NVIC_SetPriority(USART2_IRQn, NVIC_EncodePriority(NVIC_GetPriorityGrouping(),0, 0));
+  NVIC_SetPriority(USART2_IRQn, NVIC_EncodePriority(NVIC_GetPriorityGrouping(),1, 0));
   NVIC_EnableIRQ(USART2_IRQn);
 
   USART_InitStruct.BaudRate = 9600;
@@ -137,15 +200,12 @@ void MX_USART2_UART_Init(void)
   USART_InitStruct.OverSampling = LL_USART_OVERSAMPLING_16;
   LL_USART_Init(USART2, &USART_InitStruct);
   LL_USART_ConfigAsyncMode(USART2);
+
   LL_USART_EnableDMAReq_RX(USART2);
   LL_USART_EnableDMAReq_TX(USART2);
+  LL_USART_EnableIT_IDLE(USART2);
+
   LL_USART_Enable(USART2);
-
-  LL_DMA_EnableIT_TC(DMA1, LL_DMA_STREAM_6);
-  LL_DMA_EnableIT_TE(DMA1, LL_DMA_STREAM_6);
-  LL_DMA_EnableIT_TC(DMA1, LL_DMA_STREAM_5);
-  LL_DMA_EnableIT_TE(DMA1, LL_DMA_STREAM_5);
-
 }
 
 void USART2_PutBuffer(uint8_t *buffer, uint8_t length)
@@ -162,6 +222,8 @@ void USART2_PutBuffer(uint8_t *buffer, uint8_t length)
 void USART2_CheckDmaReception(void)
 {
 	static uint16_t memTargetPrev = 0;
+
+	if(usart2Callback == 0) return;
 
 	uint16_t memTarget = DMA_USART2_BUFFER_SIZE - LL_DMA_GetDataLength(DMA1, LL_DMA_STREAM_5); //DMA_GetCurrDataCounter(DMA1_Channel5);
 
@@ -207,6 +269,52 @@ void USART2_RegisterCallbackWakeUp(void *callback)
 	 usart2CallbackWakeUp = callback;
 }
 
+void USART1_PutBuffer(uint8_t *buffer, uint8_t length)
+{
+	LL_DMA_DisableStream(DMA2, LL_DMA_STREAM_7);
+
+	LL_DMA_SetMemoryAddress(DMA2, LL_DMA_STREAM_7, (uint32_t)buffer);
+	LL_DMA_SetDataLength(DMA2, LL_DMA_STREAM_7, length);
+
+	LL_DMA_EnableIT_TC(DMA2, LL_DMA_STREAM_7);
+	LL_DMA_EnableStream(DMA2, LL_DMA_STREAM_7);
+}
+
+void USART1_CheckDmaReception(void)
+{
+	static uint16_t memTargetPrev = 0;
+
+	if(usart1Callback == 0) return;
+
+	uint16_t memTarget = DMA_USART1_BUFFER_SIZE - LL_DMA_GetDataLength(DMA2, LL_DMA_STREAM_2);
+
+	uint16_t i;
+	for(i = memTargetPrev; i != memTarget; i=(i+1) & (DMA_USART1_BUFFER_SIZE - 1))
+	{
+		usart1Callback(bufferUSART1dma[i]);
+	}
+	memTargetPrev = memTarget;
+}
+
+void USART1_RegisterCallback(void *callback)
+{
+	usart1Callback = callback;
+}
+
+/*
+ * USART and USART/DMA interrupts
+ */
+
+void USART2_IRQHandler(void)
+{
+	if(LL_USART_IsActiveFlag_IDLE(USART2))
+	{
+		USART2_CheckDmaReception();
+		LL_USART_ClearFlag_IDLE(USART2);
+	}
+}
+
+// DMA1 USART2 Tx
 void DMA1_Stream6_IRQHandler(void)
 {
 	if(LL_DMA_IsActiveFlag_TC6(DMA1) == SET)
@@ -217,11 +325,54 @@ void DMA1_Stream6_IRQHandler(void)
 	}
 }
 
+// DMA1 USART2 Rx
 void DMA1_Stream5_IRQHandler(void)
 {
-	if(LL_DMA_IsActiveFlag_TC5(DMA1) == SET)
+	if(LL_DMA_IsActiveFlag_HT5(DMA1) == SET)
 	{
+		USART2_CheckDmaReception();
+		LL_DMA_ClearFlag_HT5(DMA1);
+	}
+	else if(LL_DMA_IsActiveFlag_TC5(DMA1) == SET)
+	{
+		USART2_CheckDmaReception();
 		LL_DMA_ClearFlag_TC5(DMA1);
+	}
+}
+
+// USART1 IDLE interrupt
+void USART1_IRQHandler(void)
+{
+	if(LL_USART_IsActiveFlag_IDLE(USART1))
+	{
+		USART1_CheckDmaReception();
+		LL_USART_ClearFlag_IDLE(USART1);
+	}
+}
+
+// DMA2 USART1 Tx
+void DMA2_Stream7_IRQHandler(void)
+{
+	if(LL_DMA_IsActiveFlag_TC7(DMA2) == SET)
+	{
+		LL_DMA_ClearFlag_TC7(DMA2);
+		while(LL_USART_IsActiveFlag_TC(USART1) == RESET);
+		LL_DMA_DisableStream(DMA2, LL_DMA_STREAM_7);
+	}
+}
+
+// DMA2 USART1 Rx
+void DMA2_Stream2_IRQHandler(void)
+{
+	if(LL_DMA_IsActiveFlag_HT2(DMA2) == SET)
+	{
+		USART1_CheckDmaReception();
+		LL_DMA_ClearFlag_HT2(DMA2);
+	}
+	else if(LL_DMA_IsActiveFlag_TC2(DMA2) == SET)
+	{
+		USART1_CheckDmaReception();
+		LL_DMA_ClearFlag_TC2(DMA2);
 	}
 }
 

@@ -29,6 +29,7 @@
 #include "bmp280_app.h"
 #include "flash.h"
 #include "data_logger.h"
+#include "app_ui.h"
 
 /* Structures containing GPS data */
 extern Gps_Data_s gGpsData;
@@ -58,20 +59,28 @@ int main(void)
   sendInitText();
   LL_mDelay(3000);
 
+  // GPS callback
+  USART2_RegisterCallback(receivedGPS);
+  registerUBXsendCallback(USART2_PutBuffer);
+  // APP callback
+  USART1_RegisterCallback(receivedByteApp);
+  registerAppCallbackSendFn(USART1_PutBuffer);
+
   flash_init();
+  loggerInit();
   initBMP280_app();
   InitGps();
-  loggerInit();
   time_init = time;
 
   uint64_t prev_time = 0;
 
   while (1)
   {
+
 	  if((time - prev_time) >= 1000)
 	  {
 		  calculateBMP280Altitude();
-		  send_GPS_BMP_to_Usart();
+		  //send_GPS_BMP_to_Usart();
 		  //loggerLogData();
 		  //loggerReadOutProccesedData();
 		  prev_time = time;
@@ -80,7 +89,7 @@ int main(void)
 	  // time of the first GPS fix
 	  if((gGpsData.gpsValid == 1) && (!time_first_fix)) time_first_fix = time;
 
-	  USART2_CheckDmaReception();
+	  //USART2_CheckDmaReception();
   }
 }
 
@@ -141,7 +150,7 @@ void send_GPS_BMP_to_Usart(void)
 	char text[50], number[10] = {0};
 
 	memset(text, '\0', sizeof(text));
-	sprintf(text, "sysTime: %ld, initTime: %ld, fixTime: %ld", (uint32_t)(time/1000), (uint32_t)(time_init/1000), (uint32_t)(time_first_fix/1000));
+	sprintf(text, "sysTime: %ld, initTime: %ld, fixTime: %ld, ", (uint32_t)(time/1000), (uint32_t)(time_init/1000), (uint32_t)(time_first_fix/1000));
 
 	uint8_t len = strlen(text);
 	for(uint8_t i = 0; i < len; i++)
@@ -153,7 +162,7 @@ void send_GPS_BMP_to_Usart(void)
 
 	memset(text, '\0', sizeof(text));
 	sprintf(text, "satTracked: %d, ", gGpsData.satTracked);
-	for(uint8_t i = 0; i < len; i++)
+	for(uint8_t i = 0; i < strlen(text); i++)
 	{
 		  LL_USART_TransmitData8(USART1, text[i]);
 		  while(!LL_USART_IsActiveFlag_TC(USART1)){};
@@ -230,7 +239,7 @@ void send_GPS_BMP_to_Usart(void)
 	memset(number, '\0', sizeof(number));
 	double_to_str(BMP280_data.bmp_comp_data.bmp_temp.temp, number);
 	memset(text, '\0', sizeof(text));
-	sprintf(text, "bmpTemp: %s \n \r", number);
+	sprintf(text, "bmpTemp: %s, ", number);
 	for(uint8_t i = 0; i < strlen(text); i++)
 	{
 		  LL_USART_TransmitData8(USART1, text[i]);
@@ -239,7 +248,7 @@ void send_GPS_BMP_to_Usart(void)
 	}
 
 	memset(text, '\0', sizeof(text));
-	sprintf(text, "FLASH: %d, %d, %lx \n \r \n \r", flash_state_data.initialized, flash_state_data.error, flash_state_data.free_memory);
+	sprintf(text, "FLASH: %d, %d, %lx \n \r", flash_state_data.initialized, flash_state_data.error, flash_state_data.free_memory);
 	for(uint8_t i = 0; i < strlen(text); i++)
 	{
 		  LL_USART_TransmitData8(USART1, text[i]);

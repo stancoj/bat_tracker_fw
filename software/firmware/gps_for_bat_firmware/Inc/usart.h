@@ -39,8 +39,11 @@ void USART2_ChangeBaudRate(void);
 void USART2_PrepareBaudRate(void);
 void USART2_RegisterCallback(void *callback);
 void USART2_RegisterCallbackWakeUp(void *callback);
-void DMA1_Channel6_IRQHandler(void);
-void DMA1_Channel5_IRQHandler(void);
+
+void USART1_PutBuffer(uint8_t *buffer, uint8_t length);
+void USART1_CheckDmaReception(void);
+void USART1_RegisterCallback(void *callback);
+
 
 #ifdef __cplusplus
 }
