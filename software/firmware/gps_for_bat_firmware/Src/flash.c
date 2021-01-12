@@ -9,7 +9,7 @@
 #include "flash.h"
 
 
-flash_state_ flash_state_data = {0};
+volatile flash_state_ flash_state_data = {0};
 uint8_t test_byte;
 
 uint32_t flash_get_free_mem(void);
@@ -19,7 +19,7 @@ void flash_init(void)
 {
 	if(flash_read_byte(FLASH_START_ADDR) != FLASH_PAGE0_HEADER_BYTE_VAL)
 	{
-		/*Variable used for Erase procedure*/
+		/* Variable used for Erase procedure */
 		static FLASH_EraseInitTypeDef EraseInitStruct;
 
 		uint32_t SECTORError = 0;
@@ -29,7 +29,7 @@ void flash_init(void)
 		EraseInitStruct.TypeErase     = FLASH_TYPEERASE_SECTORS;
 		EraseInitStruct.VoltageRange  = FLASH_VOLTAGE_RANGE_3;
 		EraseInitStruct.Sector        = FLASH_SECTOR_5;
-		EraseInitStruct.NbSectors     = 1;
+		EraseInitStruct.NbSectors     = 3;
 
 		if (HAL_FLASHEx_Erase(&EraseInitStruct, &SECTORError) != HAL_OK)
 		{
@@ -47,6 +47,7 @@ void flash_init(void)
 		    (flash_read_word(FLASH_USER_MEM_START_ADDR) == FLASH_USER_MEM_SPACE_ADDR) )
 		{
 			flash_state_data.initialized = FLASH_STATE_NEW_INIT;
+			flash_state_data.free_memory = FLASH_USER_MEM_SPACE_ADDR;
 		}
 		else
 		{
@@ -245,5 +246,7 @@ void flash_erase(void)
 	}
 
 	HAL_FLASH_Lock();
+
+	flash_state_data.free_memory = flash_get_free_mem();
 }
 

@@ -40,8 +40,11 @@ void receivedByteApp(uint8_t c)
 
 		if(c == '#')
 		{
-			parseCmdApp(buffer);
-			processCmdApp();
+			if(strlen(buffer) >= 3)
+			{
+				parseCmdApp(buffer);
+				processCmdApp();
+			}
 
 			memset(buffer, '\0', BUFFER_LENGTH);
 
@@ -88,6 +91,7 @@ void parseCmdApp(uint8_t* cmd)
 	}
 }
 
+
 void processCmdApp(void)
 {
 	switch(appCommand.cmd_id)
@@ -97,9 +101,11 @@ void processCmdApp(void)
 			break;
 
 		case ERASE_MEMORY:
+			appEraseStoredData();
 			break;
 
 		case READ_MEMORY:
+			appReadStoredData();
 			break;
 
 		case STATE_MEMORY:
@@ -107,6 +113,7 @@ void processCmdApp(void)
 			break;
 
 		case STATE_DEVICE:
+			appSendDeviceState();
 			break;
 
 		case SET_TIME:
@@ -123,20 +130,25 @@ void processCmdApp(void)
 
 void appSendResponse(void)
 {
-	uint8_t data[] = "$BAT_GPS#";
+	char data[] = "$BAT_GPS#";
 
-	if(appCallbackSendFn)
+	for(uint8_t i = 0; i < strlen(data); i++)
 	{
-		appCallbackSendFn(data, sizeof(data));
+		  LL_USART_TransmitData8(USART1, data[i]);
+		  while(!LL_USART_IsActiveFlag_TC(USART1)){};
+		  LL_USART_ClearFlag_TC(USART1);
 	}
 }
 
+
 void appSendMemoryState(void)
 {
-	uint8_t data[20] = {0};
+	char data[10] = {0};
 	uint8_t len;
 
-	sprintf(data, "%lu,%d#", logger_state.free_memory, logger_state.init);
+	uint32_t used_mem = 10000 - (((FLASH_END_ADDR - logger_state.write_to_addr) * 10000) / (FLASH_END_ADDR - FLASH_USER_MEM_SPACE_ADDR));
+
+	sprintf(data, "$%lu,%u#", used_mem, logger_state.init);
 
 	len = strlen(data);
 
@@ -147,6 +159,48 @@ void appSendMemoryState(void)
 		  LL_USART_ClearFlag_TC(USART1);
 	}
 }
+
+
+void appSendDeviceState(void)
+{
+	char data[10] = {0};
+
+	sprintf(data, "$%u,%u#", BMP280_data.init_status, !(gGpsData.e2D3Dfix == 0));
+
+	uint8_t len = strlen(data);
+
+	for(uint8_t i = 0; i < len; i++)
+	{
+		  LL_USART_TransmitData8(USART1, data[i]);
+		  while(!LL_USART_IsActiveFlag_TC(USART1)){};
+		  LL_USART_ClearFlag_TC(USART1);
+	}
+}
+
+
+void appEraseStoredData(void)
+{
+	char data[] = "$OK#";
+
+	flash_erase();
+	loggerInit();
+
+	uint8_t len = strlen(data);
+
+	for(uint8_t i = 0; i < len; i++)
+	{
+		  LL_USART_TransmitData8(USART1, data[i]);
+		  while(!LL_USART_IsActiveFlag_TC(USART1)){};
+		  LL_USART_ClearFlag_TC(USART1);
+	}
+}
+
+
+void appReadStoredData(void)
+{
+
+}
+
 
 void registerAppCallbackSendFn(void *callback)
 {

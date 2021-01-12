@@ -106,7 +106,7 @@ void MX_USART1_UART_Init(void)
   LL_DMA_EnableIT_TE(DMA2, LL_DMA_STREAM_7);
 
   /* USART1 interrupt Init */
-  NVIC_SetPriority(USART1_IRQn, NVIC_EncodePriority(NVIC_GetPriorityGrouping(),0, 0));
+  NVIC_SetPriority(USART1_IRQn, NVIC_EncodePriority(NVIC_GetPriorityGrouping(),2, 0));
   NVIC_EnableIRQ(USART1_IRQn);
 
   USART_InitStruct.BaudRate = 115200;
@@ -188,7 +188,7 @@ void MX_USART2_UART_Init(void)
   LL_DMA_EnableIT_TE(DMA1, LL_DMA_STREAM_6);
 
   /* USART2 interrupt Init */
-  NVIC_SetPriority(USART2_IRQn, NVIC_EncodePriority(NVIC_GetPriorityGrouping(),1, 0));
+  NVIC_SetPriority(USART2_IRQn, NVIC_EncodePriority(NVIC_GetPriorityGrouping(),3, 0));
   NVIC_EnableIRQ(USART2_IRQn);
 
   USART_InitStruct.BaudRate = 9600;

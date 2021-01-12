@@ -15,6 +15,7 @@ volatile uint8_t baud_rate_change_flag = 0;
 
 void mcu_init(void)
 {
+	  flash_init();
 	  MX_GPIO_Init();
 	  MX_DMA_Init();
 	  MX_I2C3_Init();

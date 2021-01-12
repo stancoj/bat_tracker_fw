@@ -117,6 +117,8 @@ void loggerReadOutRawData(void)
  */
 uint32_t loggerMemoryUsed(void)
 {
+	//return 10000 - (((FLASH_END_ADDR - logger_state.write_to_addr) * 10000) / (FLASH_END_ADDR - FLASH_USER_MEM_SPACE_ADDR));
+
 	return (FLASH_END_ADDR - logger_state.write_to_addr);
 }
 

@@ -48,6 +48,9 @@ void processCmdApp(void);
 
 void appSendResponse(void);
 void appSendMemoryState(void);
+void appSendDeviceState(void);
+void appEraseStoredData(void);
+void appReadStoredData(void);
 
 void registerAppCallbackSendFn(void *callback);
 

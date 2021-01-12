@@ -27,7 +27,6 @@
 #include "gps.h"
 #include "lis2dh.h"
 #include "bmp280_app.h"
-#include "flash.h"
 #include "data_logger.h"
 #include "app_ui.h"
 
@@ -66,9 +65,8 @@ int main(void)
   USART1_RegisterCallback(receivedByteApp);
   registerAppCallbackSendFn(USART1_PutBuffer);
 
-  flash_init();
   loggerInit();
-  initBMP280_app();
+  BMP280_data.init_status = initBMP280_app();
   InitGps();
   time_init = time;
 
@@ -81,7 +79,7 @@ int main(void)
 	  {
 		  calculateBMP280Altitude();
 		  //send_GPS_BMP_to_Usart();
-		  //loggerLogData();
+		  loggerLogData();
 		  //loggerReadOutProccesedData();
 		  prev_time = time;
 	  }

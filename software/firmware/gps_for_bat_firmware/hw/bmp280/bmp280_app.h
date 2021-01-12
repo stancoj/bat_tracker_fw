@@ -65,6 +65,7 @@ typedef struct
 	struct bmp280_status bmp_status;
 	struct bmp280_uncomp_data bmp_ucomp_data;
 	struct bmp280_comp_data bmp_comp_data;
+	uint8_t init_status;
 }bmp280_sensor_data_;
 
 bool initBMP280_app(void);

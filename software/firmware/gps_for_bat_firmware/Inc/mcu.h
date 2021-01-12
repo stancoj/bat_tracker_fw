@@ -14,6 +14,8 @@
 #include "rtc.h"
 #include "usart.h"
 #include "gpio.h"
+#include "flash.h"
+
 
 void mcu_init(void);
 
