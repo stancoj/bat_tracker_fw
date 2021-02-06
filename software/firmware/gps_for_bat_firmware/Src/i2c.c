@@ -208,6 +208,8 @@ int8_t i2c_bmp280_write(uint8_t slave_addr, uint8_t register_addr, uint8_t *data
 		return 1;
 	}
 
+	__set_BASEPRI(1 << 4);
+
 	LL_I2C_AcknowledgeNextData(I2C3, LL_I2C_ACK);
 	LL_I2C_GenerateStartCondition(I2C3);
 	while(!LL_I2C_IsActiveFlag_SB(I2C3)){};
@@ -237,6 +239,7 @@ int8_t i2c_bmp280_write(uint8_t slave_addr, uint8_t register_addr, uint8_t *data
 		}
 	}
 
+	__set_BASEPRI(0);
 	return 0;
 }
 
@@ -246,6 +249,8 @@ int8_t i2c_bmp280_read(uint8_t slave_addr, uint8_t register_addr, uint8_t *data_
 	/* Multibyte data transfer: slave => master */
 	if(read_data_length > 0 && data_rx_buffer != 0)
 	{
+		__set_BASEPRI(1 << 4);
+
 		/* Save number of bytes to be received */
 		uint8_t data_to_receive = read_data_length;
 		uint8_t buffer_iterator = 0;
@@ -312,14 +317,13 @@ int8_t i2c_bmp280_read(uint8_t slave_addr, uint8_t register_addr, uint8_t *data_
 
 		buffer_iterator = 0;
 
+		__set_BASEPRI(0);
 		return 0;
 	}
 	else
 	{
 		return 1;
 	}
-
-
 }
 
 

@@ -35,6 +35,7 @@ extern Gps_Data_s gGpsData;
 extern Gps_Data_Ubx_s gGpsDataUbx;
 extern bmp280_sensor_data_ BMP280_data;
 extern flash_state_ flash_state_data;
+extern app_cmd_ appCommand;
 
 void SystemClock_Config(void);
 void send_GPS_BMP_to_Usart(void);
@@ -74,14 +75,19 @@ int main(void)
 
   while (1)
   {
+	  //USART1_CheckDmaReception();
+	  //USART2_CheckDmaReception();
 
-	  if((time - prev_time) >= 1000)
+	  if(!appCommand.connected)
 	  {
-		  calculateBMP280Altitude();
-		  //send_GPS_BMP_to_Usart();
-		  loggerLogData();
-		  //loggerReadOutProccesedData();
-		  prev_time = time;
+		  if((time - prev_time) >= 1000)
+		  {
+			  calculateBMP280Altitude();
+			  //send_GPS_BMP_to_Usart();
+			  loggerLogData();
+			  //loggerReadOutProccesedData();
+			  prev_time = time;
+		  }
 	  }
 
 	  // time of the first GPS fix

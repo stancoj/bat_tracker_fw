@@ -67,7 +67,7 @@ void loggerReadOutProccesedData(void)
 	while(read_out_addr >= FLASH_USER_MEM_SPACE_ADDR)
 	{
 		memcpy(&(retrieved_deta.ptr_start), (uint8_t*)(read_out_addr), data_len);
-		sprintf(text, "%ld,%ld,%ld,%ld,%ld\n\r", retrieved_deta.data.baro_altitude, retrieved_deta.data.baro_temp, retrieved_deta.data.gps_altitude,
+		sprintf(text, "%ld,%ld,%ld,%ld,%ld\n", retrieved_deta.data.baro_altitude, retrieved_deta.data.baro_temp, retrieved_deta.data.gps_altitude,
 												 retrieved_deta.data.gps_latitude, retrieved_deta.data.gps_longitude);
 		for(uint8_t i = 0; i < strlen(text); i++)
 		{

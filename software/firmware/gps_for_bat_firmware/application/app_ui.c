@@ -122,6 +122,10 @@ void processCmdApp(void)
 		case SET_ALTITUDE:
 			break;
 
+		case DISCONNECT:
+			appDisconnect();
+			break;
+
 		default:
 			break;
 	}
@@ -138,6 +142,8 @@ void appSendResponse(void)
 		  while(!LL_USART_IsActiveFlag_TC(USART1)){};
 		  LL_USART_ClearFlag_TC(USART1);
 	}
+
+	appCommand.connected = 1;
 }
 
 
@@ -198,7 +204,43 @@ void appEraseStoredData(void)
 
 void appReadStoredData(void)
 {
+	char data[] = "$EOF_LOG#";
 
+	//Send starting char
+	LL_USART_TransmitData8(USART1, data[0]);
+	while(!LL_USART_IsActiveFlag_TC(USART1)){};
+	LL_USART_ClearFlag_TC(USART1);
+
+	//send the stored data
+	loggerReadOutProccesedData();
+
+	//Send ending char
+	LL_USART_TransmitData8(USART1, data[strlen(data)-1]);
+	while(!LL_USART_IsActiveFlag_TC(USART1)){};
+	LL_USART_ClearFlag_TC(USART1);
+
+	// Send end string
+	for(uint8_t i = 0; i < strlen(data); i++)
+	{
+		  LL_USART_TransmitData8(USART1, data[i]);
+		  while(!LL_USART_IsActiveFlag_TC(USART1)){};
+		  LL_USART_ClearFlag_TC(USART1);
+	}
+}
+
+
+void appDisconnect(void)
+{
+	char data[] = "$OK#";
+
+	for(uint8_t i = 0; i < strlen(data); i++)
+	{
+		  LL_USART_TransmitData8(USART1, data[i]);
+		  while(!LL_USART_IsActiveFlag_TC(USART1)){};
+		  LL_USART_ClearFlag_TC(USART1);
+	}
+
+	appCommand.connected = 0;
 }
 
 

@@ -26,7 +26,8 @@ typedef enum
 	STATE_MEMORY,
 	SET_TIME,
 	SET_ALTITUDE,
-	STATE_DEVICE
+	STATE_DEVICE,
+	DISCONNECT
 }APP_COMMAND_;
 
 typedef struct
@@ -40,6 +41,7 @@ typedef struct
 	APP_COMMAND_ cmd_id;
 	app_cmd_time_ time;
 	uint16_t altitude;
+	uint8_t connected;
 }app_cmd_;
 
 void receivedByteApp(uint8_t c);
@@ -51,6 +53,7 @@ void appSendMemoryState(void);
 void appSendDeviceState(void);
 void appEraseStoredData(void);
 void appReadStoredData(void);
+void appDisconnect(void);
 
 void registerAppCallbackSendFn(void *callback);
 

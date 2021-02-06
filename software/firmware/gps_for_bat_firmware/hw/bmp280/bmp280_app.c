@@ -7,7 +7,7 @@
 
 #include "bmp280_app.h"
 
-volatile bmp280_sensor_data_ BMP280_data = {0};
+bmp280_sensor_data_ BMP280_data = {0};
 
 
 bool initBMP280_app(void)
