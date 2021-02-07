@@ -56,7 +56,6 @@ int main(void)
 
   mcu_init();
 
-  sendInitText();
   LL_mDelay(3000);
 
   // GPS callback
@@ -67,33 +66,26 @@ int main(void)
   registerAppCallbackSendFn(USART1_PutBuffer);
 
   loggerInit();
-  BMP280_data.init_status = initBMP280_app();
   InitGps();
+  BMP280_data.init_status = initBMP280_app();
   time_init = time;
 
   uint64_t prev_time = 0;
 
   while (1)
   {
-	  //USART1_CheckDmaReception();
-	  //USART2_CheckDmaReception();
-
 	  if(!appCommand.connected)
 	  {
-		  if((time - prev_time) >= 1000)
+		  //approx. 6,8 hours of logged data
+		  if((time - prev_time) >= 1250)
 		  {
 			  calculateBMP280Altitude();
-			  //send_GPS_BMP_to_Usart();
 			  loggerLogData();
-			  //loggerReadOutProccesedData();
 			  prev_time = time;
 		  }
 	  }
-
 	  // time of the first GPS fix
 	  if((gGpsData.gpsValid == 1) && (!time_first_fix)) time_first_fix = time;
-
-	  //USART2_CheckDmaReception();
   }
 }
 

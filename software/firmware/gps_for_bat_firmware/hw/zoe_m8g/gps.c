@@ -284,6 +284,7 @@ void receivedGPS(uint8_t c)
 		bufferToProceed = buffer;
 
 		packetState = proceedUbxBuffer(buffer, UBXpacketEndPos);
+		CorrectMsg = 1;
     }
 
     if(c == NMEA_End && packetType == NMEA_Packet_Type)
@@ -300,7 +301,7 @@ void receivedGPS(uint8_t c)
 		}
         bufferToProceed = buffer;
         proceedNMEABuffer(buffer);
-
+        CorrectMsg = 1;
     }
 
     previousChar = c;
@@ -555,7 +556,6 @@ void InitGps()
 
 	if (!CorrectMsg)
 	{
-		//USART2_UpdateBaudRate(UART_BaudRate_9_6k);
 		time = rtc_getMs();
 		while((rtc_getMs() - time) < 50){}
 
@@ -565,37 +565,13 @@ void InitGps()
 		USART2_UpdateBaudRate(UART_BaudRate_115_2k);
 		while((rtc_getMs() - time) < 100){}
 
-		if (WaitToSend())
+		packetState = setRate(100, 1, GPS_time);
+		if(WaitToReceive() != Packet_State_Accepted) return 0;
+
+		for (i = 0; i < GPS_CONFIG_MSG_LENGTH; i++)
 		{
-			packetState = setRate(100, 1, GPS_time);
-		}
-		else
-		{
-			WaitToSend();
-			packetState = setRate(100, 1, GPS_time);
-		}
-
-		if(WaitToReceive() == Packet_State_Accepted)
-		{
-
-			for (i = 0; i < GPS_CONFIG_MSG_LENGTH; i++)
-			{
-
-				if (WaitToSend())
-				{
-					packetState = setMessageRateForCurrentPort(UBX_MSG_NMEA_CLASS_ID, gpsMsgsAll[i],messageRate(gpsMsgsAll[i]));
-				}
-				if(WaitToReceive() == Packet_State_Accepted)
-				{
-
-				}
-				else
-				{
-					WaitToSend();
-					packetState = setMessageRateForCurrentPort(UBX_MSG_NMEA_CLASS_ID, gpsMsgsAll[i],messageRate(gpsMsgsAll[i]));
-				}
-
-			}
+			packetState = setMessageRateForCurrentPort(UBX_MSG_NMEA_CLASS_ID, gpsMsgsAll[i],messageRate(gpsMsgsAll[i]));
+			if(WaitToReceive() != Packet_State_Accepted) return 0;
 		}
 	}
 }

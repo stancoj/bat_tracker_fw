@@ -42,7 +42,8 @@ static void (* usart1Callback)(uint8_t) = 0;
 
 static uint8_t gAfterTransmitUpdateBaudRate = 0;
 
-uint8_t DMA2_USART1_Tx_flag = 0;
+volatile uint8_t DMA1_USART2_Tx_flag = 0;
+volatile uint8_t DMA2_USART1_Tx_flag = 0;
 
 
 /* USART1 init function */
@@ -210,6 +211,8 @@ void MX_USART2_UART_Init(void)
 
 void USART2_PutBuffer(uint8_t *buffer, uint8_t length)
 {
+	DMA1_USART2_Tx_flag = 0;
+
 	LL_DMA_DisableStream(DMA1, LL_DMA_STREAM_6);
 
 	LL_DMA_SetMemoryAddress(DMA1, LL_DMA_STREAM_6, (uint32_t)buffer);
@@ -217,6 +220,8 @@ void USART2_PutBuffer(uint8_t *buffer, uint8_t length)
 
 	LL_DMA_EnableIT_TC(DMA1, LL_DMA_STREAM_6);
 	LL_DMA_EnableStream(DMA1, LL_DMA_STREAM_6);
+
+	while(!DMA1_USART2_Tx_flag){};
 }
 
 void USART2_CheckDmaReception(void)
@@ -271,6 +276,8 @@ void USART2_RegisterCallbackWakeUp(void *callback)
 
 void USART1_PutBuffer(uint8_t *buffer, uint8_t length)
 {
+	DMA2_USART1_Tx_flag = 0;
+
 	LL_DMA_DisableStream(DMA2, LL_DMA_STREAM_7);
 
 	LL_DMA_SetMemoryAddress(DMA2, LL_DMA_STREAM_7, (uint32_t)buffer);
@@ -278,6 +285,9 @@ void USART1_PutBuffer(uint8_t *buffer, uint8_t length)
 
 	LL_DMA_EnableIT_TC(DMA2, LL_DMA_STREAM_7);
 	LL_DMA_EnableStream(DMA2, LL_DMA_STREAM_7);
+
+	while(!DMA2_USART1_Tx_flag){};
+
 }
 
 void USART1_CheckDmaReception(void)
@@ -322,6 +332,7 @@ void DMA1_Stream6_IRQHandler(void)
 		LL_DMA_ClearFlag_TC6(DMA1);
 		while(LL_USART_IsActiveFlag_TC(USART2) == RESET);
 		LL_DMA_DisableStream(DMA1, LL_DMA_STREAM_6);
+		DMA1_USART2_Tx_flag = 1;
 	}
 }
 
@@ -358,6 +369,7 @@ void DMA2_Stream7_IRQHandler(void)
 		LL_DMA_ClearFlag_TC7(DMA2);
 		while(LL_USART_IsActiveFlag_TC(USART1) == RESET);
 		LL_DMA_DisableStream(DMA2, LL_DMA_STREAM_7);
+		DMA2_USART1_Tx_flag = 1;
 	}
 }
 
