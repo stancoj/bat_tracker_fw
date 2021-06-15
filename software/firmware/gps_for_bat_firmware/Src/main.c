@@ -36,6 +36,7 @@ extern Gps_Data_Ubx_s gGpsDataUbx;
 extern bmp280_sensor_data_ BMP280_data;
 extern flash_state_ flash_state_data;
 extern app_cmd_ appCommand;
+extern logger_state_ logger_state;
 
 void SystemClock_Config(void);
 void send_GPS_BMP_to_Usart(void);
@@ -56,7 +57,10 @@ int main(void)
 
   mcu_init();
 
-  LL_mDelay(3000);
+  // set initial value of sensor status variable
+  BMP280_data.init_status = 2;
+  gGpsData.init_status = 2;
+  logger_state.init = 2;
 
   // GPS callback
   USART2_RegisterCallback(receivedGPS);
@@ -65,8 +69,10 @@ int main(void)
   USART1_RegisterCallback(receivedByteApp);
   registerAppCallbackSendFn(USART1_PutBuffer);
 
+  LL_mDelay(5000);
+
   loggerInit();
-  InitGps();
+  gGpsData.init_status = InitGps();
   BMP280_data.init_status = initBMP280_app();
   time_init = time;
 

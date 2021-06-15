@@ -27,7 +27,9 @@ typedef enum
 	SET_TIME,
 	SET_ALTITUDE,
 	STATE_DEVICE,
-	DISCONNECT
+	DISCONNECT,
+	SET_CLOCK,
+	READ_SENSOR_DATA,
 }APP_COMMAND_;
 
 typedef struct
@@ -40,19 +42,24 @@ typedef struct
 {
 	APP_COMMAND_ cmd_id;
 	app_cmd_time_ time;
+	app_cmd_time_ clock;
 	uint16_t altitude;
 	uint8_t connected;
 }app_cmd_;
 
 void receivedByteApp(uint8_t c);
 void parseCmdApp(uint8_t* cmd);
-void processCmdApp(void);
+void processCmdApp(uint8_t* cmd);
 
 void appSendResponse(void);
 void appSendMemoryState(void);
 void appSendDeviceState(void);
 void appEraseStoredData(void);
 void appReadStoredData(void);
+void appReadSensorData(void);
+void appSetTime(uint8_t* cmd);
+void appSetClock(uint8_t* cmd);
+void appSetAltitude(uint8_t* cmd);
 void appDisconnect(void);
 
 void registerAppCallbackSendFn(void *callback);

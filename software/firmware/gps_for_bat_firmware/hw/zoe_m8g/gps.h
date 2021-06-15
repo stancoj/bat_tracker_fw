@@ -60,6 +60,7 @@ typedef struct
 	Eauto_manual_2D_3D_Fix eAutoManualFix;// = (Eauto_manual_2D_3D_Fix)'A';
 	E2D_3D_Fix e2D3Dfix;// = (E2D_3D_Fix)'1';
 
+	uint8_t init_status;
 }Gps_Data_s;
 
 typedef struct
@@ -119,7 +120,7 @@ Packet_State_s proceedUBXBuffer(uint8_t *buffer, uint16_t length);
 uint8_t messageReceived();
 uint8_t WaitToReceive(void);
 uint8_t WaitToSend(void);
-void InitGps();
+uint8_t InitGps();
 
 typedef enum
 {

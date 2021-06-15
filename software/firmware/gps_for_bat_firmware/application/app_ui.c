@@ -43,7 +43,7 @@ void receivedByteApp(uint8_t c)
 			if(strlen(buffer) >= 3)
 			{
 				parseCmdApp(buffer);
-				processCmdApp();
+				processCmdApp(buffer);
 			}
 
 			memset(buffer, '\0', BUFFER_LENGTH);
@@ -75,24 +75,10 @@ void receivedByteApp(uint8_t c)
 void parseCmdApp(uint8_t* cmd)
 {
 	appCommand.cmd_id = (10 * (cmd[0] - '0')) + (cmd[1] - '0');
-
-	if(appCommand.cmd_id == SET_TIME)
-	{
-		appCommand.time.hour = (10 * (cmd[2] - '0')) + (cmd[3] - '0');
-		appCommand.time.minute = (10 * (cmd[4] - '0')) + (cmd[5] - '0');
-
-		if(appCommand.time.hour > 23) appCommand.time.hour = 0;
-		if(appCommand.time.minute > 59) appCommand.time.minute = 0;
-	}
-	else if(appCommand.cmd_id == SET_ALTITUDE)
-	{
-		appCommand.altitude = (1000 * (cmd[2] - '0')) + (100 * (cmd[3] - '0')) +
-						   (10 * (cmd[4] - '0')) + (cmd[5] - '0');
-	}
 }
 
 
-void processCmdApp(void)
+void processCmdApp(uint8_t* cmd)
 {
 	switch(appCommand.cmd_id)
 	{
@@ -108,6 +94,10 @@ void processCmdApp(void)
 			appReadStoredData();
 			break;
 
+		case READ_SENSOR_DATA:
+			appReadSensorData();
+			break;
+
 		case STATE_MEMORY:
 			appSendMemoryState();
 			break;
@@ -116,10 +106,16 @@ void processCmdApp(void)
 			appSendDeviceState();
 			break;
 
+		case SET_CLOCK:
+			appSetClock(cmd);
+			break;
+
 		case SET_TIME:
+			appSetTime(cmd);
 			break;
 
 		case SET_ALTITUDE:
+			appSetAltitude(cmd);
 			break;
 
 		case DISCONNECT:
@@ -171,7 +167,7 @@ void appSendDeviceState(void)
 {
 	char data[10] = {0};
 
-	sprintf(data, "$%u,%u#", BMP280_data.init_status, !(gGpsData.e2D3Dfix == 0));
+	sprintf(data, "$%u,%u#", BMP280_data.init_status, gGpsData.init_status);
 
 	uint8_t len = strlen(data);
 
@@ -226,6 +222,69 @@ void appReadStoredData(void)
 		  while(!LL_USART_IsActiveFlag_TC(USART1)){};
 		  LL_USART_ClearFlag_TC(USART1);
 	}
+}
+
+
+void appReadSensorData(void)
+{
+	char data[50] = {0};
+
+	int32_t baro_alt = (int32_t)(BMP280_data.bmp_comp_data.bmp_alt.alt_rel * 1000);
+	int32_t gps_log = gGpsData.longitude.longitudeMicroDegree;
+	int32_t gps_lat = gGpsData.latitude.latitudeMicroDegree;
+	int32_t gps_alt = gGpsData.altitude.altitudeUInt;
+
+	sprintf(data, "$%ld,%ld,%ld,%ld#", baro_alt, gps_log, gps_lat, gps_alt);
+
+	uint8_t len = strlen(data);
+
+	for(uint8_t i = 0; i < len; i++)
+	{
+		  LL_USART_TransmitData8(USART1, data[i]);
+		  while(!LL_USART_IsActiveFlag_TC(USART1)){};
+		  LL_USART_ClearFlag_TC(USART1);
+	}
+}
+
+
+void appSetClock(uint8_t* cmd)
+{
+	appCommand.clock.hour = (10 * (cmd[2] - '0')) + (cmd[3] - '0');
+	appCommand.clock.minute = (10 * (cmd[4] - '0')) + (cmd[5] - '0');
+
+	if(appCommand.clock.hour > 23)
+	{
+		appCommand.clock.hour = 0;
+	}
+
+	if(appCommand.clock.minute > 59)
+	{
+		appCommand.clock.minute = 0;
+	}
+}
+
+
+void appSetTime(uint8_t* cmd)
+{
+	appCommand.time.hour = (10 * (cmd[2] - '0')) + (cmd[3] - '0');
+	appCommand.time.minute = (10 * (cmd[4] - '0')) + (cmd[5] - '0');
+
+	if(appCommand.time.hour > 23)
+	{
+		appCommand.time.hour = 0;
+	}
+
+	if(appCommand.time.minute > 59)
+	{
+		appCommand.time.minute = 0;
+	}
+}
+
+
+void appSetAltitude(uint8_t* cmd)
+{
+	appCommand.altitude = (1000 * (cmd[2] - '0')) + (100 * (cmd[3] - '0')) +
+					   	  (10 * (cmd[4] - '0')) + (cmd[5] - '0');
 }
 
 

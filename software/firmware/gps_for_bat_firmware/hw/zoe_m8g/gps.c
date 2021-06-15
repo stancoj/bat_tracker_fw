@@ -541,7 +541,7 @@ uint8_t messageReceived()
 }
 
 
-void InitGps()
+uint8_t InitGps()
 {
 	uint8_t i = 0;
 	uint64_t time = 0;
@@ -574,6 +574,8 @@ void InitGps()
 			if(WaitToReceive() != Packet_State_Accepted) return 0;
 		}
 	}
+
+	return 1;
 }
 
 
