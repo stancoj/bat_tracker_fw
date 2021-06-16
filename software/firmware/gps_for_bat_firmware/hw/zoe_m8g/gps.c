@@ -431,6 +431,8 @@ void proceedNMEABuffer(uint8_t *buffer)
 		GSA_Data_s gsaData = proceedGSAparsing(buffer);
 		uint8_t i;
 
+		gGpsData.lock = 1;
+
 		gGpsData.e2D3Dfix = gsaData.e2D3Dfix;
 		gGpsData.eAutoManualFix = gsaData.eAutoManualFix;
 		gGpsData.horizontalDOP = gsaData.horizontalDilutionOfPrecision;
@@ -440,9 +442,13 @@ void proceedNMEABuffer(uint8_t *buffer)
 		{
 			*((uint8_t*)&gGpsData.satellite + i) = *((uint8_t*)&gsaData.satellite + i);
 		}
+
+		gGpsData.lock = 0;
 	}
 	else if(msg.message == NMEA_Message_RMC)
 	{
+		gGpsData.lock = 1;
+
 		RMC_Data_s rmcData = proceedRMCparsing(buffer);
 		gGpsData.time = rmcData.time;
 		gGpsData.date = rmcData.date;
@@ -456,9 +462,13 @@ void proceedNMEABuffer(uint8_t *buffer)
 			gGpsData.trackAngle = rmcData.trackAngle;
 			gGpsData.magneticVariation = rmcData.magneticVariation;
 		}
+
+		gGpsData.lock = 0;
 	}
 	else if(msg.message == NMEA_Message_GGA)
 	{
+		gGpsData.lock = 1;
+
 		GGA_Data_s ggaData = proceedGGAparsing(buffer);
 		gGpsData.time = ggaData.time;
 		gGpsData.gpsValid = ggaData.gpsValid;
@@ -470,7 +480,7 @@ void proceedNMEABuffer(uint8_t *buffer)
 			gGpsData.altitude = ggaData.altitude;
 		}
 
-
+		gGpsData.lock = 0;
 	}
 	else if(msg.message == NMEA_Message_GLL)
 	{

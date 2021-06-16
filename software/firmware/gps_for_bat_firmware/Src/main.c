@@ -80,16 +80,19 @@ int main(void)
 
   while (1)
   {
-	  if(!appCommand.connected)
-	  {
+	  //if(!appCommand.connected)
+	  //{
 		  //approx. 6,8 hours of logged data
 		  if((time - prev_time) >= 1250)
 		  {
+			  BMP280_data.lock = 1;
 			  calculateBMP280Altitude();
+			  BMP280_data.lock = 0;
+
 			  loggerLogData();
 			  prev_time = time;
 		  }
-	  }
+	  //}
 	  // time of the first GPS fix
 	  if((gGpsData.gpsValid == 1) && (!time_first_fix)) time_first_fix = time;
   }

@@ -229,10 +229,22 @@ void appReadSensorData(void)
 {
 	char data[50] = {0};
 
-	int32_t baro_alt = (int32_t)(BMP280_data.bmp_comp_data.bmp_alt.alt_rel * 1000);
-	int32_t gps_log = gGpsData.longitude.longitudeMicroDegree;
-	int32_t gps_lat = gGpsData.latitude.latitudeMicroDegree;
-	int32_t gps_alt = gGpsData.altitude.altitudeUInt;
+	static int32_t baro_alt = 0;
+	static int32_t gps_log = 0;
+	static int32_t gps_lat = 0;
+	static int32_t gps_alt = 0;
+
+	if(!BMP280_data.lock)
+	{
+		baro_alt = (int32_t)(BMP280_data.bmp_comp_data.bmp_alt.alt_rel * 1000);
+	}
+
+	if(!gGpsData.lock)
+	{
+		gps_log = gGpsData.longitude.longitudeMicroDegree;
+		gps_lat = gGpsData.latitude.latitudeMicroDegree;
+		gps_alt = gGpsData.altitude.altitudeUInt;
+	}
 
 	sprintf(data, "$%ld,%ld,%ld,%ld#", baro_alt, gps_log, gps_lat, gps_alt);
 

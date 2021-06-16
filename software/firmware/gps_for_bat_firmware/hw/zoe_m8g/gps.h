@@ -61,6 +61,7 @@ typedef struct
 	E2D_3D_Fix e2D3Dfix;// = (E2D_3D_Fix)'1';
 
 	uint8_t init_status;
+	uint8_t lock;
 }Gps_Data_s;
 
 typedef struct
@@ -81,6 +82,7 @@ typedef struct
 	Eauto_manual_2D_3D_Fix eAutoManualFix;
 	E2D_3D_Fix_Ubx e2D3Dfix;
 
+	uint8_t lock;
 }Gps_Data_Ubx_s;
 
 #define GPS_DATA_INIT  {NMEA_TIME_INIT, NMEA_DATE_INIT, NMEA_LATITUDE_INIT, NMEA_LONGITUDE_INIT, NMEA_SPEED_INIT, NMEA_ALTITUDE_INIT, NMEA_SATELLITE_INIT, 0.0, 0.0, 0.0, 0.0, 0.0, 0, 0, 'A', '1'}
