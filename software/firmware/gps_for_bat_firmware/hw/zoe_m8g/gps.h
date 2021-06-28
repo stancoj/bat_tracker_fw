@@ -61,6 +61,9 @@ typedef struct
 	E2D_3D_Fix e2D3Dfix;// = (E2D_3D_Fix)'1';
 
 	uint8_t init_status;
+	uint8_t lock;
+	uint8_t low_power;
+	uint64_t first_fix;
 }Gps_Data_s;
 
 typedef struct
@@ -81,6 +84,7 @@ typedef struct
 	Eauto_manual_2D_3D_Fix eAutoManualFix;
 	E2D_3D_Fix_Ubx e2D3Dfix;
 
+	uint8_t lock;
 }Gps_Data_Ubx_s;
 
 #define GPS_DATA_INIT  {NMEA_TIME_INIT, NMEA_DATE_INIT, NMEA_LATITUDE_INIT, NMEA_LONGITUDE_INIT, NMEA_SPEED_INIT, NMEA_ALTITUDE_INIT, NMEA_SATELLITE_INIT, 0.0, 0.0, 0.0, 0.0, 0.0, 0, 0, 'A', '1'}
@@ -120,6 +124,9 @@ Packet_State_s proceedUBXBuffer(uint8_t *buffer, uint16_t length);
 uint8_t messageReceived();
 uint8_t WaitToReceive(void);
 uint8_t WaitToSend(void);
+uint8_t LowPowerGPS(void);
+uint8_t SleepModeGPS(void);
+uint8_t WakeUpGPS(void);
 uint8_t InitGps();
 
 typedef enum

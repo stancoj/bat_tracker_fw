@@ -10,55 +10,72 @@
 
 void enter_LP_Sleep(uint8_t sleep_on_exit)
 {
-	/* Ensure that MSI is wake-up system clock */
+	/*
+	// Ensure that MSI is wake-up system clock
 #ifdef HSI
-	LL_RCC_SetClkAfterWakeFromStop(LL_RCC_STOP_WAKEUPCLOCK_HSI);
+	//LL_RCC_SetClkAfterWakeFromStop(LL_RCC_STOP_WAKEUPCLOCK_HSI);
+	LL_RCC_SetClkAfterWakeFromStop();
 #else
 	LL_RCC_SetClkAfterWakeFromStop(LL_RCC_STOP_WAKEUPCLOCK_MSI);
 #endif
-	/* Enable sleep low power mode */
+	// Enable sleep low power mode
 	LL_LPM_EnableSleep();
-	/* Enable Sleep after ISR */
+	// Enable Sleep after ISR
 	if(sleep_on_exit) LL_LPM_EnableSleepOnExit();
-	/* Ensure Flash memory stays on */
+	// Ensure Flash memory stays on
 	FLASH->ACR &= ~FLASH_ACR_SLEEP_PD;
 
-	/* Request Wait For Interrupt */
+	// Request Wait For Interrupt
 	__WFI();
+	*/
 }
 
-void enter_LP_Stop(uint8_t sleep_on_exit)
+void enter_LP_Stop(void)
 {
-	  //testovacie ucely
-	  //LL_GPIO_ResetOutputPin(GPIOC, LL_GPIO_PIN_15);
+	/* Backup systick setup */
+	uint32_t systick_reg = SysTick->CTRL;
+	/* Disable the SysTick */
+	SysTick->CTRL  = 0;
+	/* Clear any pending EXTI */
+	EXTI->PR = 0xFFFFFFFF;
+	/* Clear any pending peripheral interrupts */
+	for (int i = 0; i < 8; i++)
+	{
+	  NVIC->ICPR[i] = 0xFFFFFFFF;
+	}
+	/* Clear the RTC pending flags */
+	RTC->ISR &= ~(RTC_ISR_ALRAF | RTC_ISR_ALRBF | RTC_ISR_WUTF | RTC_ISR_TSF | RTC_ISR_TAMP1F);
 
-	  /* Ensure that MSI is wake-up system clock */
-#ifdef HSI
-	  LL_RCC_SetClkAfterWakeFromStop(LL_RCC_STOP_WAKEUPCLOCK_HSI);
-#else
-	  LL_RCC_SetClkAfterWakeFromStop(LL_RCC_STOP_WAKEUPCLOCK_MSI);
-#endif
+	SCB->SCR |= (1 << SCB_SCR_SLEEPDEEP_Pos);
+	PWR->CR &= ~(PWR_CR_PDDS);
+	PWR->CR |= PWR_CR_LPDS;
 
-	  /* Enable ultra low power mode */
-	  LL_PWR_EnableUltraLowPower();
+	__WFI();
 
-	  /*Enable fast wake up from ultra low power mode*/
-	  LL_PWR_EnableFastWakeUp();
+	/* Setup the systick */
+	SysTick->CTRL = systick_reg;
+}
 
-	  /** Set the regulator to low power before setting MODE_STOP.
-	    * If the regulator remains in "main mode",
-	    * it consumes more power without providing any additional feature. */
-	  LL_PWR_SetRegulModeLP(LL_PWR_REGU_LPMODES_LOW_POWER);
 
-	  /*Enable SleepOnExit*/
-	  if(sleep_on_exit) LL_LPM_EnableSleepOnExit();
+void enter_LP_Standby(void)
+{
+	/* Disable the SysTick */
+	//SysTick->CTRL  = 0;
+	/* Clear any pending EXTI */
+	EXTI->PR = 0xFFFFFFFF;
+	/* Clear any pending peripheral interrupts */
+	for (int i = 0; i < 8; i++)
+	{
+	  NVIC->ICPR[i] = 0xFFFFFFFF;
+	}
+	/* Clear the RTC pending flags */
+	RTC->ISR &= ~(RTC_ISR_ALRAF | RTC_ISR_ALRBF | RTC_ISR_WUTF | RTC_ISR_TSF | RTC_ISR_TAMP1F);
 
-	  /* Set STOP mode when CPU enters deepsleep */
-	  LL_PWR_SetPowerMode(LL_PWR_MODE_STOP);
+	//SCB->SCR |= (1 << SCB_SCR_SLEEPDEEP_Pos);
+	//PWR->CR |= PWR_CR_PDDS;
+	//PWR->CR |= PWR_CR_LPDS;
 
-	  /* Set SLEEPDEEP bit of Cortex System Control Register */
-	  LL_LPM_EnableDeepSleep();
+	HAL_PWR_EnterSTANDBYMode();
 
-	  /* Request Wait For Interrupt */
-	  __WFI();
+	__WFI();
 }

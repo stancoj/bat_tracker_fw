@@ -139,6 +139,7 @@ void appSendResponse(void)
 		  LL_USART_ClearFlag_TC(USART1);
 	}
 
+	app_set_main_ui_state(UI_CONNECTED);
 	appCommand.connected = 1;
 }
 
@@ -165,9 +166,11 @@ void appSendMemoryState(void)
 
 void appSendDeviceState(void)
 {
-	char data[10] = {0};
+	char data[13] = {0};
 
-	sprintf(data, "$%u,%u#", BMP280_data.init_status, gGpsData.init_status);
+	uint8_t state = get_main_app_state()*10 + get_log_app_state();
+
+	sprintf(data, "$%u,%u,%u,%u#", BMP280_data.init_status, gGpsData.init_status, state, gGpsData.e2D3Dfix);
 
 	uint8_t len = strlen(data);
 
@@ -227,12 +230,24 @@ void appReadStoredData(void)
 
 void appReadSensorData(void)
 {
-	char data[50] = {0};
+	char data[100] = {0};
 
-	int32_t baro_alt = (int32_t)(BMP280_data.bmp_comp_data.bmp_alt.alt_rel * 1000);
-	int32_t gps_log = gGpsData.longitude.longitudeMicroDegree;
-	int32_t gps_lat = gGpsData.latitude.latitudeMicroDegree;
-	int32_t gps_alt = gGpsData.altitude.altitudeUInt;
+	static int32_t baro_alt = 0;
+	static int32_t gps_log = 0;
+	static int32_t gps_lat = 0;
+	static int32_t gps_alt = 0;
+
+	//if(!BMP280_data.lock)
+	//{
+		baro_alt = (int32_t)(BMP280_data.bmp_comp_data.bmp_alt.alt_rel * 1000);
+	//}
+
+	//if(!gGpsData.lock)
+	//{
+		gps_log = gGpsData.longitude.longitudeMicroDegree;
+		gps_lat = gGpsData.latitude.latitudeMicroDegree;
+		gps_alt = gGpsData.altitude.altitudeUInt;
+	//}
 
 	sprintf(data, "$%ld,%ld,%ld,%ld#", baro_alt, gps_log, gps_lat, gps_alt);
 
@@ -249,35 +264,23 @@ void appReadSensorData(void)
 
 void appSetClock(uint8_t* cmd)
 {
+	if(appCommand.clock.hour > 23) return;
+	if(appCommand.clock.minute > 59) return;
+
 	appCommand.clock.hour = (10 * (cmd[2] - '0')) + (cmd[3] - '0');
 	appCommand.clock.minute = (10 * (cmd[4] - '0')) + (cmd[5] - '0');
-
-	if(appCommand.clock.hour > 23)
-	{
-		appCommand.clock.hour = 0;
-	}
-
-	if(appCommand.clock.minute > 59)
-	{
-		appCommand.clock.minute = 0;
-	}
+	appCommand.clock.is_set = 1;
 }
 
 
 void appSetTime(uint8_t* cmd)
 {
+	if(appCommand.time.hour > 23) return;
+	if(appCommand.time.minute > 59) return;
+
 	appCommand.time.hour = (10 * (cmd[2] - '0')) + (cmd[3] - '0');
 	appCommand.time.minute = (10 * (cmd[4] - '0')) + (cmd[5] - '0');
-
-	if(appCommand.time.hour > 23)
-	{
-		appCommand.time.hour = 0;
-	}
-
-	if(appCommand.time.minute > 59)
-	{
-		appCommand.time.minute = 0;
-	}
+	appCommand.time.is_set = 1;
 }
 
 
@@ -299,6 +302,7 @@ void appDisconnect(void)
 		  LL_USART_ClearFlag_TC(USART1);
 	}
 
+	app_set_main_ui_state(UI_DISCONNECTED);
 	appCommand.connected = 0;
 }
 

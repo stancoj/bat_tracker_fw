@@ -99,6 +99,8 @@
 
  void rtc_ClearRSF(void);
  void set_up_WUT(uint32_t wake_up_time);
+ void set_up_CLOCK(uint32_t hour, uint32_t min, uint32_t sec);
+ void set_up_ALARM(uint32_t hour, uint32_t min, uint32_t sec);
  void rtc_registerCallback(void *callback);
  void Enable_LSI(void);
  void Enable_LSE(void);

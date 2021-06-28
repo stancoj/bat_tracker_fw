@@ -87,8 +87,6 @@ Packet_State_s pollProtocol(I_O_Port_e port)
 	return sendMessageUbx(UBX_CFG, UBX_CFG_PRT, payload, 1);
 }
 
-
-
 void processProtocolUART(uint8_t * payload)
 {
 	payloadToStruct((uint8_t*)&gConfigProtocolUART, payload, sizeof(CFG_Protocol_UART_s));
@@ -349,6 +347,10 @@ Packet_State_s proceedUbxBuffer(uint8_t *buffer, uint16_t buffer_length)
 		{
 			return Packet_State_Failed;
 		}
+	}
+	else if(msg.classId == UBX_MON)
+	{
+		return Packet_State_Data_Received;
 	}
 	else
 	{

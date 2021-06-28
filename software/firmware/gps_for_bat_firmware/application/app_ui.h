@@ -17,6 +17,7 @@
 #include "bmp280_app.h"
 #include "flash.h"
 #include "data_logger.h"
+#include "app.h"
 
 typedef enum
 {
@@ -36,6 +37,7 @@ typedef struct
 {
 	uint8_t hour;
 	uint8_t minute;
+	uint8_t is_set;
 }app_cmd_time_;
 
 typedef struct

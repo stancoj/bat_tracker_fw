@@ -431,6 +431,8 @@ void proceedNMEABuffer(uint8_t *buffer)
 		GSA_Data_s gsaData = proceedGSAparsing(buffer);
 		uint8_t i;
 
+		gGpsData.lock = 1;
+
 		gGpsData.e2D3Dfix = gsaData.e2D3Dfix;
 		gGpsData.eAutoManualFix = gsaData.eAutoManualFix;
 		gGpsData.horizontalDOP = gsaData.horizontalDilutionOfPrecision;
@@ -440,9 +442,13 @@ void proceedNMEABuffer(uint8_t *buffer)
 		{
 			*((uint8_t*)&gGpsData.satellite + i) = *((uint8_t*)&gsaData.satellite + i);
 		}
+
+		gGpsData.lock = 0;
 	}
 	else if(msg.message == NMEA_Message_RMC)
 	{
+		gGpsData.lock = 1;
+
 		RMC_Data_s rmcData = proceedRMCparsing(buffer);
 		gGpsData.time = rmcData.time;
 		gGpsData.date = rmcData.date;
@@ -456,9 +462,13 @@ void proceedNMEABuffer(uint8_t *buffer)
 			gGpsData.trackAngle = rmcData.trackAngle;
 			gGpsData.magneticVariation = rmcData.magneticVariation;
 		}
+
+		gGpsData.lock = 0;
 	}
 	else if(msg.message == NMEA_Message_GGA)
 	{
+		gGpsData.lock = 1;
+
 		GGA_Data_s ggaData = proceedGGAparsing(buffer);
 		gGpsData.time = ggaData.time;
 		gGpsData.gpsValid = ggaData.gpsValid;
@@ -470,7 +480,7 @@ void proceedNMEABuffer(uint8_t *buffer)
 			gGpsData.altitude = ggaData.altitude;
 		}
 
-
+		gGpsData.lock = 0;
 	}
 	else if(msg.message == NMEA_Message_GLL)
 	{
@@ -548,11 +558,7 @@ uint8_t InitGps()
 
 	time = rtc_getMs();
 
-	while (((rtc_getMs() - time) < 1000) && (!CorrectMsg))
-	{
-		//USART2_CheckDmaReception();
-		//i++;
-	}
+	while (((rtc_getMs() - time) < 1000) && (!CorrectMsg)){}
 
 	if (!CorrectMsg)
 	{
@@ -574,6 +580,51 @@ uint8_t InitGps()
 			if(WaitToReceive() != Packet_State_Accepted) return 0;
 		}
 	}
+
+	packetState = setPowerMode(Power_Setup_Balanced, 0, 0);
+	if(WaitToReceive() != Packet_State_Accepted) return 0;
+
+	packetState = setReceiverManagement(Low_Power_Mode_Continous_ver0);
+	if(WaitToReceive() != Packet_State_Accepted) return 0;
+
+	return 1;
+}
+
+
+uint8_t LowPowerGPS(void)
+{
+	packetState = setPowerMode(Power_Setup_Aggresive_2Hz, 0, 0);
+	if(WaitToReceive() != Packet_State_Accepted) return 0;
+
+	packetState = setReceiverManagement(Low_Power_Mode_Power_Save);
+	if(WaitToReceive() != Packet_State_Accepted) return 0;
+
+	gGpsData.low_power = 1;
+
+	return 1;
+}
+
+
+uint8_t SleepModeGPS(void)
+{
+	setInactiveStateWithWakeUpSource(0,WakeUp_Source_UART_RX);
+	if(WaitToReceive() != Packet_State_Accepted) return 0;
+
+	return 1;
+}
+
+
+uint8_t WakeUpGPS(void)
+{
+	// Send dummy message to wake up the GPS
+	uint8_t dummy_data = 0xFF;
+	LL_USART_TransmitData8(USART2, dummy_data);
+
+	LL_mDelay(500);
+
+	// Send Ubx message to confirm the GPS is up
+	packetState = setPowerMode(Power_Setup_Aggresive_2Hz, 0, 0);
+	if(WaitToReceive() != Packet_State_Accepted) return 0;
 
 	return 1;
 }

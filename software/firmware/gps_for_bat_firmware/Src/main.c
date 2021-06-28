@@ -29,6 +29,8 @@
 #include "bmp280_app.h"
 #include "data_logger.h"
 #include "app_ui.h"
+#include "lpmode.h"
+#include "app.h"
 
 /* Structures containing GPS data */
 extern Gps_Data_s gGpsData;
@@ -45,9 +47,30 @@ void double_to_str(double x, char *p);
 
 uint64_t time = 0, time_init = 0, time_first_fix = 0;
 
+/*
+typedef enum
+{
+	WAIT_FOR_FIRST_FIX = 0,
+	WAIT_FOR_TIME_SETUP,
+	WAIT_FOR_ALT_SETUP,
+	SET_SLEEP_MODE,
+	DATA_LOGER_MODE,
+}MAIN_APP_STATE;
+
+
+typedef enum
+{
+	WAIT_FOR_ALT_TRIGGER = 0,
+	WAKE_UP_GPS,
+	WAIT_FOR_GPS_FIX,
+	LOG_MEAS_DATA
+}LOG_APP_STATE;
+*/
+
+//MAIN_APP_STATE main_app_state = WAIT_FOR_TIME_SETUP;
+
 int main(void)
 {
-  
   LL_APB2_GRP1_EnableClock(LL_APB2_GRP1_PERIPH_SYSCFG);
   LL_APB1_GRP1_EnableClock(LL_APB1_GRP1_PERIPH_PWR);
 
@@ -76,22 +99,96 @@ int main(void)
   BMP280_data.init_status = initBMP280_app();
   time_init = time;
 
-  uint64_t prev_time = 0;
+  //uint64_t prev_time = 0;
 
   while (1)
   {
-	  //if(!appCommand.connected)
-	  //{
-		  //approx. 6,8 hours of logged data
+	  // main application state logic
+	  app_main();
+
+	  // Old application
+	  /*
+	  LL_mDelay(500);
+
+	  // Application is not connected
+	  if(!appCommand.connected)
+	  {
+		  switch(main_app_state)
+		  {
+		  	  case WAIT_FOR_FIRST_FIX:
+		  	  {
+		  		  // Save time of the first fix
+		  		  if((gGpsData.gpsValid == 1) && (!gGpsData.first_fix))
+				  {
+		  			  gGpsData.first_fix = 1;
+					  time_first_fix = time;
+					  main_app_state = WAIT_FOR_TIME_SETUP;
+				  }
+
+		  		  break;
+		  	  }
+
+		  	  case WAIT_FOR_TIME_SETUP:
+		  	  {
+		  		  if(appCommand.clock.is_set && appCommand.time.is_set)
+		  		  {
+		  			  set_up_CLOCK(appCommand.clock.hour, appCommand.clock.minute, 0);
+		  			  set_up_ALARM(appCommand.time.hour, appCommand.time.minute, 0);
+					  main_app_state = WAIT_FOR_ALT_SETUP;
+		  		  }
+
+		  		  break;
+		  	  }
+
+		  	  case WAIT_FOR_ALT_SETUP:
+		  	  {
+		  		  if(appCommand.altitude > 0)
+		  		  {
+					  main_app_state = SET_SLEEP_MODE;
+		  		  }
+
+		  		  break;
+		  	  }
+
+		  	  case SET_SLEEP_MODE:
+		  	  {
+				  LowPowerGPS();
+		  		  SleepModeGPS();
+		  		  enter_LP_Stop();
+
+		  		  main_app_state = DATA_LOGER_MODE;
+		  		  break;
+		  	  }
+
+		  	  case DATA_LOGER_MODE:
+		  	  {
+		  		  //Wake up GPS and start logging
+				  if((time - prev_time) >= 1250)
+				  {
+					  BMP280_data.lock = 1;
+					  calculateBMP280Altitude();
+					  BMP280_data.lock = 0;
+
+					  loggerLogData();
+					  prev_time = time;
+				  }
+
+		  		  break;
+		  	  }
+		  }
+	  }
+	  else
+	  {
 		  if((time - prev_time) >= 1250)
 		  {
+			  BMP280_data.lock = 1;
 			  calculateBMP280Altitude();
-			  loggerLogData();
+			  BMP280_data.lock = 0;
+
 			  prev_time = time;
 		  }
-	  //}
-	  // time of the first GPS fix
-	  if((gGpsData.gpsValid == 1) && (!time_first_fix)) time_first_fix = time;
+	  }
+	  */
   }
 }
 
@@ -143,7 +240,6 @@ void SystemClock_Config(void)
   LL_SYSTICK_EnableIT();
   LL_SetSystemCoreClock(16000000);
   LL_RCC_SetTIMPrescaler(LL_RCC_TIM_PRESCALER_TWICE);
-
 }
 
 

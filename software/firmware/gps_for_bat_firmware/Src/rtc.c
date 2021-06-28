@@ -62,43 +62,15 @@ static void (* sCallbackRTC)(uint16_t) = 0;
 mytime_t dt;
 
 
-void RTC_IRQHandler(void)
+void RTC_Alarm_IRQHandler(void)
 {
-  static uint8_t rtc_init_flag = 0;
-  static uint32_t rtc_wakeups = 0;
+	if(LL_RTC_IsActiveFlag_ALRA(RTC))
+	{
+		rtc_ClearRSF();
+		LL_RTC_ClearFlag_ALRA(RTC);
+	}
 
-  if(LL_RTC_IsActiveFlag_WUT(RTC) == 1)
-  {
-//	  iwdg_reset_counter();
-
-	  rtc_init_flag ? rtc_wakeups++ : rtc_wakeups;
-
-	  rtc_init_flag = 1;
-
-//	  if(rtc_wakeups >= 3)
-//	  {
-//		  send_regular_message = 1;
-//		  rtc_wakeups = 0;
-//	  }
-
-	  if(sCallbackRTC)
-	  {
-		  sCallbackRTC(rtc_wakeups);
-	  }
-
-	  LL_PWR_EnableBkUpAccess();
-	  LL_RTC_DisableWriteProtection(RTC);
-
-	  LL_RTC_ClearFlag_WUT(RTC);
-
-	  LL_RTC_EnableWriteProtection(RTC);
-	  LL_PWR_DisableBkUpAccess();
-
-	  /*Disable SleepOnExit from LPM*/
-	  LL_LPM_DisableSleepOnExit();
-  }
-
-  EXTI->PR |= (1 << 20);
+	EXTI->PR |= (1 << 17);
 }
 
 
@@ -126,11 +98,16 @@ void RTC_Init(uint16_t time, uint8_t osc_type)
   /* Peripheral clock enable */
   LL_RCC_EnableRTC();
 
-  /* RTC interrupt Init */
-  LL_EXTI_EnableIT_0_31(LL_EXTI_LINE_20);
-  LL_EXTI_EnableRisingTrig_0_31(LL_EXTI_LINE_20);
-  NVIC_SetPriority(RTC_WKUP_IRQn, 0);
-  NVIC_EnableIRQ(RTC_WKUP_IRQn);
+  /* WUT interrupt */
+  //LL_EXTI_EnableIT_0_31(LL_EXTI_LINE_20);
+  //LL_EXTI_EnableRisingTrig_0_31(LL_EXTI_LINE_20);
+  //NVIC_SetPriority(RTC_WKUP_IRQn, 0);
+  //NVIC_EnableIRQ(RTC_WKUP_IRQn);
+  /* Alarm interrupt */
+  LL_EXTI_EnableIT_0_31(LL_EXTI_LINE_17);
+  LL_EXTI_EnableRisingTrig_0_31(LL_EXTI_LINE_17);
+  NVIC_SetPriority(RTC_Alarm_IRQn, 0);
+  NVIC_EnableIRQ(RTC_Alarm_IRQn);
 
   /**Initialize RTC and set the Time and Date
   */
@@ -149,7 +126,7 @@ void RTC_Init(uint16_t time, uint8_t osc_type)
 	  LL_RTC_WAKEUP_Disable(RTC);
 	  while(RTC->ISR & (1 << 10)){};
 	  LL_RTC_WAKEUP_SetClock(RTC, LL_RTC_WAKEUPCLOCK_CKSPRE); //LL_RTC_WAKEUPCLOCK_CKSPRE LL_RTC_WAKEUPCLOCK_DIV_16
-	  LL_RTC_WAKEUP_SetAutoReload(RTC, time); //*2048
+	  LL_RTC_WAKEUP_SetAutoReload(RTC, time); //2048
 	  LL_RTC_EnableIT_WUT(RTC);
 	  LL_RTC_WAKEUP_Enable(RTC);
   }
@@ -211,6 +188,59 @@ void Enable_LSE(void)
 	while(LL_RCC_LSE_IsReady() != 1)
 	{
 	};
+}
+
+
+void set_up_CLOCK(uint32_t hour, uint32_t min, uint32_t sec)
+{
+	LL_RTC_TimeTypeDef RTC_TimeStruct;
+
+	LL_PWR_EnableBkUpAccess();
+	LL_RTC_DisableWriteProtection(RTC);
+
+	LL_mDelay(100);
+
+	LL_RTC_EnterInitMode(RTC);
+
+	RTC_TimeStruct.Seconds = sec;
+	RTC_TimeStruct.Minutes = min;
+	RTC_TimeStruct.Hours = hour;
+	RTC_TimeStruct.TimeFormat = LL_RTC_TIME_FORMAT_AM_OR_24;
+	LL_RTC_TIME_Init(RTC, LL_RTC_FORMAT_BIN, &RTC_TimeStruct);
+
+	LL_RTC_ExitInitMode(RTC);
+
+	LL_RTC_EnableWriteProtection(RTC);
+	LL_PWR_DisableBkUpAccess();
+}
+
+
+void set_up_ALARM(uint32_t hour, uint32_t min, uint32_t sec)
+{
+	LL_PWR_EnableBkUpAccess();
+	LL_RTC_DisableWriteProtection(RTC);
+
+	LL_mDelay(100);
+
+	LL_RTC_ALMA_Disable(RTC);
+	while(!LL_RTC_IsActiveFlag_ALRAW(RTC)){};
+
+	LL_RTC_ClearFlag_ALRA(RTC);
+
+	LL_RTC_ALMA_ConfigTime(	RTC,
+							LL_RTC_ALMA_TIME_FORMAT_AM,
+							__LL_RTC_CONVERT_BIN2BCD(hour),
+							__LL_RTC_CONVERT_BIN2BCD(min),
+							__LL_RTC_CONVERT_BIN2BCD(sec));
+
+	LL_RTC_ALMA_SetMask(RTC, LL_RTC_ALMA_MASK_DATEWEEKDAY | LL_RTC_ALMA_MASK_SECONDS);
+	LL_RTC_ALMA_SetSubSecondMask(RTC, 0x00);
+
+	LL_RTC_EnableIT_ALRA(RTC);
+	LL_RTC_ALMA_Enable(RTC);
+
+	LL_RTC_EnableWriteProtection(RTC);
+	LL_PWR_DisableBkUpAccess();
 }
 
 

@@ -64,12 +64,20 @@ void updateBMP280data_normal(void)
 void updateBMP280data_forced (void)
 {
 	int8_t rslt = bmp280_set_power_mode(BMP280_FORCED_MODE, &BMP280_data.bmp);
-	if(rslt != BMP280_OK) return;
+	if(rslt != BMP280_OK)
+	{
+		BMP280_data.init_status = 1;
+		return;
+	}
 
 	do
 	{
 		rslt = bmp280_get_status(&BMP280_data.bmp_status, &BMP280_data.bmp);
-		if(rslt != BMP280_OK) return;
+		if(rslt != BMP280_OK)
+		{
+			BMP280_data.init_status = 1;
+			return;
+		}
 
 		BMP280_data.bmp.delay_ms(1);
 	}while(BMP280_data.bmp_status.measuring == BMP280_MEAS_ONGOING || BMP280_data.bmp_status.measuring == BMP280_IM_UPDATE_ONGOING);
