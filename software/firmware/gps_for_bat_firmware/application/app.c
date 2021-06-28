@@ -18,7 +18,7 @@ extern logger_state_ logger_state;
 extern uint64_t time;
 uint64_t prev_time = 0;
 
-MAIN_UI_STATE main_ui_state = UI_DISCONNECTED;
+MAIN_UI_STATE main_ui_state = UI_CONNECTED;
 MAIN_APP_STATE main_app_state = WAIT_FOR_TIME_SETUP; //WAIT_FOR_FIRST_FIX;
 APP_LOGGER_STATE log_app_state = WAIT_FOR_ALT_TRIGGER;
 
